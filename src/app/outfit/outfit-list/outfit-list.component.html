@@ -1,0 +1,33 @@
+<div class="text-center">
+  <h1>Listado Outfits</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Color</th>
+        <th scope="col">Genero</th>
+        <th scope="col">Ocacion</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Talla</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let outfit of outfits">
+      <tr>
+        <td>{{outfit.id}}</td>
+        <td>{{outfit.descripcion}}</td>
+        <td><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}"></td>
+        <td>{{outfit.nombre}}</td>
+        <td>{{outfit.precio}}</td>
+        <td>{{outfit.colores}}</td>
+        <td>{{outfit.genero}}</td>
+        <td>{{outfit.ocasiones}}</td>
+        <td>{{outfit.rango_edad}}</td>
+        <td>{{outfit.talla}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
