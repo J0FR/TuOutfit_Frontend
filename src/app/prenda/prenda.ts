@@ -1,4 +1,4 @@
-import { Outfit } from "../outfit/outfit";
+import { Marca } from '../marca/marca';
 
 export class Prenda {
     id: number;
@@ -10,7 +10,8 @@ export class Prenda {
     ocasiones: string;
     rango_edad: string;
     talla: string;
-    constructor(id: number, nombre: string, imagen: string, colores: string, genero: string, precio: number, ocasiones: string, rango_edad: string, talla: string) {
+    marca: Marca;
+    constructor(id: number, nombre: string, imagen: string, colores: string, genero: string, precio: number, ocasiones: string, rango_edad: string, talla: string, marca: Marca) {
         this.id = id;
         this.nombre = nombre;
         this.imagen = imagen;
@@ -20,5 +21,6 @@ export class Prenda {
         this.ocasiones = ocasiones;
         this.rango_edad = rango_edad;
         this.talla = talla;
+        this.marca = marca;
     }
   }

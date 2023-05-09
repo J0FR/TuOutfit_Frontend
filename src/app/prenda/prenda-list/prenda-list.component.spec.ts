@@ -8,6 +8,7 @@ import { PrendaListComponent } from './prenda-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Prenda } from '../prenda';
 import { PrendaService } from '../Prenda.service';
+import { Marca } from 'src/app/marca/marca';
 
 describe('PrendaListComponent', () => {
   let component: PrendaListComponent;
@@ -26,9 +27,11 @@ describe('PrendaListComponent', () => {
     fixture = TestBed.createComponent(PrendaListComponent);
     component = fixture.componentInstance;
 
+    const marca = new Marca(faker.datatype.number(), faker.lorem.sentence(), faker.lorem.sentence(),faker.image.imageUrl(), faker.lorem.sentence());
+
     for(let i = 0; i < 10; i++) {
     const prenda = new Prenda(faker.datatype.number(), faker.lorem.sentence(), faker.image.imageUrl(), faker.lorem.sentence(), faker.lorem.sentence(), faker.datatype.number(), faker.lorem.sentence(),
-    faker.lorem.sentence(), faker.lorem.sentence());
+    faker.lorem.sentence(), faker.lorem.sentence(),marca);
     component.prendas.push(prenda);
     }
     fixture.detectChanges();

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Prenda } from '../prenda';
 import { PrendaService } from '../Prenda.service'
+import { PrendaDetail } from '../prenda-detail/PrendaDetail';
 
 @Component({
   selector: 'app-prenda-list',
@@ -8,8 +9,8 @@ import { PrendaService } from '../Prenda.service'
   styleUrls: ['./prenda-list.component.css']
 })
 export class PrendaListComponent implements OnInit {
-  prendas : Array<Prenda> = [];
-  selectedPrenda!: Prenda;
+  prendas : Array<PrendaDetail> = [];
+  selectedPrenda!: PrendaDetail;
   selected = false;
 
   constructor(private PrendaService: PrendaService) { }
@@ -20,7 +21,7 @@ export class PrendaListComponent implements OnInit {
     });
   }
 
-  onSelected(prenda: Prenda): void {
+  onSelected(prenda: PrendaDetail): void {
     this.selected = true;
     this.selectedPrenda = prenda;
   }
