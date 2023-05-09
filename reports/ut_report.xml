@@ -1,13 +1,19 @@
 <testExecutions version="1">
   <file path="src/app/outfit/outfit.service.spec.ts">
-    <testCase name="Service: Outfit should ..." duration="18"/>
+    <testCase name="Service: Outfit should ..." duration="11"/>
   </file>
   <file path="src/app/outfit/outfit-list/outfit-list.component.spec.ts">
-    <testCase name="OutfitListComponent should have 10 &lt;img> elements" duration="88"/>
-    <testCase name="OutfitListComponent should create" duration="17"/>
+    <testCase name="OutfitListComponent should have 10 &lt;p.card-text> elements" duration="55"/>
+    <testCase name="OutfitListComponent should have the corresponding src to the outfits image and alt to the outfits name" duration="19"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="10"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.col> elements" duration="10"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.card-body> elements" duration="9"/>
+    <testCase name="OutfitListComponent should have 10 &lt;img> elements" duration="9"/>
+    <testCase name="OutfitListComponent should create" duration="5"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="9"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="16"/>
-    <testCase name="AppComponent should create the app" duration="7"/>
+    <testCase name="AppComponent should create the app" duration="8"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="3"/>
   </file>
 </testExecutions>
