@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <testExecutions version="1">
   <file path="src/app/outfit/outfit.service.spec.ts">
     <testCase name="Service: Outfit should ..." duration="11"/>
@@ -17,3 +18,6 @@
     <testCase name="AppComponent should have as title 'base-project'" duration="3"/>
   </file>
 </testExecutions>
+=======
+<testExecutions version="1"/>
+>>>>>>> master
