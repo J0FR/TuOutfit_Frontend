@@ -1,33 +1,32 @@
-<div class="text-center">
-  <h1>Listado Outfits</h1>
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Descripcion</th>
-        <th scope="col">Imagen</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Precio</th>
-        <th scope="col">Color</th>
-        <th scope="col">Genero</th>
-        <th scope="col">Ocacion</th>
-        <th scope="col">Edad</th>
-        <th scope="col">Talla</th>
-      </tr>
-    </thead>
-    <tbody *ngFor="let outfit of outfits">
-      <tr>
-        <td>{{outfit.id}}</td>
-        <td>{{outfit.descripcion}}</td>
-        <td><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}"></td>
-        <td>{{outfit.nombre}}</td>
-        <td>{{outfit.precio}}</td>
-        <td>{{outfit.colores}}</td>
-        <td>{{outfit.genero}}</td>
-        <td>{{outfit.ocasiones}}</td>
-        <td>{{outfit.rango_edad}}</td>
-        <td>{{outfit.talla}}</td>
-      </tr>
-    </tbody>
-  </table>
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light" id="outfits">Outfits</h1>
+    </div>
+  </div>
+</section>
+
+<div class="album py-5" style="background-color: white">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col" *ngFor="let outfit of outfits">
+        <div class="card shadow-sm">
+          <img src="{{outfit.imagen}}" class="bd-placeholder-img card-img-top" width="100%" height="225">
+          <div class="card-body">
+            <p class="card-text">{{outfit.nombre}}</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Id:</b>  {{outfit.id}}</li>
+                <li class="list-group-item"><b>Descripcion:</b> {{outfit.descripcion}}</li>
+                <li class="list-group-item"><b>Precio:</b>  {{outfit.precio}}</li>
+                <li class="list-group-item"><b>Color:</b> {{outfit.colores}}</li>
+                <li class="list-group-item"><b>Genero:</b>  {{outfit.genero}}</li>
+                <li class="list-group-item"><b>Ocacion:</b> {{outfit.ocasiones}}</li>
+                <li class="list-group-item"><b>Edad:</b>  {{outfit.rango_edad}}</li>
+                <li class="list-group-item"><b>Talla:</b> {{outfit.talla}}</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
