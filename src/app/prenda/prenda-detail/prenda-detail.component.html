@@ -18,15 +18,15 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{prendaDetail.id}}</td>
+        <td class = "id">{{prendaDetail.id}}</td>
         <td><img src="{{prendaDetail.imagen}}" alt="{{prendaDetail.nombre}}"></td>
-        <td>{{prendaDetail.nombre}}</td>
-        <td>{{prendaDetail.precio}}</td>
+        <td class ="nombre">{{prendaDetail.nombre}}</td>
+        <td class = "precio">{{prendaDetail.precio}}</td>
         <td>{{prendaDetail.colores}}</td>
-        <td>{{prendaDetail.genero}}</td>
-        <td>{{prendaDetail.ocasiones}}</td>
+        <td class = "genero">{{prendaDetail.genero}}</td>
+        <td class = "ocasiones">{{prendaDetail.ocasiones}}</td>
         <td>{{prendaDetail.rango_edad}}</td>
-        <td>{{prendaDetail.talla}}</td>
+        <td class = "talla">{{prendaDetail.talla}}</td>
         <td>{{prendaDetail.marca.nombre}}</td>
         <td>
         <dd class="caption" *ngFor= "let outfit of prendaDetail.outfits" >
