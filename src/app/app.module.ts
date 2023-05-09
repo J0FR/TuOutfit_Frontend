@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OutfitModule } from './outfit/outfit.module';
+import { PrendaModule } from './prenda/prenda.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { OutfitModule } from './outfit/outfit.module';
     BrowserModule,
     AppRoutingModule,
     OutfitModule,
+    PrendaModule,
     HttpClientModule
   ],
   providers: [],
