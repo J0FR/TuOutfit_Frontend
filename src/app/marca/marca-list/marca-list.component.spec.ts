@@ -65,6 +65,7 @@ describe('MarcaListComponent', () => {
     })
   });
 
+
   it('should have 10 <p.card-text> elements', () => {
     expect(debug.queryAll(By.css('p.card-text'))).toHaveSize(10)
   });
