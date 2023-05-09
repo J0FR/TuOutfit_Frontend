@@ -10,9 +10,9 @@
         <th scope="col">Precio</th>
         <th scope="col">Color</th>
         <th scope="col">Genero</th>
-        <th scope="col">Ocacion</th>
         <th scope="col">Edad</th>
         <th scope="col">Talla</th>
+        <th scope="col">Prendas</th>
       </tr>
     </thead>
     <tbody>
@@ -24,10 +24,13 @@
         <td>{{outfitDetail.precio}}</td>
         <td>{{outfitDetail.colores}}</td>
         <td>{{outfitDetail.genero}}</td>
-        <td>{{outfitDetail.ocasiones}}</td>
         <td>{{outfitDetail.rango_edad}}</td>
         <td>{{outfitDetail.talla}}</td>
+        <td><dd class="caption" *ngFor="let prenda of outfitDetailMas.prendas">
+          <p>{{ prenda.id }}</p>
+          </dd></td>
       </tr>
     </tbody>
   </table>
 </div>
+
