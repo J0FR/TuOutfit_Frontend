@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Outfit } from '../outfit';
+import { OutfitDetail } from '../outfitDetail';
 
 @Component({
   selector: 'app-outfit-detail',
@@ -8,11 +9,16 @@ import { Outfit } from '../outfit';
 })
 export class OutfitDetailComponent implements OnInit {
 
+
+
   @Input() outfitDetail!: Outfit;
+  outfitDetailMas!: OutfitDetail;
 
   constructor() { }
 
   ngOnInit() {
   }
+
+
 
 }
