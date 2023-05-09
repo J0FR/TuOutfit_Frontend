@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
 import { Observable} from 'rxjs';
-import { Prenda } from './prenda';
+import { PrendaDetail } from './prenda-detail/PrendaDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,8 @@ export class PrendaService {
 
   constructor(private http: HttpClient) { }
 
-  getPrendas() : Observable<Prenda[]>{
-    return this.http.get<Prenda[]>(this.apiurl);
+  getPrendas() : Observable<PrendaDetail[]>{
+    return this.http.get<PrendaDetail[]>(this.apiurl);
   }
 
 }

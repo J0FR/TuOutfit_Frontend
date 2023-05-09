@@ -12,6 +12,8 @@
         <th scope="col">Ocacion</th>
         <th scope="col">Edad</th>
         <th scope="col">Talla</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Outfits</th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +27,13 @@
         <td>{{prendaDetail.ocasiones}}</td>
         <td>{{prendaDetail.rango_edad}}</td>
         <td>{{prendaDetail.talla}}</td>
+        <td>{{prendaDetail.marca.nombre}}</td>
+        <td>
+        <dd class="caption" *ngFor= "let outfit of prendaDetail.outfits" >
+          {{outfit.nombre}}
+        </dd>
+        </td>
+
       </tr>
     </tbody>
   </table>
