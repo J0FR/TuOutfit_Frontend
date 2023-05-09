@@ -52,9 +52,44 @@ describe('OutfitDetailComponent', () => {
     debug = fixture.debugElement;
   });
 
-  it('should have a td.id element with outfitDetail.name', () => {
+  it('should have a td.id element with outfitDetail.id', () => {
     const element: HTMLElement = debug.query(By.css('td.id')).nativeElement;
     expect(element.textContent).toContain(component.outfitDetail.id);
+  });
+
+  it('should have a td.descripcion element with outfitDetail.descripcion', () => {
+    const element: HTMLElement = debug.query(By.css('td.descripcion')).nativeElement;
+    expect(element.textContent).toContain(component.outfitDetail.descripcion);
+  });
+
+  it('should have a td.nombre element with outfitDetail.name', () => {
+    const element: HTMLElement = debug.query(By.css('td.nombre')).nativeElement;
+    expect(element.textContent).toContain(component.outfitDetail.nombre);
+  });
+
+  it('should have a td.precio element with outfitDetail.precio', () => {
+    const element: HTMLElement = debug.query(By.css('td.precio')).nativeElement;
+    expect(element.textContent).toContain(component.outfitDetail.precio);
+  });
+
+  it('should have a td.colores element with outfitDetail.colores', () => {
+    const element: HTMLElement = debug.query(By.css('td.colores')).nativeElement;
+    expect(element.textContent).toContain(component.outfitDetail.colores);
+  });
+
+  it('should have a td.genero element with outfitDetail.genero', () => {
+    const element: HTMLElement = debug.query(By.css('td.genero')).nativeElement;
+    expect(element.textContent).toContain(component.outfitDetail.genero);
+  });
+
+  it('should have a td.rango_edad element with outfitDetail.rango_edad', () => {
+    const element: HTMLElement = debug.query(By.css('td.rango_edad')).nativeElement;
+    expect(element.textContent).toContain(component.outfitDetail.rango_edad);
+  });
+
+  it('should have a td.talla element with outfitDetail.talla', () => {
+    const element: HTMLElement = debug.query(By.css('td.talla')).nativeElement;
+    expect(element.textContent).toContain(component.outfitDetail.talla);
   });
 
   it('should have an img element with src= outfitDetail.image', () => {
@@ -72,7 +107,6 @@ describe('OutfitDetailComponent', () => {
   it('should have 3 <dd> elements', () => {
     expect(debug.queryAll(By.css('dd.caption'))).toHaveSize(3)
   });
-
 
   it('should have one td tag for component.outfitDetail.nombre', () => {
     const allDt : DebugElement[] = debug.queryAll(By.css('td'));
