@@ -6,11 +6,17 @@
   </div>
 </section>
 
+<div *ngIf="selected">
+  <app-outfit-detail [outfitDetail]="selectedOutfit"></app-outfit-detail>
+</div>
+
+ <hr />
+
 <div class="album py-5" style="background-color: white">
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col" *ngFor="let outfit of outfits">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm" (click)="onSelected(outfit)">
           <img src="{{outfit.imagen}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="{{outfit.nombre}}">
           <div class="card-body">
             <p class="card-text">{{outfit.nombre}}</p>
