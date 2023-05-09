@@ -1,3 +1,4 @@
+import { Prenda } from '../prenda/prenda';
 
 export class Outfit {
   id: number;
@@ -11,9 +12,9 @@ export class Outfit {
   rango_edad: string;
   talla: string;
   // comentarios: Comentario[];
-  // prendas: Prenda[];
+  //prendas: Prenda[];
 
-  constructor (id: number, descripcion: string, imagen: string, nombre: string, precio: number, colores: string, genero: string, ocasiones: string, rango_edad: string, talla: string
+  constructor (id: number, descripcion: string, imagen: string, nombre: string, precio: number, colores: string, genero: string, ocasiones: string, rango_edad: string, talla: string,
     // , comentarios: Comentario[], prendas: Prenda[]
     ) {
     this.id = id;
@@ -27,6 +28,6 @@ export class Outfit {
     this.rango_edad = rango_edad;
     this.talla = talla;
     // this.comentarios = comentarios;
-    // this.prendas = prendas;
+     //this.prendas = prendas;
   }
 }
