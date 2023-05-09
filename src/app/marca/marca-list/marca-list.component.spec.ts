@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Marca } from '../marca';
 import { MarcaService } from '../marca.service';
 import { provideRoutes } from '@angular/router';
+import { MarcaDetail } from '../marcaDetail';
 
 
 describe('MarcaListComponent', () => {
@@ -31,7 +32,7 @@ describe('MarcaListComponent', () => {
     component = fixture.componentInstance;
 
     for(let i = 0; i < 10; i++) {
-    const marca = new Marca(faker.datatype.number(), faker.lorem.sentence(), faker.lorem.sentence(),faker.image.imageUrl(), faker.lorem.sentence());
+    const marca = new MarcaDetail(faker.datatype.number(), faker.lorem.sentence(), faker.lorem.sentence(),faker.image.imageUrl(), faker.lorem.sentence(),[]);
     component.marcas.push(marca);
     }
     fixture.detectChanges();
