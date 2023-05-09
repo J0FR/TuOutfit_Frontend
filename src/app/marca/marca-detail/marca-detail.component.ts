@@ -1,5 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
 import { Marca } from '../marca';
+import { MarcaDetail } from '../marcaDetail';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Marca } from '../marca';
 })
 export class MarcaDetailComponent implements OnInit {
 
-  @Input() marcaDetail!: Marca;
+  @Input() marcaDetail!: MarcaDetail;
 
   constructor() { }
 

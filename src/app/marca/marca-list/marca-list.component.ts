@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Marca } from '../marca';
 import { MarcaService } from '../marca.service';
+import { MarcaDetail } from '../marcaDetail';
 
 @Component({
   selector: 'app-marca-list',
@@ -9,9 +10,9 @@ import { MarcaService } from '../marca.service';
 })
 export class MarcaListComponent implements OnInit {
 
-  marcas: Array<Marca> = [];
+  marcas: Array<MarcaDetail> = [];
   constructor(private marcaService: MarcaService) { }
-  selectedMarca!: Marca;
+  selectedMarca!: MarcaDetail;
   selected = false;
   getMarcas(): void {
     this.marcaService.getMarcas().subscribe((marcas) => {
@@ -19,7 +20,7 @@ export class MarcaListComponent implements OnInit {
   });
   }
 
-  onSelected(marca: Marca): void {
+  onSelected(marca: MarcaDetail): void {
     this.selected = true;
     this.selectedMarca = marca;
   }

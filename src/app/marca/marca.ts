@@ -4,7 +4,6 @@ export class Marca {
   url_sitio_web: string;
   logo: string;
   detalle_de_marca: string;
-  prendas: any;
 
 
   constructor(id: number, nombre: string, url_sitio_web: string, logo: string, detalle_de_marca: string) {

@@ -1,0 +1,45 @@
+<testExecutions version="1">
+  <file path="src/app/prenda/PrendaService.service.spec.ts">
+    <testCase name="Service: Prenda should ..." duration="10"/>
+  </file>
+  <file path="src/app/outfit/outfit-list/outfit-list.component.spec.ts">
+    <testCase name="OutfitListComponent should have 10 &lt;div.col> elements" duration="34"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.card-body> elements" duration="7"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="8"/>
+    <testCase name="OutfitListComponent should create" duration="8"/>
+    <testCase name="OutfitListComponent should have 10 &lt;p.card-text> elements" duration="11"/>
+    <testCase name="OutfitListComponent should have the corresponding src to the outfits image and alt to the outfits name" duration="13"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="11"/>
+    <testCase name="OutfitListComponent should have 10 &lt;img> elements" duration="7"/>
+  </file>
+  <file path="src/app/outfit/outfit.service.spec.ts">
+    <testCase name="Service: Outfit should ..." duration="1"/>
+  </file>
+  <file path="src/app/marca/marca-list/marca-list.component.spec.ts">
+    <testCase name="MarcaListComponent should have 10 &lt;p.card-text> elements" duration="10"/>
+    <testCase name="MarcaListComponent should have the corresponding src to the marcas image and alt to the marcas name" duration="5"/>
+    <testCase name="MarcaListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="5"/>
+    <testCase name="MarcaListComponent should create" duration="3"/>
+    <testCase name="MarcaListComponent should have 10 &lt;div.col> elements" duration="4"/>
+    <testCase name="MarcaListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="5"/>
+    <testCase name="MarcaListComponent should have 10 &lt;div.card-body> elements" duration="4"/>
+    <testCase name="MarcaListComponent should have 10 &lt;img> elements" duration="4"/>
+  </file>
+  <file path="src/app/marca/marca.service.spec.ts">
+    <testCase name="Service: Marca should ..." duration="1"/>
+  </file>
+  <file path="src/app/prenda/prenda-list/prenda-list.component.spec.ts">
+    <testCase name="PrendaListComponent should have 10 &lt;p.card-text> elements" duration="10"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="4"/>
+    <testCase name="PrendaListComponent should have the corresponding src to the prendas image and alt to the prendas name" duration="5"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.card-body> elements" duration="4"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="4"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.col> elements" duration="6"/>
+    <testCase name="PrendaListComponent should create" duration="3"/>
+    <testCase name="PrendaListComponent should have 10 &lt;img> elements" duration="4"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="6"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="2"/>
+  </file>
+</testExecutions>
