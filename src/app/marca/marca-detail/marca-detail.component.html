@@ -13,14 +13,14 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{marcaDetail.id}}</td>
-        <td>{{marcaDetail.nombre}}</td>
-        <td>{{marcaDetail.url_sitio_web}}</td>
+        <td class="id">{{marcaDetail.id}}</td>
+        <td class="name">{{marcaDetail.nombre}}</td>
+        <td class="url">{{marcaDetail.url_sitio_web}}</td>
         <td><img src="{{marcaDetail.logo}}" alt="{{marcaDetail.nombre}}"></td>
-        <td>{{marcaDetail.detalle_de_marca}}</td>
-        <dd class="caption" *ngFor="let prenda of marcaDetail.prendas">
-        {{ prenda.nombre }}
-      </dd>
+        <td class="detalle">{{marcaDetail.detalle_de_marca}}</td>
+        <td><dd class="caption" *ngFor="let prenda of marcaDetail.prendas">
+          <p class="h3 p-3">{{ prenda.nombre }}</p>
+          </dd></td>
       </tr>
     </tbody>
   </table>
