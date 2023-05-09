@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrendaListComponent } from './prenda-list/prenda-list.component';
+import { PrendaDetailComponent } from './prenda-detail/prenda-detail.component';
 
 
 @NgModule({
@@ -8,6 +9,6 @@ import { PrendaListComponent } from './prenda-list/prenda-list.component';
     CommonModule
   ],
   exports: [PrendaListComponent],
-  declarations: [PrendaListComponent]
+  declarations: [PrendaListComponent, PrendaDetailComponent]
 })
 export class PrendaModule { }

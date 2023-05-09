@@ -11,11 +11,17 @@ export class MarcaListComponent implements OnInit {
 
   marcas: Array<Marca> = [];
   constructor(private marcaService: MarcaService) { }
-
+  selectedMarca!: Marca;
+  selected = false;
   getMarcas(): void {
     this.marcaService.getMarcas().subscribe((marcas) => {
       this.marcas = marcas;
   });
+  }
+
+  onSelected(marca: Marca): void {
+    this.selected = true;
+    this.selectedMarca = marca;
   }
 
   ngOnInit(): void {
