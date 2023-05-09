@@ -9,7 +9,7 @@ import { OutfitDetail } from '../outfitDetail';
 })
 export class OutfitDetailComponent implements OnInit {
 
-
+  outfits: Array<OutfitDetail> = [];
 
   @Input() outfitDetail!: OutfitDetail;
 

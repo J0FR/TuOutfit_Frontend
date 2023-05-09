@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{outfitDetail.id}}</td>
+        <td class="id">{{outfitDetail.id}}</td>
         <td>{{outfitDetail.descripcion}}</td>
         <td><img src="{{outfitDetail.imagen}}" alt="{{outfitDetail.nombre}}"></td>
         <td>{{outfitDetail.nombre}}</td>
@@ -27,10 +27,12 @@
         <td>{{outfitDetail.rango_edad}}</td>
         <td>{{outfitDetail.talla}}</td>
         <td><dd class="caption" *ngFor="let prenda of outfitDetail.prendas ">
-          <p>{{ prenda.nombre}}</p>
+          <p class="h3 p-3">{{ prenda.nombre }}</p>
           </dd></td>
       </tr>
     </tbody>
   </table>
 </div>
+
+
 
