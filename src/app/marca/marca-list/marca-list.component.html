@@ -1,10 +1,16 @@
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="fw-light" id="marcas">Marcas</h1>
+      <h1 class="fw-light" id="Marcas">Marcas</h1>
     </div>
   </div>
 </section>
+
+<div *ngIf="selected">
+  <app-marca-detail [marcaDetail]="selectedMarca"></app-marca-detail>
+</div>
+
+ <hr />
 
 <div class="album py-5" style="background-color: rgb(255, 255, 255)">
   <div class="container">
