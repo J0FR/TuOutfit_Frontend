@@ -6,6 +6,11 @@
   </div>
 </section>
 
+
+<div *ngIf="selected">
+  <app-prenda-detail [prendaDetail]="selectedPrenda"></app-prenda-detail>
+</div>
+
 <div class="album py-5" style="background-color: white">
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

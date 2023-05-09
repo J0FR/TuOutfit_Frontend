@@ -9,6 +9,8 @@ import { PrendaService } from '../Prenda.service'
 })
 export class PrendaListComponent implements OnInit {
   prendas : Array<Prenda> = [];
+  selectedPrenda!: Prenda;
+  selected = false;
 
   constructor(private PrendaService: PrendaService) { }
 
@@ -16,6 +18,11 @@ export class PrendaListComponent implements OnInit {
     this.PrendaService.getPrendas().subscribe((prendas) => {
       this.prendas = prendas;
     });
+  }
+
+  onSelected(prenda: Prenda): void {
+    this.selected = true;
+    this.selectedPrenda = prenda;
   }
 
   ngOnInit() {
