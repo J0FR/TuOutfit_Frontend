@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Marca } from './marca';
+import { MarcaDetail } from './marcaDetail';
 
 
 @Injectable({
@@ -14,8 +15,8 @@ export class MarcaService {
 
 constructor(private http: HttpClient) { }
 
-  getMarcas(): Observable<Marca[]> {
-    return this.http.get<Marca[]>(this.apiUrl);
+  getMarcas(): Observable<MarcaDetail[]> {
+    return this.http.get<MarcaDetail[]>(this.apiUrl);
   }
 
 }

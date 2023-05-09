@@ -16,7 +16,11 @@
         <td>{{marcaDetail.nombre}}</td>
         <td>{{marcaDetail.url_sitio_web}}</td>
         <td><img src="{{marcaDetail.logo}}" alt="{{marcaDetail.nombre}}"></td>
-        <td>{{marcaDetail.detalle_marca}}</td>
+        <td>{{marcaDetail.detalle_de_marca}}</td>
+        <dt>Authors</dt>
+        <dd class="caption" *ngFor="let author of marcaDetail.prendas">
+        {{ author.name }}
+      </dd>
       </tr>
     </tbody>
   </table>

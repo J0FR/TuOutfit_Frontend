@@ -1,6 +1,7 @@
 import { Component,Input, OnInit } from '@angular/core';
 import { Marca } from '../marca';
 
+
 @Component({
   selector: 'app-marca-detail',
   templateUrl: './marca-detail.component.html',
