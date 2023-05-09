@@ -1,0 +1,23 @@
+<<div class="text-center">
+  <h1>Listado Marcas</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nommbre</th>
+        <th scope="col">url_sitio_web</th>
+        <th scope="col">Logo</th>
+        <th scope="col">Detalle de Marca</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let marca of marcas">
+      <tr>
+        <td>{{marca.id}}</td>
+        <td>{{marca.nombre}}</td>
+        <td>{{marca.url_sitio_web}}</td>
+        <td><img src="{{marca.logo}}" alt="{{marca.nombre}}"></td>
+        <td>{{marca.detalle_marca}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
