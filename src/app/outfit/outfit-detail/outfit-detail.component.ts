@@ -11,8 +11,7 @@ export class OutfitDetailComponent implements OnInit {
 
 
 
-  @Input() outfitDetail!: Outfit;
-  outfitDetailMas!: OutfitDetail;
+  @Input() outfitDetail!: OutfitDetail;
 
   constructor() { }
 

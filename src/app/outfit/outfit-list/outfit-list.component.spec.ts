@@ -8,6 +8,7 @@ import { OutfitListComponent } from './outfit-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OutfitService } from '../outfit.service';
 import { Outfit } from '../outfit';
+import { OutfitDetail } from '../outfitDetail';
 
 describe('OutfitListComponent', () => {
   let component: OutfitListComponent;
@@ -28,7 +29,7 @@ describe('OutfitListComponent', () => {
     component = fixture.componentInstance;
 
     for(let i = 0; i < 10; i++) {
-      const outfit = new Outfit(
+      const outfit = new OutfitDetail(
         faker.datatype.number(),
         faker.lorem.sentence(),
         faker.image.imageUrl(),
@@ -38,7 +39,7 @@ describe('OutfitListComponent', () => {
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence(),
+        faker.lorem.sentence(),[]
         );
         component.outfits.push(outfit);
       }
