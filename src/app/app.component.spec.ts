@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { OutfitListComponent } from './outfit/outfit-list/outfit-list.component';
 import { MarcaListComponent } from './marca/marca-list/marca-list.component';
 
+import { PrendaListComponent } from './prenda/prenda-list/prenda-list.component';
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
