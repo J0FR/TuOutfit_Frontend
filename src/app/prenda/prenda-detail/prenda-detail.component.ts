@@ -1,5 +1,6 @@
 import { Component, Input ,OnInit } from '@angular/core';
 import { Prenda } from '../prenda';
+import { PrendaDetail } from './PrendaDetail';
 
 @Component({
   selector: 'app-prenda-detail',
@@ -8,7 +9,7 @@ import { Prenda } from '../prenda';
 })
 export class PrendaDetailComponent implements OnInit {
 
-  @Input() prendaDetail!: Prenda;
+  @Input() prendaDetail!: PrendaDetail;
 
   constructor() { }
 
