@@ -1,1 +1,64 @@
-<testExecutions version="1"/>
+<testExecutions version="1">
+  <file path="src/app/marca/marca.service.spec.ts">
+    <testCase name="Service: Marca should ..." duration="8"/>
+  </file>
+  <file path="src/app/marca/marca-list/marca-list.component.spec.ts">
+    <testCase name="MarcaListComponent should have 10 &lt;div.card-body> elements" duration="243">
+      <failure message="Error">TypeError: Cannot read properties of undefined (reading 'queryAll')
+    at UserContext.&lt;anonymous&gt; (src/app/marca/marca-list/marca-list.component.spec.ts:73:18)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:1)
+    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:1)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:567:1)
+    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/fesm2015/zone-testing.js:582:1)
+    at &lt;Jasmine&gt;
+</failure>
+    </testCase>
+    <testCase name="MarcaListComponent should create" duration="5"/>
+    <testCase name="MarcaListComponent should have 10 &lt;img> elements" duration="4">
+      <failure message="Error">TypeError: Cannot read properties of undefined (reading 'queryAll')
+    at UserContext.&lt;anonymous&gt; (src/app/marca/marca-list/marca-list.component.spec.ts:69:18)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:1)
+    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:1)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:567:1)
+    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/fesm2015/zone-testing.js:582:1)
+    at &lt;Jasmine&gt;
+</failure>
+    </testCase>
+    <testCase name="MarcaListComponent should have 10 &lt;card.p-2> elements" duration="4">
+      <failure message="Error">TypeError: Cannot read properties of undefined (reading 'queryAll')
+    at UserContext.&lt;anonymous&gt; (src/app/marca/marca-list/marca-list.component.spec.ts:65:18)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:371:1)
+    at Zone.run (node_modules/zone.js/fesm2015/zone.js:134:1)
+    at runInTestZone (node_modules/zone.js/fesm2015/zone-testing.js:567:1)
+    at UserContext.&lt;anonymous&gt; (node_modules/zone.js/fesm2015/zone-testing.js:582:1)
+    at &lt;Jasmine&gt;
+</failure>
+    </testCase>
+    <testCase name="MarcaListComponent should create" duration="8"/>
+    <testCase name="MarcaListComponent should have 10 &lt;div.col.mb-2> elements" duration="9">
+      <failure message="Error">Error: Expected [  ] to have size 10.
+    at &lt;Jasmine&gt;
+    at UserContext.&lt;anonymous&gt; (src/app/marca/marca-list/marca-list.component.spec.ts:61:52)
+    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
+    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
+</failure>
+    </testCase>
+  </file>
+  <file path="src/app/outfit/outfit.service.spec.ts">
+    <testCase name="Service: Outfit should ..." duration="3"/>
+  </file>
+  <file path="src/app/outfit/outfit-list/outfit-list.component.spec.ts">
+    <testCase name="OutfitListComponent should create" duration="14"/>
+    <testCase name="OutfitListComponent should have 10 &lt;img> elements" duration="11"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="6"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="2"/>
+  </file>
+</testExecutions>
