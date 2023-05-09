@@ -1,5 +1,5 @@
 <div class="text-center">
-  <h1>Outfit Detallado</h1>
+  <h1>Marca Detallada</h1>
   <table class="table table-bordered">
     <thead>
       <tr>
@@ -8,6 +8,7 @@
         <th scope="col">Url Sitio Web</th>
         <th scope="col">logo</th>
         <th scope="col">detalle marca</th>
+        <th scope="col">Prendas</th>
       </tr>
     </thead>
     <tbody>
@@ -17,9 +18,8 @@
         <td>{{marcaDetail.url_sitio_web}}</td>
         <td><img src="{{marcaDetail.logo}}" alt="{{marcaDetail.nombre}}"></td>
         <td>{{marcaDetail.detalle_de_marca}}</td>
-        <dt>Authors</dt>
-        <dd class="caption" *ngFor="let author of marcaDetail.prendas">
-        {{ author.name }}
+        <dd class="caption" *ngFor="let prenda of marcaDetail.prendas">
+        {{ prenda.nombre }}
       </dd>
       </tr>
     </tbody>
