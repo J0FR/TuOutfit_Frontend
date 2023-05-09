@@ -85,6 +85,22 @@ describe('OutfitListComponent', () => {
     expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(10)
   });
 
+  it('should have p.card-text tag with the outfit.name', () => {
+    debug.queryAll(By.css('p.card-text')).forEach((h5, i)=>{
+      expect(h5.nativeElement.textContent).toContain(component.outfits[i].nombre)
+    });
+  });
+
+  it('should have 9 <div.col> elements and the deleted outfit should not exist', () => {
+    const outfit = component.outfits.pop()!;
+    fixture.detectChanges();
+    expect(debug.queryAll(By.css('div.col'))).toHaveSize(9)
+
+    debug.queryAll(By.css('div.col')).forEach((selector, i)=>{
+      expect(selector.nativeElement.textContent).not.toContain(outfit.nombre);
+    });
+  });
+
 });
 
 
