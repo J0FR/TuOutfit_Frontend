@@ -55,15 +55,12 @@ describe('PrendaListComponent', () => {
     expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(10)
   });
 
-//   it('should have the corresponding src to the prendas image and alt to the prendas name', () => {
-  // debug.queryAll(By.css('img')).forEach((img, i)=>{
-    // expect(img.attributes['src']).toEqual(
-      // component.prendas[i].imagen)
-//
-    // expect(img.attributes['alt']).toEqual(
-      // component.prendas[i].nombre)
-  // })
-// });
+   it('should have the corresponding src to the prendas image and alt to the prendas name', () => {
+   debug.queryAll(By.css('img')).forEach((img, i)=>{
+     expect(img.attributes['src']).toEqual(
+       component.prendas[i].imagen);
+})
+ });
 
   it('should have 10 <p.card-text> elements', () => {
     expect(debug.queryAll(By.css('p.card-text'))).toHaveSize(10)
