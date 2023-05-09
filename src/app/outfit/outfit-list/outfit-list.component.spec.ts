@@ -2,16 +2,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { faker } from '@faker-js/faker';
 
 import { OutfitListComponent } from './outfit-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OutfitService } from '../outfit.service';
+import { Outfit } from '../outfit';
 
 describe('OutfitListComponent', () => {
   let component: OutfitListComponent;
   let fixture: ComponentFixture<OutfitListComponent>;
+  let debug: DebugElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ OutfitListComponent ]
+      imports: [HttpClientModule],
+      declarations: [ OutfitListComponent ],
+      providers: [ OutfitService ]
     })
     .compileComponents();
   }));
@@ -19,10 +26,34 @@ describe('OutfitListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(OutfitListComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+
+    for(let i = 0; i < 10; i++) {
+      const outfit = new Outfit(
+        faker.datatype.number(),
+        faker.lorem.sentence(),
+        faker.image.imageUrl(),
+        faker.name.firstName(),
+        faker.datatype.number(),
+        faker.color.human(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        faker.lorem.sentence(),
+        );
+        component.outfits.push(outfit);
+      }
+      fixture.detectChanges();
+      debug = fixture.debugElement;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have 10 <img> elements', () => {
+    expect(debug.queryAll(By.css('img'))).toHaveSize(10)
+  });
 });
+
+
+
