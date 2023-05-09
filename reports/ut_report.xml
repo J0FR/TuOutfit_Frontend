@@ -1,1 +1,25 @@
-<testExecutions version="1"/>
+<testExecutions version="1">
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="34"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="5"/>
+  </file>
+  <file path="src/app/prenda/prenda-list/prenda-list.component.spec.ts">
+    <testCase name="PrendaListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="24"/>
+    <testCase name="PrendaListComponent should create" duration="7"/>
+    <testCase name="PrendaListComponent should have 10 &lt;img> elements" duration="10"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.card-body> elements" duration="6"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.col> elements" duration="5"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="5"/>
+    <testCase name="PrendaListComponent should have 10 &lt;p.card-text> elements" duration="5"/>
+  </file>
+  <file path="src/app/prenda/PrendaService.service.spec.ts">
+    <testCase name="Service: Prenda should ..." duration="1"/>
+  </file>
+  <file path="src/app/outfit/outfit.service.spec.ts">
+    <testCase name="Service: Outfit should ..." duration="1"/>
+  </file>
+  <file path="src/app/outfit/outfit-list/outfit-list.component.spec.ts">
+    <testCase name="OutfitListComponent should create" duration="3"/>
+    <testCase name="OutfitListComponent should have 10 &lt;img> elements" duration="4"/>
+  </file>
+</testExecutions>
