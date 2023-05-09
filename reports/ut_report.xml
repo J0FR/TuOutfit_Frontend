@@ -1,13 +1,1 @@
-<testExecutions version="1">
-  <file path="src/app/outfit/outfit.service.spec.ts">
-    <testCase name="Service: Outfit should ..." duration="18"/>
-  </file>
-  <file path="src/app/outfit/outfit-list/outfit-list.component.spec.ts">
-    <testCase name="OutfitListComponent should have 10 &lt;img> elements" duration="88"/>
-    <testCase name="OutfitListComponent should create" duration="17"/>
-  </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="16"/>
-    <testCase name="AppComponent should create the app" duration="7"/>
-  </file>
-</testExecutions>
+<testExecutions version="1"/>
