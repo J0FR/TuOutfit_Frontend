@@ -1,20 +1,13 @@
 <testExecutions version="1">
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="65"/>
-    <testCase name="AppComponent should create the app" duration="7"/>
-    <testCase name="AppComponent should render title" duration="62">
-      <failure message="Error">Error: Expected undefined to contain 'base-project app is running!'.
-    at &lt;Jasmine&gt;
-    at UserContext.&lt;anonymous&gt; (src/app/app.component.spec.ts:31:66)
-    at _ZoneDelegate.invoke (node_modules/zone.js/fesm2015/zone.js:372:1)
-    at ProxyZoneSpec.onInvoke (node_modules/zone.js/fesm2015/zone-testing.js:287:1)
-</failure>
-    </testCase>
+  <file path="src/app/outfit/outfit.service.spec.ts">
+    <testCase name="Service: Outfit should ..." duration="18"/>
   </file>
   <file path="src/app/outfit/outfit-list/outfit-list.component.spec.ts">
-    <testCase name="OutfitListComponent should create" duration="11"/>
+    <testCase name="OutfitListComponent should have 10 &lt;img> elements" duration="88"/>
+    <testCase name="OutfitListComponent should create" duration="17"/>
   </file>
-  <file path="src/app/outfit/outfit.service.spec.ts">
-    <testCase name="Service: Outfit should ..." duration="4"/>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'base-project'" duration="16"/>
+    <testCase name="AppComponent should create the app" duration="7"/>
   </file>
 </testExecutions>
