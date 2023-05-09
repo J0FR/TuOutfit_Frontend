@@ -1,0 +1,61 @@
+<testExecutions version="1">
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="196"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="47"/>
+  </file>
+  <file path="src/app/outfit/outfit-list/outfit-list.component.spec.ts">
+    <testCase name="OutfitListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="124"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.col> elements" duration="83"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.card-body> elements" duration="69"/>
+    <testCase name="OutfitListComponent should have 10 &lt;img> elements" duration="43"/>
+    <testCase name="OutfitListComponent should create" duration="34"/>
+    <testCase name="OutfitListComponent should have the corresponding src to the outfits image and alt to the outfits name" duration="45"/>
+    <testCase name="OutfitListComponent should have 10 &lt;p.card-text> elements" duration="28"/>
+    <testCase name="OutfitListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="57"/>
+  </file>
+  <file path="src/app/outfit/outfit-detail/outfit-detail.component.spec.ts">
+    <testCase name="OutfitDetailComponent should create" duration="82">
+      <failure message="Error">TypeError: Cannot read properties of undefined (reading 'id')
+    at OutfitDetailComponent_Template (ng:///OutfitDetailComponent.js:74:50)
+    at executeTemplate (node_modules/@angular/core/fesm2015/core.mjs:9618:1)
+    at refreshView (node_modules/@angular/core/fesm2015/core.mjs:9484:1)
+    at refreshComponent (node_modules/@angular/core/fesm2015/core.mjs:10655:1)
+    at refreshChildComponents (node_modules/@angular/core/fesm2015/core.mjs:9280:1)
+    at refreshView (node_modules/@angular/core/fesm2015/core.mjs:9534:1)
+    at renderComponentOrTemplate (node_modules/@angular/core/fesm2015/core.mjs:9598:1)
+    at tickRootContext (node_modules/@angular/core/fesm2015/core.mjs:10829:1)
+    at detectChangesInRootView (node_modules/@angular/core/fesm2015/core.mjs:10854:1)
+    at RootViewRef.detectChanges (node_modules/@angular/core/fesm2015/core.mjs:21451:1)
+</failure>
+    </testCase>
+  </file>
+  <file path="src/app/marca/marca.service.spec.ts">
+    <testCase name="Service: Marca should ..." duration="8"/>
+  </file>
+  <file path="src/app/marca/marca-list/marca-list.component.spec.ts">
+    <testCase name="MarcaListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="23"/>
+    <testCase name="MarcaListComponent should have the corresponding src to the marcas image and alt to the marcas name" duration="33"/>
+    <testCase name="MarcaListComponent should have 10 &lt;img> elements" duration="25"/>
+    <testCase name="MarcaListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="15"/>
+    <testCase name="MarcaListComponent should have 10 &lt;p.card-text> elements" duration="38"/>
+    <testCase name="MarcaListComponent should have 10 &lt;div.col> elements" duration="17"/>
+    <testCase name="MarcaListComponent should have 10 &lt;div.card-body> elements" duration="21"/>
+    <testCase name="MarcaListComponent should create" duration="12"/>
+  </file>
+  <file path="src/app/prenda/PrendaService.service.spec.ts">
+    <testCase name="Service: Prenda should ..." duration="6"/>
+  </file>
+  <file path="src/app/outfit/outfit.service.spec.ts">
+    <testCase name="Service: Outfit should ..." duration="6"/>
+  </file>
+  <file path="src/app/prenda/prenda-list/prenda-list.component.spec.ts">
+    <testCase name="PrendaListComponent should have 10 &lt;p.card-text> elements" duration="40"/>
+    <testCase name="PrendaListComponent should create" duration="22"/>
+    <testCase name="PrendaListComponent should have the corresponding src to the prendas image and alt to the prendas name" duration="15"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.col> elements" duration="21"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.card-body> elements" duration="20"/>
+    <testCase name="PrendaListComponent should have 10 &lt;img> elements" duration="26"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="30"/>
+    <testCase name="PrendaListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="18"/>
+  </file>
+</testExecutions>
