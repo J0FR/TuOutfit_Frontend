@@ -18,14 +18,14 @@
     <tbody>
       <tr>
         <td class="id">{{outfitDetail.id}}</td>
-        <td>{{outfitDetail.descripcion}}</td>
+        <td class="descripcion">{{outfitDetail.descripcion}}</td>
         <td><img src="{{outfitDetail.imagen}}" alt="{{outfitDetail.nombre}}"></td>
-        <td>{{outfitDetail.nombre}}</td>
-        <td>{{outfitDetail.precio}}</td>
-        <td>{{outfitDetail.colores}}</td>
-        <td>{{outfitDetail.genero}}</td>
-        <td>{{outfitDetail.rango_edad}}</td>
-        <td>{{outfitDetail.talla}}</td>
+        <td class="nombre">{{outfitDetail.nombre}}</td>
+        <td class="precio">{{outfitDetail.precio}}</td>
+        <td class="colores">{{outfitDetail.colores}}</td>
+        <td class="genero">{{outfitDetail.genero}}</td>
+        <td class="rango_edad">{{outfitDetail.rango_edad}}</td>
+        <td class="talla">{{outfitDetail.talla}}</td>
         <td><dd class="caption" *ngFor="let prenda of outfitDetail.prendas ">
           <p class="h3 p-3">{{ prenda.nombre }}</p>
           </dd></td>
