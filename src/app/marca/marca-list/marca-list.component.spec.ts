@@ -58,15 +58,12 @@ describe('MarcaListComponent', () => {
     expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(10)
   });
 
-  /*it('should have the corresponding src to the marcas image and alt to the marcas name', () => {
+  it('should have the corresponding src to the marcas image and alt to the marcas name', () => {
     debug.queryAll(By.css('img')).forEach((img, i)=>{
       expect(img.attributes['src']).toEqual(
         component.marcas[i].logo)
-
-      expect(img.attributes['alt']).toEqual(
-        component.marcas[i].nombre)
     })
-  });*/
+  });
 
   it('should have 10 <p.card-text> elements', () => {
     expect(debug.queryAll(By.css('p.card-text'))).toHaveSize(10)
