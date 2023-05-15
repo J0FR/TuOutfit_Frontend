@@ -1,0 +1,41 @@
+<div class="text-center">
+  <h1>Prenda Detallado</h1>
+  <table class="table table-bordered">
+    <caption>Prenda Detalles</caption>
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Color</th>
+        <th scope="col">Genero</th>
+        <th scope="col">Ocacion</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Talla</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Outfits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class = "id">{{prendaDetail.id}}</td>
+        <td><img src="{{prendaDetail.imagen}}" alt="{{prendaDetail.nombre}}"></td>
+        <td class ="nombre">{{prendaDetail.nombre}}</td>
+        <td class = "precio">{{prendaDetail.precio}}</td>
+        <td>{{prendaDetail.colores}}</td>
+        <td class = "genero">{{prendaDetail.genero}}</td>
+        <td class = "ocasiones">{{prendaDetail.ocasiones}}</td>
+        <td>{{prendaDetail.rango_edad}}</td>
+        <td class = "talla">{{prendaDetail.talla}}</td>
+        <td>{{prendaDetail.marca.nombre}}</td>
+        <td>
+        <dd class="caption" *ngFor= "let outfit of prendaDetail.outfits" >
+          {{outfit.nombre}}
+        </dd>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

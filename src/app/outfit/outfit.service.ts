@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Outfit } from './outfit';
 import { Observable } from 'rxjs';
+import { OutfitDetail } from './outfitDetail';
 
 
 @Injectable({
@@ -14,8 +15,10 @@ export class OutfitService {
 
   constructor(private http: HttpClient) { }
 
-  getOutfits(): Observable<Outfit[]> {
-    return this.http.get<Outfit[]>(this.apiUrl);
+  getOutfits(): Observable<OutfitDetail[]> {
+    return this.http.get<OutfitDetail[]>(this.apiUrl);
   }
+
+
 
 }

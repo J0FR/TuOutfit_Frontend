@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Outfit } from '../outfit';
 import { OutfitService } from '../outfit.service';
+import { OutfitDetail } from '../outfitDetail';
 
 @Component({
   selector: 'app-outfit-list',
@@ -9,9 +9,9 @@ import { OutfitService } from '../outfit.service';
 })
 export class OutfitListComponent implements OnInit {
 
-  outfits: Array<Outfit> = [];
+  outfits: Array<OutfitDetail> = [];
   constructor(private outfitService: OutfitService) { }
-  selectedOutfit!: Outfit;
+  selectedOutfit!: OutfitDetail;
   selected = false;
 
   getOutfits(): void {
@@ -20,7 +20,7 @@ export class OutfitListComponent implements OnInit {
     });
   }
 
-  onSelected(outfit: Outfit): void {
+  onSelected(outfit: OutfitDetail): void {
     this.selected = true;
     this.selectedOutfit = outfit;
   }
