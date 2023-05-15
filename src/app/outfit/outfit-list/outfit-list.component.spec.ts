@@ -8,6 +8,7 @@ import { OutfitListComponent } from './outfit-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OutfitService } from '../outfit.service';
 import { Outfit } from '../outfit';
+import { OutfitDetail } from '../outfitDetail';
 
 describe('OutfitListComponent', () => {
   let component: OutfitListComponent;
@@ -28,7 +29,7 @@ describe('OutfitListComponent', () => {
     component = fixture.componentInstance;
 
     for(let i = 0; i < 10; i++) {
-      const outfit = new Outfit(
+      const outfit = new OutfitDetail(
         faker.datatype.number(),
         faker.lorem.sentence(),
         faker.image.imageUrl(),
@@ -38,7 +39,7 @@ describe('OutfitListComponent', () => {
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence(),
+        faker.lorem.sentence(),[]
         );
         component.outfits.push(outfit);
       }
@@ -82,6 +83,64 @@ describe('OutfitListComponent', () => {
 
   it('should have 10 <div.list-group.list-group-flush> elements', () => {
     expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(10)
+  });
+
+  it('should have p.card-text tag with the outfit.name', () => {
+    debug.queryAll(By.css('p.card-text')).forEach((h5, i)=>{
+      expect(h5.nativeElement.textContent).toContain(component.outfits[i].nombre)
+    });
+  });
+
+  it('should have 9 <div.col> elements and the deleted outfit should not exist', () => {
+    const outfit = component.outfits.pop()!;
+    fixture.detectChanges();
+    expect(debug.queryAll(By.css('div.col'))).toHaveSize(9)
+
+    debug.queryAll(By.css('div.col')).forEach((selector, i)=>{
+      expect(selector.nativeElement.textContent).not.toContain(outfit.nombre);
+    });
+  });
+
+  it('should display selected outfit detail when an outfit is selected', () => {
+    const outfit = component.outfits[0];
+    component.selected = true;
+    component.selectedOutfit = outfit;
+    fixture.detectChanges();
+
+    const outfitDetailElem = debug.query(By.css('app-outfit-detail'));
+    expect(outfitDetailElem).toBeTruthy();
+  });
+
+  it('should set selected and selectedOutfit when an outfit is clicked', () => {
+    const outfit = component.outfits[0];
+    component.onSelected(outfit);
+
+    expect(component.selected).toBeTrue();
+    expect(component.selectedOutfit).toBe(outfit);
+  });
+
+  it('should render outfit details correctly', () => {
+    const outfitElems = debug.queryAll(By.css('div.col'));
+
+    outfitElems.forEach((outfitElem, i) => {
+      const outfit = component.outfits[i];
+      const idElem = outfitElem.query(By.css('li.list-group-item:nth-child(1)'));
+      const descriptionElem = outfitElem.query(By.css('li.list-group-item:nth-child(2)'));
+
+      expect(idElem.nativeElement.textContent).toContain(outfit.id);
+      expect(descriptionElem.nativeElement.textContent).toContain(outfit.descripcion);
+    });
+  });
+
+  it('should include all necessary details for each outfit', () => {
+    component.outfits.forEach(outfit => {
+      expect(outfit.id).toBeDefined();
+      expect(outfit.descripcion).toBeDefined();
+    });
+  });
+
+  it('should render the correct number of outfits', () => {
+    expect(debug.queryAll(By.css('div.col'))).toHaveSize(component.outfits.length);
   });
 
 });

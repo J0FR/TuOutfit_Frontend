@@ -1,6 +1,7 @@
 <div class="text-center">
   <h1>Outfit Detallado</h1>
   <table class="table table-bordered">
+    <caption>Outfit Detalles</caption>
     <thead>
       <tr>
         <th scope="col">Id</th>
@@ -10,24 +11,29 @@
         <th scope="col">Precio</th>
         <th scope="col">Color</th>
         <th scope="col">Genero</th>
-        <th scope="col">Ocacion</th>
         <th scope="col">Edad</th>
         <th scope="col">Talla</th>
+        <th scope="col">Prendas</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{outfitDetail.id}}</td>
-        <td>{{outfitDetail.descripcion}}</td>
+        <td class="id">{{outfitDetail.id}}</td>
+        <td class="descripcion">{{outfitDetail.descripcion}}</td>
         <td><img src="{{outfitDetail.imagen}}" alt="{{outfitDetail.nombre}}"></td>
-        <td>{{outfitDetail.nombre}}</td>
-        <td>{{outfitDetail.precio}}</td>
-        <td>{{outfitDetail.colores}}</td>
-        <td>{{outfitDetail.genero}}</td>
-        <td>{{outfitDetail.ocasiones}}</td>
-        <td>{{outfitDetail.rango_edad}}</td>
-        <td>{{outfitDetail.talla}}</td>
+        <td class="nombre">{{outfitDetail.nombre}}</td>
+        <td class="precio">{{outfitDetail.precio}}</td>
+        <td class="colores">{{outfitDetail.colores}}</td>
+        <td class="genero">{{outfitDetail.genero}}</td>
+        <td class="rango_edad">{{outfitDetail.rango_edad}}</td>
+        <td class="talla">{{outfitDetail.talla}}</td>
+        <td><dd class="caption" *ngFor="let prenda of outfitDetail.prendas ">
+          <p class="h3 p-3">{{ prenda.nombre }}</p>
+          </dd></td>
       </tr>
     </tbody>
   </table>
 </div>
+
+
+
