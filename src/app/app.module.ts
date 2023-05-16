@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { OutfitModule } from './outfit/outfit.module';
 import { MarcaModule } from './marca/marca.module';
 import { PrendaModule } from './prenda/prenda.module';
+import { TiendafisicaModule } from './tiendafisica/tiendafisica.module';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { PrendaModule } from './prenda/prenda.module';
     OutfitModule,
     MarcaModule,
     PrendaModule,
+    TiendafisicaModule,
     HttpClientModule
   ],
   providers: [],
