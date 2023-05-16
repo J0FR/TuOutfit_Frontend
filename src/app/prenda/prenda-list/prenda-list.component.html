@@ -16,17 +16,17 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col" *ngFor="let prenda of prendas">
         <div class="card shadow-sm" (click)="onSelected(prenda)">
-          <img src="{{prenda.imagen}}" class="bd-placeholder-img card-img-top" width="100%" height="225">
+          <img src="{{prenda.imagen}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="{{prenda.nombre}}">
           <div class="card-body">
             <p class="card-text">{{prenda.nombre}}</p>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>Id:</b>  {{prenda.id}}</li>
-                <li class="list-group-item"><b>Precio:</b>  {{prenda.precio}}</li>
-                <li class="list-group-item"><b>Color:</b> {{prenda.colores}}</li>
-                <li class="list-group-item"><b>Genero:</b>  {{prenda.genero}}</li>
-                <li class="list-group-item"><b>Ocacion:</b> {{prenda.ocasiones}}</li>
-                <li class="list-group-item"><b>Edad:</b>  {{prenda.rango_edad}}</li>
-                <li class="list-group-item"><b>Talla:</b> {{prenda.talla}}</li>
+                <li class="list-group-item"><strong>Id:</strong>  {{prenda.id}}</li>
+                <li class="list-group-item"><strong>Precio:</strong>  {{prenda.precio}}</li>
+                <li class="list-group-item"><strong>Color:</strong> {{prenda.colores}}</li>
+                <li class="list-group-item"><strong>Genero:</strong>  {{prenda.genero}}</li>
+                <li class="list-group-item"><strong>Ocacion:</strong> {{prenda.ocasiones}}</li>
+                <li class="list-group-item"><strong>Edad:</strong>  {{prenda.rango_edad}}</li>
+                <li class="list-group-item"><strong>Talla:</strong> {{prenda.talla}}</li>
               </ul>
           </div>
         </div>

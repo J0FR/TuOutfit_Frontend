@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Outfit } from '../outfit';
 import { OutfitService } from '../outfit.service';
 import { OutfitDetail } from '../outfitDetail';
 

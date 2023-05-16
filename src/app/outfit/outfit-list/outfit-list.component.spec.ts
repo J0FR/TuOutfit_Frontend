@@ -101,6 +101,48 @@ describe('OutfitListComponent', () => {
     });
   });
 
+  it('should display selected outfit detail when an outfit is selected', () => {
+    const outfit = component.outfits[0];
+    component.selected = true;
+    component.selectedOutfit = outfit;
+    fixture.detectChanges();
+
+    const outfitDetailElem = debug.query(By.css('app-outfit-detail'));
+    expect(outfitDetailElem).toBeTruthy();
+  });
+
+  it('should set selected and selectedOutfit when an outfit is clicked', () => {
+    const outfit = component.outfits[0];
+    component.onSelected(outfit);
+
+    expect(component.selected).toBeTrue();
+    expect(component.selectedOutfit).toBe(outfit);
+  });
+
+  it('should render outfit details correctly', () => {
+    const outfitElems = debug.queryAll(By.css('div.col'));
+
+    outfitElems.forEach((outfitElem, i) => {
+      const outfit = component.outfits[i];
+      const idElem = outfitElem.query(By.css('li.list-group-item:nth-child(1)'));
+      const descriptionElem = outfitElem.query(By.css('li.list-group-item:nth-child(2)'));
+
+      expect(idElem.nativeElement.textContent).toContain(outfit.id);
+      expect(descriptionElem.nativeElement.textContent).toContain(outfit.descripcion);
+    });
+  });
+
+  it('should include all necessary details for each outfit', () => {
+    component.outfits.forEach(outfit => {
+      expect(outfit.id).toBeDefined();
+      expect(outfit.descripcion).toBeDefined();
+    });
+  });
+
+  it('should render the correct number of outfits', () => {
+    expect(debug.queryAll(By.css('div.col'))).toHaveSize(component.outfits.length);
+  });
+
 });
 
 
