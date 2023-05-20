@@ -1,0 +1,31 @@
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light" id="tiendasfisicas">Tiendas Fisicas</h1>
+    </div>
+  </div>
+</section>
+
+
+<div *ngIf="selected">
+  <app-tiendafisica-detail [tiendafisicaDetail]="selectedTiendafisica"></app-tiendafisica-detail>
+</div>
+
+<div class="album py-5" style="background-color: rgb(255, 255, 255)">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col" *ngFor="let tiendaFisica of tiendasfisicas">
+        <div class="card shadow-sm" (click)="onSelected(tiendaFisica)">
+          <div class="card-body">
+            <p class="card-text">{{tiendaFisica.nombre}}</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>id:</b>  {{tiendaFisica.id}}</li>
+                <li class="list-group-item"><b>nombre:</b> {{tiendaFisica.nombre}}</li>
+                <li class="list-group-item"><b>horarios:</b>  {{tiendaFisica.horarios}}</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
