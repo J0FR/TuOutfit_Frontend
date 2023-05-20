@@ -6,11 +6,16 @@
   </div>
 </section>
 
+
+<div *ngIf="selected">
+  <app-tiendafisica-detail [tiendafisicaDetail]="selectedTiendafisica"></app-tiendafisica-detail>
+</div>
+
 <div class="album py-5" style="background-color: rgb(255, 255, 255)">
   <div class="container">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
       <div class="col" *ngFor="let tiendaFisica of tiendasfisicas">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm" (click)="onSelected(tiendaFisica)">
           <div class="card-body">
             <p class="card-text">{{tiendaFisica.nombre}}</p>
               <ul class="list-group list-group-flush">

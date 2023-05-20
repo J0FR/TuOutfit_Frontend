@@ -12,7 +12,7 @@ export class TiendafisicaListComponent implements OnInit {
 
   tiendasfisicas: Array<Tiendafisica> = [];
   constructor(private tiendafisicaService: TiendafisicaService) { }
-  selectedTiensafisica!: Tiendafisica;
+  selectedTiendafisica!: Tiendafisica;
   selected = false;
 
   getTiendasFisicas(): void {
@@ -22,7 +22,10 @@ export class TiendafisicaListComponent implements OnInit {
     console.log(this.tiendasfisicas);
   }
 
-
+  onSelected(tiendafisica: Tiendafisica): void {
+    this.selected = true;
+    this.selectedTiendafisica = tiendafisica;
+  }
 
   ngOnInit() {
     this.getTiendasFisicas();
