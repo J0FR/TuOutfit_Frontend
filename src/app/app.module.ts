@@ -8,6 +8,8 @@ import { OutfitModule } from './outfit/outfit.module';
 import { MarcaModule } from './marca/marca.module';
 import { PrendaModule } from './prenda/prenda.module';
 import { TiendafisicaModule } from './tiendafisica/tiendafisica.module';
+import { UsuarioModule } from './usuario/usuario.module';
+import { ComentarioModule } from './comentario/comentario.module';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { TiendafisicaModule } from './tiendafisica/tiendafisica.module';
     MarcaModule,
     PrendaModule,
     TiendafisicaModule,
+    UsuarioModule,
+    ComentarioModule,
     HttpClientModule
   ],
   providers: [],
