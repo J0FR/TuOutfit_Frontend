@@ -5,3 +5,19 @@
 <div *ngIf="selected">
   <app-comentario-detail [comentarioDetail]="selectedComentario"></app-comentario-detail>
 </div>
+
+<!-- Show a list of all the comentarios -->
+
+<div class="album py-5" style="background-color: rgb(255, 255, 255)">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col" *ngFor="let comentario of comentarios">
+
+        <p>{{comentario.titulo}}</p>
+        <p>Mensaje: {{comentario.mensaje}}</p>
+        <p>Calificacion: {{comentario.calificacion}} </p>
+
+      </div>
+    </div>
+  </div>
+</div>
