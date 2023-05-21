@@ -1,3 +1,23 @@
+<p>
+  usuario-list works!
+</p>
+
 <div *ngIf="selected">
   <app-usuario-detail [usuarioDetail]="selectedUsuario"></app-usuario-detail>
+</div>
+
+<!-- Show a list of all the usuarios -->
+
+<div class="album py-5" style="background-color: rgb(255, 255, 255)">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col" *ngFor="let usuario of usuarios">
+
+        <p>{{usuario.nombre}}</p>
+        <p>Edad: {{usuario.edad}}</p>
+        <p>Género: {{usuario.genero}} </p>
+
+      </div>
+    </div>
+  </div>
 </div>
