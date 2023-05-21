@@ -5,6 +5,8 @@ import { DebugElement } from '@angular/core';
 
 import { ComentarioListComponent } from './comentario-list.component';
 
+// TODO: crear test
+
 describe('ComentarioListComponent', () => {
   let component: ComentarioListComponent;
   let fixture: ComponentFixture<ComentarioListComponent>;

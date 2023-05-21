@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { Usuario } from '../usuario';
 import { UsuarioDetail } from '../usuario-detail';
 
+// TODO: crear tests
+
 describe('UsuarioListComponent', () => {
   let component: UsuarioListComponent;
   let fixture: ComponentFixture<UsuarioListComponent>;

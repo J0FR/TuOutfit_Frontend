@@ -1,0 +1,26 @@
+<div class="text-center">
+  <h1>TiendaFisica Detallado</h1>
+  <table class="table table-bordered">
+    <caption>TiendaFisica Detalles</caption>
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Horarios</th>
+        <th scope="col">Longitud</th>
+        <th scope="col">Latitud</th>
+        <th scope="col">Marca</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class = "id">{{tiendafisicaDetail.id}}</td>
+        <td class ="nombre">{{tiendafisicaDetail.nombre}}</td>
+        <td class = "horarios">{{tiendafisicaDetail.horarios}}</td>
+        <td class = "longitud">{{tiendafisicaDetail.ubicacion.longitud}}</td>
+        <td class = "latitud">{{tiendafisicaDetail.ubicacion.latitud}}</td>
+        <td class = "marca">{{tiendafisicaDetail.marca.nombre}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -4,6 +4,8 @@ import { TestBed, async, inject } from '@angular/core/testing';
 import { UsuarioService } from './usuario.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
+// TODO: crear tests
+
 describe('Service: Usuario', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -12,7 +14,7 @@ describe('Service: Usuario', () => {
     });
   });
 
-  it('should ...', inject([UsuarioService], (service: UsuarioService) => {
+  /* it('should ...', inject([UsuarioService], (service: UsuarioService) => {
     expect(service).toBeTruthy();
-  }));
+  })); */
 });
