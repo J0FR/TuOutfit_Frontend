@@ -1,3 +1,7 @@
 <p>
   comentario-list works!
 </p>
+
+<div *ngIf="selected">
+  <app-comentario-detail [comentarioDetail]="selectedComentario"></app-comentario-detail>
+</div>
