@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class MarcaListComponent implements OnInit {
 
   marcas: Array<MarcaDetail> = [];
+  selected: boolean = false;
   constructor(private marcaService: MarcaService, private router: Router) { }
 
   getMarcas(): void {

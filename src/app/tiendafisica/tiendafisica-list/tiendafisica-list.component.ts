@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class TiendafisicaListComponent implements OnInit {
 
   tiendasfisicas: Array<Tiendafisica> = [];
+  selected: boolean = false;
   constructor(private tiendafisicaService: TiendafisicaService, private router: Router) { }
 
   getTiendasFisicas(): void {

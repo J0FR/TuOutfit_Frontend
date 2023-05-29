@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class PrendaListComponent implements OnInit {
   prendas : Array<PrendaDetail> = [];
-
+  selected: boolean = false;
   constructor(private PrendaService: PrendaService, private router: Router) { }
 
   getPrendas(): void {

@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class OutfitListComponent implements OnInit {
 
   outfits: Array<OutfitDetail> = [];
+  selected: boolean = false;
   constructor(private outfitService: OutfitService, private router: Router) { }
 
   getOutfits(): void {
