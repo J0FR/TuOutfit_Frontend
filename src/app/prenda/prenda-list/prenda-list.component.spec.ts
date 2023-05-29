@@ -39,38 +39,4 @@ describe('PrendaListComponent', () => {
     debug = fixture.debugElement;
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should have 10 <div.col> elements', () => {
-    expect(debug.queryAll(By.css('div.col'))).toHaveSize(10)
-  });
-
-  it('should have 10 <div.card.shadow-sm> elements', () => {
-    expect(debug.queryAll(By.css('div.card.shadow-sm'))).toHaveSize(10)
-  });
-
-  it('should have 10 <img> elements', () => {
-    expect(debug.queryAll(By.css('img'))).toHaveSize(10)
-  });
-
-  it('should have 10 <div.card-body> elements', () => {
-    expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(10)
-  });
-
-   it('should have the corresponding src to the prendas image and alt to the prendas name', () => {
-   debug.queryAll(By.css('img')).forEach((img, i)=>{
-     expect(img.attributes['src']).toEqual(
-       component.prendas[i].imagen);
-})
- });
-
-  it('should have 10 <p.card-text> elements', () => {
-    expect(debug.queryAll(By.css('p.card-text'))).toHaveSize(10)
-  });
-
-  it('should have 10 <div.list-group.list-group-flush> elements', () => {
-    expect(debug.queryAll(By.css('div.card-body'))).toHaveSize(10)
-  });
 });

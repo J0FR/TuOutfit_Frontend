@@ -1,86 +1,18 @@
 <testExecutions version="1">
-  <file path="src/app/outfit/outfit-detail/outfit-detail.component.spec.ts">
-    <testCase name="OutfitDetailComponent should have a td.id element with outfitDetail.id" duration="68"/>
-    <testCase name="OutfitDetailComponent should have one td tag for component.outfitDetail.nombre" duration="8"/>
-    <testCase name="OutfitDetailComponent should have a td.nombre element with outfitDetail.name" duration="6"/>
-    <testCase name="OutfitDetailComponent should have a td.descripcion element with outfitDetail.descripcion" duration="5"/>
-    <testCase name="OutfitDetailComponent should have an img element with alt= outfitDetail.name" duration="5"/>
-    <testCase name="OutfitDetailComponent should have a td.genero element with outfitDetail.genero" duration="4"/>
-    <testCase name="OutfitDetailComponent should have 3 &lt;dd> elements" duration="5"/>
-    <testCase name="OutfitDetailComponent should have a td.rango_edad element with outfitDetail.rango_edad" duration="4"/>
-    <testCase name="OutfitDetailComponent should have a td.precio element with outfitDetail.precio" duration="8"/>
-    <testCase name="OutfitDetailComponent should have a td.talla element with outfitDetail.talla" duration="6"/>
-    <testCase name="OutfitDetailComponent should have an img element with src= outfitDetail.image" duration="5"/>
-    <testCase name="OutfitDetailComponent should have a td.colores element with outfitDetail.colores" duration="4"/>
-  </file>
-  <file path="src/app/outfit/outfit-list/outfit-list.component.spec.ts">
-    <testCase name="OutfitListComponent should create" duration="24"/>
-    <testCase name="OutfitListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="7"/>
-    <testCase name="OutfitListComponent should have 10 &lt;div.col> elements" duration="8"/>
-    <testCase name="OutfitListComponent should set selected and selectedOutfit when an outfit is clicked" duration="6"/>
-    <testCase name="OutfitListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="10"/>
-    <testCase name="OutfitListComponent should display selected outfit detail when an outfit is selected" duration="10"/>
-    <testCase name="OutfitListComponent should have 10 &lt;p.card-text> elements" duration="7"/>
-    <testCase name="OutfitListComponent should have the corresponding src to the outfits image and alt to the outfits name" duration="8"/>
-    <testCase name="OutfitListComponent should have 10 &lt;div.card-body> elements" duration="7"/>
-    <testCase name="OutfitListComponent should have 10 &lt;img> elements" duration="7"/>
-    <testCase name="OutfitListComponent should include all necessary details for each outfit" duration="5"/>
-    <testCase name="OutfitListComponent should render outfit details correctly" duration="6"/>
-    <testCase name="OutfitListComponent should have 9 &lt;div.col> elements and the deleted outfit should not exist" duration="7"/>
-    <testCase name="OutfitListComponent should render the correct number of outfits" duration="6"/>
-    <testCase name="OutfitListComponent should have p.card-text tag with the outfit.name" duration="6"/>
-  </file>
-  <file path="src/app/prenda/prenda-detail/prenda-detail.component.spec.ts">
-    <testCase name="PrendaDetailComponent should have one td tag for component.prendaDetail.nombre" duration="9"/>
-    <testCase name="PrendaDetailComponent should have 3 &lt;dd> elements" duration="3"/>
-    <testCase name="PrendaDetailComponent should have an img element with src= prendaDetail.image" duration="3"/>
-    <testCase name="PrendaDetailComponent should have a td.precio element with prendaDetail.precio" duration="3"/>
-    <testCase name="PrendaDetailComponent should have a td.nombre element with prendaDetail.nombre" duration="3"/>
-    <testCase name="PrendaDetailComponent should have a td.id element with prendaDetail.id" duration="3"/>
-    <testCase name="PrendaDetailComponent should have a td.genero element with prendaDetail.genero" duration="2"/>
-    <testCase name="PrendaDetailComponent should have a td.ocasiones element with prendaDetail.ocasiones" duration="2"/>
-    <testCase name="PrendaDetailComponent should have a td.talla element with prendaDetail.talla" duration="3"/>
-  </file>
-  <file path="src/app/marca/marca-list/marca-list.component.spec.ts">
-    <testCase name="MarcaListComponent should create" duration="9"/>
-    <testCase name="MarcaListComponent should have the corresponding src to the marcas image and alt to the marcas name" duration="5"/>
-    <testCase name="MarcaListComponent should have 10 &lt;div.card-body> elements" duration="4"/>
-    <testCase name="MarcaListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="6"/>
-    <testCase name="MarcaListComponent should have 10 &lt;div.col> elements" duration="4"/>
-    <testCase name="MarcaListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="5"/>
-    <testCase name="MarcaListComponent should have 10 &lt;p.card-text> elements" duration="6"/>
-    <testCase name="MarcaListComponent should have 10 &lt;img> elements" duration="4"/>
+  <file path="src/app/outfit/outfit.service.spec.ts">
+    <testCase name="Service: Outfit should ..." duration="15"/>
   </file>
   <file path="src/app/prenda/PrendaService.service.spec.ts">
-    <testCase name="Service: Prenda should ..." duration="2"/>
+    <testCase name="Service: Prenda should ..." duration="4"/>
   </file>
   <file path="src/app/marca/marca.service.spec.ts">
-    <testCase name="Service: Marca should ..." duration="1"/>
+    <testCase name="Service: Marca should ..." duration="3"/>
   </file>
-  <file path="src/app/outfit/outfit.service.spec.ts">
-    <testCase name="Service: Outfit should ..." duration="3"/>
-  </file>
-  <file path="src/app/prenda/prenda-list/prenda-list.component.spec.ts">
-    <testCase name="PrendaListComponent should create" duration="12"/>
-    <testCase name="PrendaListComponent should have 10 &lt;img> elements" duration="8"/>
-    <testCase name="PrendaListComponent should have 10 &lt;div.card.shadow-sm> elements" duration="8"/>
-    <testCase name="PrendaListComponent should have 10 &lt;div.list-group.list-group-flush> elements" duration="11"/>
-    <testCase name="PrendaListComponent should have 10 &lt;div.col> elements" duration="11"/>
-    <testCase name="PrendaListComponent should have 10 &lt;div.card-body> elements" duration="10"/>
-    <testCase name="PrendaListComponent should have 10 &lt;p.card-text> elements" duration="10"/>
-    <testCase name="PrendaListComponent should have the corresponding src to the prendas image and alt to the prendas name" duration="9"/>
+  <file path="src/app/tiendafisica/tiendafisica.service.spec.ts">
+    <testCase name="Service: Tiendafisica should ..." duration="2"/>
   </file>
   <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="14"/>
-    <testCase name="AppComponent should create the app" duration="5"/>
-  </file>
-  <file path="src/app/marca/marca-detail/marca-detail.component.spec.ts">
-    <testCase name="MarcaDetailComponent should have 3 &lt;dd> elements" duration="9"/>
-    <testCase name="MarcaDetailComponent should have a td.url element with marcaDetail.url_sitio_web" duration="4"/>
-    <testCase name="MarcaDetailComponent should have an img element with alt= marcaDetail.name" duration="4"/>
-    <testCase name="MarcaDetailComponent should have an img element with src= marcaDetail.image" duration="4"/>
-    <testCase name="MarcaDetailComponent should have a td.detalle element with marcaDetail.detalle" duration="5"/>
-    <testCase name="MarcaDetailComponent should have a td.name element with marcaDetail.nombre" duration="7"/>
-    <testCase name="MarcaDetailComponent should have a td.id element with marcaDetail.id" duration="5"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="53"/>
+    <testCase name="AppComponent should create the app" duration="4"/>
   </file>
 </testExecutions>

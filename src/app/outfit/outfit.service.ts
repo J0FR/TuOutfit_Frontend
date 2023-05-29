@@ -19,6 +19,7 @@ export class OutfitService {
     return this.http.get<OutfitDetail[]>(this.apiUrl);
   }
 
-
-
+  getOutfitsById(outfitId: number): Observable<OutfitDetail> {
+    return this.http.get<OutfitDetail>(`${this.apiUrl}/${outfitId}`);
+  }
 }

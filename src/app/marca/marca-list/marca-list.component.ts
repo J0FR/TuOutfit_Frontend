@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Marca } from '../marca';
 import { MarcaService } from '../marca.service';
 import { MarcaDetail } from '../marcaDetail';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-marca-list',
@@ -11,18 +12,17 @@ import { MarcaDetail } from '../marcaDetail';
 export class MarcaListComponent implements OnInit {
 
   marcas: Array<MarcaDetail> = [];
-  constructor(private marcaService: MarcaService) { }
-  selectedMarca!: MarcaDetail;
-  selected = false;
+  selected: boolean = false;
+  constructor(private marcaService: MarcaService, private router: Router) { }
+
   getMarcas(): void {
     this.marcaService.getMarcas().subscribe((marcas) => {
       this.marcas = marcas;
-  });
+    });
   }
 
   onSelected(marca: MarcaDetail): void {
-    this.selected = true;
-    this.selectedMarca = marca;
+    this.router.navigate(['/Marcas', marca.id]);
   }
 
   ngOnInit(): void {

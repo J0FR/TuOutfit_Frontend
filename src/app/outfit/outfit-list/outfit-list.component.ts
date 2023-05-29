@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OutfitService } from '../outfit.service';
 import { OutfitDetail } from '../outfitDetail';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-outfit-list',
@@ -10,9 +11,8 @@ import { OutfitDetail } from '../outfitDetail';
 export class OutfitListComponent implements OnInit {
 
   outfits: Array<OutfitDetail> = [];
-  constructor(private outfitService: OutfitService) { }
-  selectedOutfit!: OutfitDetail;
-  selected = false;
+  selected: boolean = false;
+  constructor(private outfitService: OutfitService, private router: Router) { }
 
   getOutfits(): void {
     this.outfitService.getOutfits().subscribe((outfits) => {
@@ -21,8 +21,7 @@ export class OutfitListComponent implements OnInit {
   }
 
   onSelected(outfit: OutfitDetail): void {
-    this.selected = true;
-    this.selectedOutfit = outfit;
+    this.router.navigate(['/Outfits', outfit.id]);
   }
 
   ngOnInit() {
