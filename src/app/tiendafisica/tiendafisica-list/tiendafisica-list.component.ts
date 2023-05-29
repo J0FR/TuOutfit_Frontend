@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tiendafisica } from '../tiendafisica';
 import { TiendafisicaService } from '../tiendafisica.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,20 +12,16 @@ import { TiendafisicaService } from '../tiendafisica.service';
 export class TiendafisicaListComponent implements OnInit {
 
   tiendasfisicas: Array<Tiendafisica> = [];
-  constructor(private tiendafisicaService: TiendafisicaService) { }
-  selectedTiendafisica!: Tiendafisica;
-  selected = false;
+  constructor(private tiendafisicaService: TiendafisicaService, private router: Router) { }
 
   getTiendasFisicas(): void {
     this.tiendafisicaService.getTiendasFisicas().subscribe((tiendasfisicas) => {
       this.tiendasfisicas = tiendasfisicas;
     });
-    console.log(this.tiendasfisicas);
   }
 
   onSelected(tiendafisica: Tiendafisica): void {
-    this.selected = true;
-    this.selectedTiendafisica = tiendafisica;
+    this.router.navigate(['/Tiendas', tiendafisica.id]);
   }
 
   ngOnInit() {

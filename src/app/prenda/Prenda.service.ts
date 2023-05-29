@@ -18,4 +18,8 @@ export class PrendaService {
     return this.http.get<PrendaDetail[]>(this.apiurl);
   }
 
+  getPrendaById(prendaId: number): Observable<PrendaDetail> {
+    return this.http.get<PrendaDetail>(`${this.apiurl}/${prendaId}`);
+  }
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Prenda } from '../prenda';
 import { PrendaService } from '../Prenda.service'
 import { PrendaDetail } from '../prenda-detail/PrendaDetail';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-prenda-list',
@@ -10,10 +11,8 @@ import { PrendaDetail } from '../prenda-detail/PrendaDetail';
 })
 export class PrendaListComponent implements OnInit {
   prendas : Array<PrendaDetail> = [];
-  selectedPrenda!: PrendaDetail;
-  selected = false;
 
-  constructor(private PrendaService: PrendaService) { }
+  constructor(private PrendaService: PrendaService, private router: Router) { }
 
   getPrendas(): void {
     this.PrendaService.getPrendas().subscribe((prendas) => {
@@ -22,8 +21,7 @@ export class PrendaListComponent implements OnInit {
   }
 
   onSelected(prenda: PrendaDetail): void {
-    this.selected = true;
-    this.selectedPrenda = prenda;
+    this.router.navigate(['/Prendas', prenda.id]);
   }
 
   ngOnInit() {

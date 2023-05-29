@@ -19,4 +19,8 @@ constructor(private http: HttpClient) { }
     return this.http.get<MarcaDetail[]>(this.apiUrl);
   }
 
+  getMarcasById(marcaId: number): Observable<MarcaDetail> {
+    return this.http.get<MarcaDetail>(`${this.apiUrl}/${marcaId}`);
+  }
+
 }

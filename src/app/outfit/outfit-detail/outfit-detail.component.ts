@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Outfit } from '../outfit';
 import { OutfitDetail } from '../outfitDetail';
+import { ActivatedRoute } from '@angular/router';
+import { OutfitService } from '../outfit.service';
 
 @Component({
   selector: 'app-outfit-detail',
@@ -9,13 +11,17 @@ import { OutfitDetail } from '../outfitDetail';
 })
 export class OutfitDetailComponent implements OnInit {
 
-  outfits: Array<OutfitDetail> = [];
-
   @Input() outfitDetail!: OutfitDetail;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private outfitService: OutfitService) { }
 
   ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.outfitService.getOutfitsById(+id).subscribe((outfitDetail) => {
+        this.outfitDetail = outfitDetail;
+      });
+    }
   }
 
 

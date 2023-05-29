@@ -18,13 +18,21 @@ import { TiendafisicaListComponent } from './tiendafisica/tiendafisica-list/tien
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { NotFoundComponent } from './NotFound/NotFound.component';
+import { OutfitDetailComponent } from './outfit/outfit-detail/outfit-detail.component';
+import { PrendaDetailComponent } from './prenda/prenda-detail/prenda-detail.component';
+import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
+import { TiendafisicaDetailComponent } from './tiendafisica/tiendafisica-detail/tiendafisica-detail.component';
 
 const appRoute: Routes = [
   {path: '', component: HomeComponent},
   {path: 'Outfits', component: OutfitListComponent},
+  {path: 'Outfits/:id', component: OutfitDetailComponent},
   {path: 'Prendas', component: PrendaListComponent},
+  {path: 'Prendas/:id', component: PrendaDetailComponent},
   {path: 'Marcas', component: MarcaListComponent},
+  {path: 'Marcas/:id', component: MarcaDetailComponent},
   {path: 'Tiendas', component: TiendafisicaListComponent},
+  {path: 'Tiendas/:id', component: TiendafisicaDetailComponent},
   {path: '**', component: NotFoundComponent}
 ]
 
