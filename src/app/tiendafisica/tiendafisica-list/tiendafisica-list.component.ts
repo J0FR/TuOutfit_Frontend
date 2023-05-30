@@ -13,6 +13,7 @@ export class TiendafisicaListComponent implements OnInit {
 
   tiendasfisicas: Array<Tiendafisica> = [];
   selected: boolean = false;
+  p:number = 1;
   constructor(private tiendafisicaService: TiendafisicaService, private router: Router) { }
 
   getTiendasFisicas(): void {
