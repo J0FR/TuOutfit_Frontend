@@ -12,6 +12,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 export class OutfitListComponent implements OnInit {
 
   p:number = 1;
+  showFilters = false;
 
   outfits: Array<OutfitDetail> = [];
   selected: boolean = false;
@@ -23,12 +24,18 @@ export class OutfitListComponent implements OnInit {
     });
   }
 
+  getNumberOfOutfits(): number {
+    return this.outfits.length;
+  }
+
   onSelected(outfit: OutfitDetail): void {
     this.router.navigate(['/Outfits', outfit.id]);
   }
 
   ngOnInit() {
     this.getOutfits();
+    this.getNumberOfOutfits();
   }
+
 
 }
