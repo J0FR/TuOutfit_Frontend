@@ -8,3 +8,15 @@
   color: black;
   text-align: center;
 }
+
+
+.navbar-custom {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad 50% */
+}
+.navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-link {
+  color: white; /* Cambiar el color del texto a blanco */
+  font-size: 1.5rem; /* Aumentar el tamaño del texto */
+}
+.navbar-custom .navbar-nav .nav-link {
+  margin-right: 6rem; /* Espacio entre las secciones */
+}
