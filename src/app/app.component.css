@@ -1,3 +1,10 @@
 * [lang^=en] {
   color: green;
 }
+
+.footer {
+  flex-shrink: 0;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+}
