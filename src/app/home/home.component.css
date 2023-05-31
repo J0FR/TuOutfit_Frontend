@@ -48,21 +48,39 @@
   background: rgba(5,13,24,0.7);
   z-index: 1;
 }
-.featurette-caption h2{
-  color: rgba(5,13,24);
+
+ /* PARTE DE ABAJO */
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
 }
 
+
+/* Featurettes
+------------------------- */
+
 .featurette-divider {
+  background-color: rgba(5,13,24,0.7); /* Cambia el color de fondo a rojo */
+  height: 4px; /* Cambia la altura de la división */
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
 
+/* Thin out the marketing headings */
+/* rtl:begin:remove */
 .featurette-heading {
-  font-size: 50px;
+  letter-spacing: -.05rem;
+  color:rgba(5,13,24);
+  font-size: 60px;
 }
 
-
-@media (min-width: 62em) {
-.featurette-heading {
-  margin-top: 7rem;
-}
+.lead {
+  color: rgb(12, 31, 58);
+  font-size: 25px;
+  text-align: justify;
 }
