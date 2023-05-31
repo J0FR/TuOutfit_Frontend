@@ -1,5 +1,12 @@
-* [lang^=en] {
-  color: green;
+.navbar .nav-link {
+  font-size: 30px;
+  color: #F0EBE1;
+  margin: 0 130px;
+  padding: 0;
+}
+
+.container-fluid{
+  padding: 0;
 }
 
 .footer {
