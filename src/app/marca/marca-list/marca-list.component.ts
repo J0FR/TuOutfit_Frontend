@@ -13,6 +13,7 @@ export class MarcaListComponent implements OnInit {
 
   marcas: Array<MarcaDetail> = [];
   selected: boolean = false;
+  p:number = 1;
   constructor(private marcaService: MarcaService, private router: Router) { }
 
   getMarcas(): void {

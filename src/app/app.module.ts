@@ -22,6 +22,7 @@ import { OutfitDetailComponent } from './outfit/outfit-detail/outfit-detail.comp
 import { PrendaDetailComponent } from './prenda/prenda-detail/prenda-detail.component';
 import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
 import { TiendafisicaDetailComponent } from './tiendafisica/tiendafisica-detail/tiendafisica-detail.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 const appRoute: Routes = [
   {path: '', component: HomeComponent},
@@ -51,7 +52,8 @@ const appRoute: Routes = [
     ComentarioModule,
     HttpClientModule,
     HomeModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
