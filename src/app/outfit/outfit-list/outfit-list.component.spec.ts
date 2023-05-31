@@ -39,7 +39,7 @@ describe('OutfitListComponent', () => {
         faker.lorem.sentence(),
         faker.lorem.sentence(),
         faker.lorem.sentence(),
-        faker.lorem.sentence(),[]
+        faker.lorem.sentence(),[],[]
         );
         component.outfits.push(outfit);
       }

@@ -6,27 +6,65 @@
   </div>
 </section>
 
-<div class="album py-5" style="background-color: white">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col" *ngFor="let outfit of outfits">
-        <div class="card shadow-sm" (click)="onSelected(outfit)">
-          <img src="{{outfit.imagen}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="{{outfit.nombre}}">
-          <div class="card-body">
-            <p class="card-text">{{outfit.nombre}}</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Id:</strong>  {{outfit.id}}</li>
-                <li class="list-group-item"><strong>Descripcion:</strong> {{outfit.descripcion}}</li>
-                <li class="list-group-item"><strong>Precio:</strong>  {{outfit.precio}}</li>
-                <li class="list-group-item"><strong>Color:</strong> {{outfit.colores}}</li>
-                <li class="list-group-item"><strong>Genero:</strong>  {{outfit.genero}}</li>
-                <li class="list-group-item"><strong>Ocacion:</strong> {{outfit.ocasiones}}</li>
-                <li class="list-group-item"><strong>Edad:</strong>  {{outfit.rango_edad}}</li>
-                <li class="list-group-item"><strong>Talla:</strong> {{outfit.talla}}</li>
-              </ul>
-          </div>
+<div class="container-fluid">
+  <div class="container-fluid d-flex justify-content-between">
+    <div>
+      <p class="detail-filter">Outfits ({{getNumberOfOutfits()}})</p>
+    </div>
+    <div class="filtro">
+      <button class="btn btn-primary" (click)="showFilters = !showFilters">Filtro</button>
+    </div>
+  </div>
+  <br>
+  <div class="container-fluid filter" *ngIf="showFilters">
+    <div class="row">
+      <div class="col">
+        <select class="form-select">
+          <option selected>Gender</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+          <option value="3">Other</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-select">
+          <option selected>Age</option>
+          <option value="1">0-10</option>
+          <option value="2">11-20</option>
+          <option value="3">21-30</option>
+          <option value="4">31-40</option>
+          <option value="5">41-50</option>
+          <option value="6">51+</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-select">
+          <option selected>Occasion</option>
+          <option value="1">Casual</option>
+          <option value="2">Formal</option>
+          <option value="3">Sport</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="row pb-5 mb-4" >
+    <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" *ngFor="let outfit of outfits | paginate: { itemsPerPage: 9, currentPage: p}">
+      <div class="card rounded shadow-lg border-0" (click)="onSelected(outfit)">
+        <div class="card-body p-4"><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}" class="img-fluid d-block mx-auto mb-3">
+          <h5>{{outfit.nombre}}</h5>
+          <p class="small text-muted font-italic">{{outfit.descripcion}}</p>
+          <ul class="list-inline small">
+            <li class="list-inline-item m-0"><i class="fa fa-star text-success price">{{outfit.precio}}$</i></li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
+  <div class="mt-8 py-5 d-flex justify-content-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
 </div>

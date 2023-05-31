@@ -9,6 +9,7 @@ import { OutfitDetail } from '../outfitDetail';
 import { Prenda } from 'src/app/prenda/prenda';
 import { PrendaDetail } from 'src/app/prenda/prenda-detail/PrendaDetail';
 import { Marca } from 'src/app/marca/marca';
+import { Comentario } from 'src/app/comentario/comentario';
 
 describe('OutfitDetailComponent', () => {
   let component: OutfitDetailComponent;
@@ -34,6 +35,12 @@ describe('OutfitDetailComponent', () => {
       prendas.push(prenda);
     }
 
+    const comentarios: Comentario[] = [];
+    for(let i = 0; i < 3; i++) {
+      const comentario = new Comentario(faker.lorem.sentence(), faker.datatype.number(), faker.lorem.sentence());
+      comentarios.push(comentario);
+    }
+
     component.outfitDetail = new OutfitDetail(
       faker.datatype.number(),
       faker.lorem.sentence(),
@@ -45,7 +52,8 @@ describe('OutfitDetailComponent', () => {
       faker.lorem.sentence(),
       faker.lorem.sentence(),
       faker.lorem.sentence(),
-      prendas
+      prendas,
+      comentarios
       );
 
     fixture.detectChanges();

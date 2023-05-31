@@ -1,39 +1,90 @@
-<div class="text-center">
-  <h1>Outfit Detallado</h1>
-  <table class="table table-bordered">
-    <caption>Outfit Detalles</caption>
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Descripcion</th>
-        <th scope="col">Imagen</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Precio</th>
-        <th scope="col">Color</th>
-        <th scope="col">Genero</th>
-        <th scope="col">Edad</th>
-        <th scope="col">Talla</th>
-        <th scope="col">Prendas</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="id">{{outfitDetail.id}}</td>
-        <td class="descripcion">{{outfitDetail.descripcion}}</td>
-        <td><img src="{{outfitDetail.imagen}}" alt="{{outfitDetail.nombre}}"></td>
-        <td class="nombre">{{outfitDetail.nombre}}</td>
-        <td class="precio">{{outfitDetail.precio}}</td>
-        <td class="colores">{{outfitDetail.colores}}</td>
-        <td class="genero">{{outfitDetail.genero}}</td>
-        <td class="rango_edad">{{outfitDetail.rango_edad}}</td>
-        <td class="talla">{{outfitDetail.talla}}</td>
-        <td><dd class="caption" *ngFor="let prenda of outfitDetail.prendas ">
-          <p class="h3 p-3">{{ prenda.nombre }}</p>
-          </dd></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</header>
 
 
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{outfitDetail.imagen}}" alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small mb-1">ID: {{outfitDetail.id}}</div>
+                <h1 class="display-5 fw-bolder">{{outfitDetail.nombre}}</h1>
+                <div class="fs-5 mb-5">
+                    <span>${{outfitDetail.precio}}</span>
+                </div>
+                <p class="lead">{{outfitDetail.descripcion}}</p>
+                <div class="d-flex">
+                    <div class="interact">
+                      <div class="interact">
+                        <button class="btn btn-light heart">
+                            <i class="fa fa-heart"></i> Like
+                        </button>
+                        <button class="btn btn-light comment">
+                            <i class="fa fa-comment"></i> Comment
+                        </button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="py-5 bg-light">
+  <div class="container px-4 px-lg-5 mt-5">
+      <h2 class="fw-bolder mb-4">Productos</h2>
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+          <div class="col mb-5">
+              <div class="card h-100" *ngFor="let prenda of outfitDetail.prendas ">
+                  <!-- Product image-->
+                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                  <!-- Product details-->
+                  <div class="card-body p-4">
+                      <div class="text-center">
+                          <!-- Product name-->
+                          <h5 class="fw-bolder">Fancy Product</h5>
+                          <!-- Product price-->
+                          $40.00 - $80.00
+                      </div>
+                  </div>
+                  <!-- Product actions-->
+                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+<br>
+
+<section class="py-5 bg-light">
+  <div class="container px-4 px-lg-5 mt-5">
+      <h2 class="fw-bolder mb-4">Comentarios</h2>
+      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+          <div class="col mb-5">
+              <div class="card h-100" *ngFor="let prenda of outfitDetail.comentarios ">
+                  <!-- Product image-->
+                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                  <!-- Product details-->
+                  <div class="card-body p-4">
+                      <div class="text-center">
+                          <!-- Product name-->
+                          <h5 class="fw-bolder">Fancy Product</h5>
+                          <!-- Product price-->
+                          $40.00 - $80.00
+                      </div>
+                  </div>
+                  <!-- Product actions-->
+                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
