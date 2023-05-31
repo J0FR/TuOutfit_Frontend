@@ -4,6 +4,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   background-color: #fefaf6 !important;
+  font-family: 'Neuton', serif !important;
 }
 .content {
   flex: 1 0 auto;
