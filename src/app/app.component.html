@@ -51,13 +51,18 @@
 </div>
 
 
-<button (click)="togglePanel()" class="btn button-position rounded-circle">
-  <i class="fas fa-user"></i>
-</button>
+<div class="container">
+  <button #button (click)="isPanelOpen = !isPanelOpen; $event.stopPropagation()" class="btn button-position rounded-circle shadow-lg">
+    <i class="fas fa-user"></i>
+  </button>
 
-<div class="panel" *ngIf="isPanelOpen">
-  <button class="btn btn-link">Option 1</button>
-  <button class="btn btn-link">Option 2</button>
-  <button class="btn btn-link">Option 2</button>
-  <button class="btn btn-link">Option 2</button>
+  <div class="panel column-layout" *ngIf="isPanelOpen">
+    <button class="btn btn-link">Option 1</button>
+    <button class="btn btn-link">Option 2</button>
+    <button class="btn btn-link">Option 2</button>
+    <button class="btn btn-link">Option 2</button>
+  </div>
+
+  <div (document:click)="isPanelOpen = false">
+  </div>
 </div>

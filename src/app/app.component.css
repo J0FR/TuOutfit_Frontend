@@ -46,7 +46,7 @@
 }
 
 .button-position:hover {
-  background-color: #ffffff;
+  background-color: #BAA377;
   color: #6E6046;
   transform: scale(1.1);
 }
@@ -59,4 +59,9 @@
   color: #ffffff;
   padding: 20px;
   border-radius: 10px;
+}
+
+.column-layout {
+  display: flex;
+  flex-direction: column;
 }
