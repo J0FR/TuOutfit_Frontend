@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'base-project';
+
+  isPanelOpen = false;
+
+  togglePanel() {
+    this.isPanelOpen = !this.isPanelOpen;
+  }
 }

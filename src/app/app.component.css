@@ -1,5 +1,5 @@
 .navbar .nav-link {
-  font-size: 30px;
+  font-size: 2rem;
   color: #F0EBE1;
   margin: 0 130px;
   padding: 0;
@@ -14,16 +14,49 @@
   background-color: transparent;
   color: black;
   text-align: center;
+  margin: 0 !important;
 }
 
 
-.navbar-custom {
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad 50% */
+.navbar {
+  position: relative;
 }
-.navbar-custom .navbar-brand, .navbar-custom .navbar-nav .nav-link {
-  color: white; /* Cambiar el color del texto a blanco */
-  font-size: 1.5rem; /* Aumentar el tamaño del texto */
+
+.center-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.navbar-custom .navbar-nav .nav-link {
-  margin-right: 6rem; /* Espacio entre las secciones */
+
+.nav-link:hover {
+  transition: transform 0.3s;
+  transform: scale(1.1);
+}
+
+.button-position {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  background-color: #6E6046;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.button-position:hover {
+  background-color: #ffffff;
+  color: #6E6046;
+  transform: scale(1.1);
+}
+
+.panel {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  background-color: #050D18;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
 }
