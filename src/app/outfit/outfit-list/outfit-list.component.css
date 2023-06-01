@@ -1,6 +1,7 @@
 .card {
   margin-top: 5%;
   cursor: pointer;
+  background-color: #F8F8FF;
 }
 
 ::ng-deep .ngx-pagination .current {

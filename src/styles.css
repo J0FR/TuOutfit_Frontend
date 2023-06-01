@@ -1,9 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
 body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-color: #fefaf6 !important;
+  background-color: #F0EBE1 !important;
+  color: #050D18 !important;
   font-family: 'Neuton', serif !important;
 }
 .content {
