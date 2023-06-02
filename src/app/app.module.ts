@@ -23,6 +23,9 @@ import { PrendaDetailComponent } from './prenda/prenda-detail/prenda-detail.comp
 import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
 import { TiendafisicaDetailComponent } from './tiendafisica/tiendafisica-detail/tiendafisica-detail.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { LoginComponent } from './usuario/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './usuario/signup/signup.component';
 
 const appRoute: Routes = [
   {path: '', component: HomeComponent},
@@ -34,6 +37,8 @@ const appRoute: Routes = [
   {path: 'Marcas/:id', component: MarcaDetailComponent},
   {path: 'Tiendas', component: TiendafisicaListComponent},
   {path: 'Tiendas/:id', component: TiendafisicaDetailComponent},
+  {path: 'Login', component: LoginComponent},
+  {path: 'Signup', component: SignupComponent},
   {path: '**', component: NotFoundComponent}
 ]
 
@@ -53,7 +58,8 @@ const appRoute: Routes = [
     HttpClientModule,
     HomeModule,
     RouterModule.forRoot(appRoute),
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

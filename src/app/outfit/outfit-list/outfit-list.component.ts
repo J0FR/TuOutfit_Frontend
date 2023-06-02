@@ -49,15 +49,6 @@ export class OutfitListComponent implements OnInit {
     this.router.navigate(['/Outfits', outfit.id]);
   }
 
-  // @Output()
-  // filterGenderListSelectionChanged: EventEmitter<string> = new EventEmitter<string>();
-
-  // @Output()
-  // filterAgeListSelectionChanged: EventEmitter<string> = new EventEmitter<string>();
-
-  // @Output()
-  // filterOcassionListSelectionChanged: EventEmitter<string> = new EventEmitter<string>();
-
   ngOnInit() {
     this.getOutfits();
     this.getNumberOfOutfits();

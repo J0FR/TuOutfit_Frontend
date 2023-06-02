@@ -51,10 +51,7 @@
     </div>
   </div>
 
-
-
-
-  <div class="row pb-5 mb-4" >
+  <div class="row pb-5 mb-4 contenedor">
     <ng-container *ngFor="let outfit of outfits | paginate: { itemsPerPage: 9, currentPage: p}">
       <ng-container *ngIf="selectedOccasion === 'Ocasion' || selectedOccasion === outfit.genero">
         <ng-container *ngIf="selectedAge === 'Edad' || selectedAge === outfit.rango_edad">
