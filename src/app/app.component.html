@@ -3,7 +3,7 @@
 </head>
 
 <!-- Barra de navegación -->
-<nav class="container-fluid navbar navbar-expand-md navbar-dark fixed-top" style="background: rgba(5,13,24,1);">
+<nav class="container-fluid navbar navbar-expand-md fixed-top" style="background: rgba(5,13,24,1);">
 
   <!-- Botón para pantallas pequeñas -->
   <div class="d-flex justify-content-center">
@@ -24,10 +24,9 @@
       <a class="nav-link container" routerLink="Prendas">Prendas</a>
     </ul>
 
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="">TU OUTFIT</a>
-      </li>
+    <!-- Here is your centered nav item -->
+    <ul class="navbar-nav nav-item">
+      <a class="nav-link container" routerLink="">Inicio</a>
     </ul>
 
     <ul class="navbar-nav nav-item">
@@ -46,6 +45,7 @@
   <router-outlet></router-outlet>
 </div>
 
+<!-- Pie de página. Muestra info de copyright -->
 <div class="footer stick-bottom">
   <div class="container">
       <div class="row">
