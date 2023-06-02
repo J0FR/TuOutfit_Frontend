@@ -90,12 +90,13 @@ input {
   width: 100%;
 }
 
+.contenedor {
+  min-height: 60vh;
+}
 
-
-
-
-
-
+.justify-content-center {
+  padding: 0 !important;
+}
 
 
 
