@@ -27,5 +27,9 @@ export class UsuarioService {
     return this.isAuth;
   }
 
+  logOut(): void {
+    this.isAuth = false;
+  }
+
 
 }
