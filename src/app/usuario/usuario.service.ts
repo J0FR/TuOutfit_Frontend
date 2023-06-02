@@ -11,6 +11,7 @@ import { Usuario } from './usuario';
 export class UsuarioService {
 
   private apiUrl = environment.baseUrl + 'usuarios';
+  public isAuth: boolean = false;
 
   constructor(private http: HttpClient) { }
 
@@ -21,4 +22,10 @@ export class UsuarioService {
   postUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.apiUrl, usuario);
   }
+
+  IsAuth(): boolean {
+    return this.isAuth;
+  }
+
+
 }

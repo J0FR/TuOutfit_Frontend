@@ -52,14 +52,30 @@
 
 <div class="container">
   <button #button (click)="isPanelOpen = !isPanelOpen; $event.stopPropagation()" class="btn button-position rounded-circle shadow-lg">
-    <i class="fas fa-user"></i>
+    <i class="fas fa-user" ></i>
   </button>
 
   <div class="panel column-layout" *ngIf="isPanelOpen">
-    <button class="btn btn-link">Option 1</button>
-    <button class="btn btn-link">Option 2</button>
-    <button class="btn btn-link">Option 2</button>
-    <button class="btn btn-link">Option 2</button>
+    <div class="icon-btn radius-style column-layout">
+      <button class="btn-snapchat" *ngIf="authService.IsAuth()">
+        <span class="btn-gradient radius-btn">
+          <i class="fa fa-snapchat"></i>
+        </span>
+        <span class="btn-text">Snapchat</span>
+      </button>
+      <button class="btn-instagram">
+        <span class="btn-gradient radius-btn">
+          <i class="fa fa-instagram"></i>
+        </span>
+        <span class="btn-text">Instagram</span>
+      </button>
+      <button class="btn-twitter">
+        <span class="btn-gradient radius-btn">
+          <i class="fa fa-twitter"></i>
+        </span>
+        <span class="btn-text">Twitter</span>
+      </button>
+    </div>
   </div>
 
   <div (document:click)="isPanelOpen = false">

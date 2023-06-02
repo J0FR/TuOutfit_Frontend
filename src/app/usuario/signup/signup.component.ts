@@ -25,7 +25,7 @@ export class SignupComponent implements OnInit {
 
     this.usuarioService.postUsuario(usuario).subscribe(result => {
       alert('Account created successfully!');
-      this.router.navigate(['']); // This navigates to the homepage
+      this.router.navigate(['Login']); // This navigates to the homepage
     }, error => {
       alert('Error creating account: ' + error.message);
     });
