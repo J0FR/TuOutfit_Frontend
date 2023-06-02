@@ -1,8 +1,50 @@
+@font-face {
+  font-family: 'Luxia-Display';
+  src: url('../assets/fonts/Luxia-Display.otf');
+}
+
+@font-face {
+  font-family: 'Luxia-Regular';
+  src: url('../assets/fonts/Luxia-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Montserrat-Thin';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Light.ttf');
+}
+
+.navbar {
+  position: relative;
+}
+
+#navbarNav {
+  padding-right: 10em;
+  padding-left: 10em;
+}
+
 .navbar .nav-link {
   font-size: 2rem;
   color: #F0EBE1;
-  margin: 0 130px;
-  padding: 0;
+  width: 12rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: Luxia-Regular;
+}
+
+.center-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1);
+}
+
+.navbar-toggler {
+  margin: 1.0em;
+  text-align: center;
 }
 
 .container-fluid{
@@ -15,22 +57,6 @@
   color: black;
   text-align: center;
   margin: 0 !important;
-}
-
-
-.navbar {
-  position: relative;
-}
-
-.center-link {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.nav-link:hover {
-  transition: transform 0.3s;
-  transform: scale(1.1);
 }
 
 .button-position {

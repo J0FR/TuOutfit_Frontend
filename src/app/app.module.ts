@@ -22,6 +22,8 @@ import { OutfitDetailComponent } from './outfit/outfit-detail/outfit-detail.comp
 import { PrendaDetailComponent } from './prenda/prenda-detail/prenda-detail.component';
 import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
 import { TiendafisicaDetailComponent } from './tiendafisica/tiendafisica-detail/tiendafisica-detail.component';
+import { NosotrosModule } from './nosotros/nosotros.module';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 
 const appRoute: Routes = [
@@ -34,6 +36,7 @@ const appRoute: Routes = [
   {path: 'Marcas/:id', component: MarcaDetailComponent},
   {path: 'Tiendas', component: TiendafisicaListComponent},
   {path: 'Tiendas/:id', component: TiendafisicaDetailComponent},
+  {path: 'Nosotros', component: NosotrosComponent},
   {path: '**', component: NotFoundComponent}
 ]
 
@@ -52,6 +55,7 @@ const appRoute: Routes = [
     ComentarioModule,
     HttpClientModule,
     HomeModule,
+    NosotrosModule,
     RouterModule.forRoot(appRoute),
     NgxPaginationModule
   ],

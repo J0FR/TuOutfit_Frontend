@@ -1,0 +1,28 @@
+p {
+  font-size: 1.6rem;
+  line-height: 3rem;
+  font-family: 'Montserrat-Thin';
+  color: white;
+
+  padding-right: 0;
+  padding-left: 0;
+}
+
+h1 {
+  font-family: 'Luxia-Regular';
+  color: white;
+}
+
+#cuerpo {
+  background-image: url("https://drive.google.com/uc?id=1mT4d8E17XyZ88XxOcV9FSSn9N9y6eQL1");
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+
+#firma {
+  height: 5rem;
+  width: auto;
+  margin-top: 3rem;
+}
