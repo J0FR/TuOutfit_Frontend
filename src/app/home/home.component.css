@@ -3,7 +3,7 @@
 }
 
 .carousel-item{
-  height: 94vh;
+  height: 95vh;
   min-height: 350px;
 }
 
@@ -48,6 +48,7 @@
   background: rgba(5,13,24,0.7);
   z-index: 1;
 }
+
 
  /* PARTE DE ABAJO */
 

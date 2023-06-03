@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsuarioService } from './usuario/usuario.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,8 @@ export class AppComponent {
   title = 'base-project';
 
   isPanelOpen = false;
+
+  constructor(public authService: UsuarioService) {}
 
   togglePanel() {
     this.isPanelOpen = !this.isPanelOpen;
