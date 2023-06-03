@@ -1,0 +1,87 @@
+/* Background color */
+* {
+  background-color: #F0EBE1;
+  border-radius: 1em;
+}
+
+#formulario {
+  margin-right: 10em;
+  margin-left: 10em;
+  margin-bottom: 3em;
+  font-family: 'Montserrat-Thin';
+  font-size: 1.4em;
+}
+
+label, .form-control {
+  font-size: 1em;
+  font-family: 'Montserrat-Thin';
+}
+
+label {
+  margin-bottom: 0.5em;
+}
+
+input {
+  font-family: 'Montserrat-Thin';
+}
+
+.form-group {
+  padding: 0.3em;
+  margin: 0.2em;
+}
+
+/* Text and box colors */
+.text-color {
+  color: #050D18;
+}
+
+.box-color {
+  background-color: #050D18;
+  color: #F0EBE1;
+}
+
+/* Highlight for valid and invalid inputs */
+input:valid,
+textarea:valid,
+select:valid {
+  border-color: rgb(211, 242, 211);
+  background-color: rgb(160, 220, 160);
+}
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-color: rgb(240, 200, 200);
+  background-color: rgb(240, 200, 200);
+}
+
+/* Hover effect */
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #050d1818;
+  background-color: #050d1818;
+}
+
+
+/* Botón de crear */
+#botonCrear {
+  font-family: 'Luxia-Regular';
+  font-size: 1.2em;
+  color: #F0EBE1;
+  background-color: #050D18;
+  width: 100%;
+  border: none;
+  margin-top: 0.5em;
+}
+
+#botonCrear:hover {
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+h1 {
+  font-family: 'Luxia-Regular';
+  color: #050D18;
+  margin-bottom: 0.5em;
+}

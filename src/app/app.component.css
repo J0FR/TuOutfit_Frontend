@@ -13,6 +13,11 @@
   src: url('../assets/fonts/Montserrat/static/Montserrat-Light.ttf');
 }
 
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../assets/fonts/Montserrat/static/Montserrat-Regular.ttf');
+}
+
 .navbar {
   position: relative;
 }
@@ -407,4 +412,3 @@ align-items:center;
 .radius-style {
   background-color: rgba(0,0,0,0);
 }
-

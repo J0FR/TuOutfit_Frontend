@@ -7,8 +7,8 @@
 </section>
 
 <!-- Formulario para crear el outfit-->
-<form (ngSubmit)="onFormSubmit()">
-  {{ miOutfit | json }}
+<form (ngSubmit)="onFormSubmit()" id="formulario">
+
   <div class="row">
     <!-- Nombre del outfit-->
     <div class="form-group col">
@@ -133,5 +133,9 @@
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">Crear</button>
+  <div class="row">
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" id="botonCrear">Crear outfit</button>
+    </div>
+  </div>
 </form>
