@@ -1,0 +1,137 @@
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light" id="outfits">Crea un outfit</h1>
+    </div>
+  </div>
+</section>
+
+<!-- Formulario para crear el outfit-->
+<form (ngSubmit)="onFormSubmit()">
+  {{ miOutfit | json }}
+  <div class="row">
+    <!-- Nombre del outfit-->
+    <div class="form-group col">
+      <label for="nombre">Nombre del outfit</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Harry Balenciaga"
+             required
+             [(ngModel)]="miOutfit.nombre" name="nombre">
+    </div>
+
+    <!-- Precio del outfit -->
+    <!-- TODO: actualizar con las prendas seleccionadas -->
+    <div class="form-group col">
+      <label for="precio">Precio del outfit</label>
+      <input type="number" patter="^\d+$" min="1000" class="form-control" placeholder="120000"
+             required
+             [(ngModel)]="miOutfit.precio" name="precio">
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Género del outfit -->
+    <div class="form-group col">
+      <label for="genero">Género</label>
+      <select class="form-control" id="genero"
+              required
+              [(ngModel)]="miOutfit.genero" name="genero">
+        <option value="HOMBRE">Hombre</option>
+        <option value="MUJER">Mujer</option>
+        <option value="UNISEX">Unisex</option>
+      </select>
+    </div>
+
+    <!-- Ocasión del outfit -->
+    <div class="form-group col">
+      <label for="ocasiones">Ocasión</label>
+      <select class="form-control" id="ocasiones"
+              required
+              [(ngModel)]="miOutfit.ocasiones" name="ocasiones">
+        <option value="BODA">Boda</option>
+        <option value="CASUAL">Casual</option>
+        <option value="CENA">Cena</option>
+        <option value="FIESTA">Fiesta</option>
+        <option value="FORMAL">Formal</option>
+        <option value="GRADO">Grado</option>
+      </select>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <!-- Talla -->
+    <div class="form-group col">
+      <label for="talla">Talla</label>
+      <select class="form-control" id="talla"
+              required
+              [(ngModel)]="miOutfit.talla" name="talla">
+        <option>XS</option>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+        <option>XXL</option>
+      </select>
+    </div>
+
+
+    <!-- Rango de edad -->
+    <div class="form-group col">
+      <label for="rangoEdad">Rango de edad</label>
+      <select class="form-control" id="rangoEdad"
+              required
+              [(ngModel)]="miOutfit.rangoEdad" name="rangoEdad">
+        <option value="BEBE">Bebé</option>
+        <option value="NINHO">Niño</option>
+        <!-- TODO: Toca corregir hasta el back para arreglar esto-->
+        <option value="ADOLECENTE">Adolescente</option>
+        <option value="JOVEN">Joven</option>
+        <option value="ADULTO">Adulto</option>
+        <option value="ABUELOS">Mayores</option>
+      </select>
+    </div>
+
+
+    <!-- Color -->
+    <div class="form-group col">
+      <label for="colores">Color</label>
+      <select class="form-control" id="colores"
+              required
+              [(ngModel)]="miOutfit.colores" name="colores">
+        <option value="ROJO">Rojo</option>
+        <option value="AZUL">Azul</option>
+        <option value="DORADO">Dorado</option>
+        <option value="VERDE">Verde</option>
+        <option value="PLATA">Plata</option>
+        <option value="AMARILLO">Amarillo</option>
+        <option value="CAFE">Café</option>
+        <option value="BLANCO">Blanco</option>
+        <option value="NEGRO">Negro</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Descripción -->
+  <div class="row">
+    <div class="form-group">
+      <label for="descripcion">Descripción</label>
+      <textarea class="form-control" rows="3" id="descripcion"
+                required
+                [(ngModel)]="miOutfit.descripcion" name="descripcion">
+      </textarea>
+    </div>
+  </div>
+
+  <!-- Imagen -->
+  <div class="row">
+    <div class="form-group">
+      <label for="imagen">Imagen</label>
+      <!-- Nombre del outfit-->
+      <input type="url" class="form-control" id="imagen" placeholder="mi-outfit.jpg"
+             required
+             [(ngModel)]="miOutfit.imagen" name="imagen">
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>

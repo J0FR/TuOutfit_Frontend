@@ -24,11 +24,14 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
 import { TiendafisicaDetailComponent } from './tiendafisica/tiendafisica-detail/tiendafisica-detail.component';
 import { NosotrosModule } from './nosotros/nosotros.module';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { OutfitCreateComponent } from './outfit/outfit-create/outfit-create.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
 
 const appRoute: Routes = [
   {path: '', component: HomeComponent},
   {path: 'Outfits', component: OutfitListComponent},
+  {path: 'Outfits/outfit-create', component: OutfitCreateComponent},
   {path: 'Outfits/:id', component: OutfitDetailComponent},
   {path: 'Prendas', component: PrendaListComponent},
   {path: 'Prendas/:id', component: PrendaDetailComponent},
@@ -37,7 +40,7 @@ const appRoute: Routes = [
   {path: 'Tiendas', component: TiendafisicaListComponent},
   {path: 'Tiendas/:id', component: TiendafisicaDetailComponent},
   {path: 'Nosotros', component: NosotrosComponent},
-  {path: '**', component: NotFoundComponent}
+  {path: '**', component: NotFoundComponent},
 ]
 
 @NgModule({
@@ -57,6 +60,7 @@ const appRoute: Routes = [
     HomeModule,
     NosotrosModule,
     RouterModule.forRoot(appRoute),
+    FormsModule,
     NgxPaginationModule
   ],
   providers: [],

@@ -1,3 +1,4 @@
+<!-- Título -->
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
@@ -6,14 +7,25 @@
   </div>
 </section>
 
+
+<!-- Contenido-->
 <div class="container-fluid">
   <div class="container-fluid d-flex justify-content-between">
+    <!-- Número de outfits-->
     <div>
       <p class="detail-filter">Outfits ({{getNumberOfOutfits()}})</p>
     </div>
+
+    <!-- Botón de filtros -->
     <div class="filtro">
       <button class="btn btn-primary" (click)="showFilters = !showFilters">Filtro</button>
     </div>
+
+    <!-- Botón de creación de outfits -->
+    <div class>
+      <button class="btn btn-primary" routerLink="outfit-create">Crear outfit</button>
+    </div>
+
   </div>
   <br>
   <div class="container-fluid filter" *ngIf="showFilters">
