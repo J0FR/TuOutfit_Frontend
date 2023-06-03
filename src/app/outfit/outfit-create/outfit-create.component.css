@@ -4,12 +4,13 @@
   border-radius: 1em;
 }
 
-#formulario {
+#formulario, #seleccion-prendas-outfit {
   margin-right: 10em;
   margin-left: 10em;
   margin-bottom: 3em;
   font-family: 'Montserrat-Thin';
   font-size: 1.4em;
+  width: auto;
 }
 
 label, .form-control {
