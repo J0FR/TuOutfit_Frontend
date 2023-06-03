@@ -24,7 +24,8 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
 import { TiendafisicaDetailComponent } from './tiendafisica/tiendafisica-detail/tiendafisica-detail.component';
 import { NosotrosModule } from './nosotros/nosotros.module';
 import { NosotrosComponent } from './nosotros/nosotros.component';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { OutfitCreateComponent } from './outfit/outfit-create/outfit-create.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { LoginComponent } from './usuario/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './usuario/signup/signup.component';
@@ -32,6 +33,7 @@ import { SignupComponent } from './usuario/signup/signup.component';
 const appRoute: Routes = [
   {path: '', component: HomeComponent},
   {path: 'Outfits', component: OutfitListComponent},
+  {path: 'Outfits/outfit-create', component: OutfitCreateComponent},
   {path: 'Outfits/:id', component: OutfitDetailComponent},
   {path: 'Prendas', component: PrendaListComponent},
   {path: 'Prendas/:id', component: PrendaDetailComponent},
@@ -42,7 +44,7 @@ const appRoute: Routes = [
   {path: 'Login', component: LoginComponent},
   {path: 'Signup', component: SignupComponent},
   {path: 'Nosotros', component: NosotrosComponent},
-  {path: '**', component: NotFoundComponent}
+  {path: '**', component: NotFoundComponent},
 ]
 
 @NgModule({
