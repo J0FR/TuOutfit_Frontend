@@ -140,6 +140,14 @@
   </div>
 </form>
 
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light" id="outfits">Agrega prendas</h1>
+    </div>
+  </div>
+</section>
+
 <div class="container-fluid" id="seleccion-prendas-outfit">
   <div class="container-fluid d-flex justify-content-between">
     <!-- Número de outfits-->
@@ -149,46 +157,11 @@
 
 
   </div>
-  <br>
-  <div class="container-fluid filter">
-    <div class="row">
-      <div class="col">
-        <select class="form-select">
-          <option value="Genero" selected>Genero</option>
-          <option value="HOMBRE">Hombre</option>
-          <option value="MUJER">Mujer</option>
-          <option value="UNISEX">Unisex</option>
-        </select>
-      </div>
-      <div class="col">
-        <select class="form-select">
-          <option value="Edad" selected>Edad</option>
-          <option value="BEBE">Bebe</option>
-          <option value="NIÑO">Niño</option>
-          <option value="ADOLECENTE">Adolecente</option>
-          <option value="JOVEN">Joven</option>
-          <option value="ADULTO">Adulto</option>
-          <option value="ABUELOS">Abuelo</option>
-        </select>
-      </div>
-      <div class="col">
-        <select class="form-select">
-          <option value="Ocasion" selected>Ocasion</option>
-          <option value="BODA">Boda</option>
-          <option value="FIESTA">Fiesta</option>
-          <option value="CENA">Cena</option>
-          <option value="CASUAL">Casual</option>
-          <option value="FORMAL">Formal</option>
-          <option value="GRADO">Grado</option>
-        </select>
-      </div>
-    </div>
-  </div>
 
-  <div class="row pb-5 mb-4 contenedor">
+  <!-- TODO: Aquí se ingresan los filtros -->
+
+  <div class="row pb-5 mb-4 contenedor" id="prendas-agregar">
     <ng-container ng-container *ngFor="let outfit of outfits">
-      <ng-container>
-        <ng-container>
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
             <div class="card rounded shadow-lg border-0">
               <div class="card-body p-4"><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}" class="img-fluid d-block mx-auto mb-3">
@@ -200,8 +173,6 @@
               </div>
             </div>
           </div>
-        </ng-container>
-      </ng-container>
     </ng-container>
   </div>
 </div>

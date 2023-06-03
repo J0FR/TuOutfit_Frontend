@@ -86,3 +86,8 @@ h1 {
   color: #050D18;
   margin-bottom: 0.5em;
 }
+
+/* Espaciado adicional para el listado */
+#prendas-agregar .card {
+  margin-bottom: 1.5em;
+}
