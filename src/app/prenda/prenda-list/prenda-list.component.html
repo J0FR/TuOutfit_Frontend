@@ -1,31 +1,77 @@
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="fw-light" id="prendas">Prendas</h1>
+      <h1 class="fw-light" id="outfits">Prendas</h1>
     </div>
   </div>
 </section>
 
-<div class="album py-5" style="background-color: white">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col" *ngFor="let prenda of prendas">
-        <div class="card shadow-sm" (click)="onSelected(prenda)">
-          <img src="{{prenda.imagen}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="{{prenda.nombre}}">
-          <div class="card-body">
-            <p class="card-text">{{prenda.nombre}}</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Id:</strong>  {{prenda.id}}</li>
-                <li class="list-group-item"><strong>Precio:</strong>  {{prenda.precio}}</li>
-                <li class="list-group-item"><strong>Color:</strong> {{prenda.colores}}</li>
-                <li class="list-group-item"><strong>Genero:</strong>  {{prenda.genero}}</li>
-                <li class="list-group-item"><strong>Ocacion:</strong> {{prenda.ocasiones}}</li>
-                <li class="list-group-item"><strong>Edad:</strong>  {{prenda.rango_edad}}</li>
-                <li class="list-group-item"><strong>Talla:</strong> {{prenda.talla}}</li>
-              </ul>
-          </div>
-        </div>
+<div class="container-fluid">
+  <div class="container-fluid d-flex justify-content-between">
+    <div>
+      <p class="detail-filter">Prendas ({{getNumberOfPrendas()}})</p>
+    </div>
+    <div class="filtro">
+      <button class="btn btn-primary" (click)="showFilters = !showFilters">Filtro</button>
+    </div>
+  </div>
+  <br>
+  <div class="container-fluid filter" *ngIf="showFilters">
+    <div class="row">
+      <div class="col">
+        <select class="form-select" #genders (change)="onSelectedFilterGender(genders.value)">
+          <option value="Genero" selected>Genero</option>
+          <option value="HOMBRE">Hombre</option>
+          <option value="MUJER">Mujer</option>
+          <option value="UNISEX">Unisex</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-select" #color (change)="onSelectedFilterColor(color.value)">
+          <option value="Color" selected>Edad</option>
+          <option value="AZUL">Azul</option>
+          <option value="DORADO">Dorado</option>
+          <option value="VERDE">Verde</option>
+          <option value="PLATA">Plata</option>
+          <option value="AMARILLO">Amarillo</option>
+          <option value="CAFE">Cafe</option>
+          <option value="BLANCO">Blanco</option>
+          <option value="NEGRO">Negro</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-select" #occasion (change)="onSelectedFilterOcassion(occasion.value)">
+          <option value="Ocasion" selected>Ocasion</option>
+          <option value="BODA">Boda</option>
+          <option value="FIESTA">Fiesta</option>
+          <option value="CENA">Cena</option>
+          <option value="CASUAL">Casual</option>
+          <option value="FORMAL">Formal</option>
+          <option value="GRADO">Grado</option>
+        </select>
       </div>
     </div>
+  </div>
+
+  <div class="row pb-5 mb-4 contenedor">
+    <ng-container *ngFor="let prenda of prendas | paginate: { itemsPerPage: 9, currentPage: p}">
+      <ng-container *ngIf="selectedOccasion === 'Ocasion' || selectedOccasion === prenda.ocasiones">
+        <ng-container *ngIf="selectedColor === 'Color' || selectedColor === prenda.colores">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" *ngIf="selectedGender === 'Genero' || selectedGender === prenda.genero">
+            <div class="card rounded shadow-lg border-0" (click)="onSelected(prenda)">
+              <div class="card-body p-4"><img src="{{prenda.imagen}}" alt="{{prenda.nombre}}" class="img-fluid d-block mx-auto mb-3">
+                <h5>{{prenda.nombre}}</h5>
+                <ul class="list-inline small">
+                  <li class="list-inline-item m-0"><i class="fa fa-star text-success price">{{prenda.precio}}$</i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+  <div class="mt-8 py-5 d-flex justify-content-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
   </div>
 </div>
