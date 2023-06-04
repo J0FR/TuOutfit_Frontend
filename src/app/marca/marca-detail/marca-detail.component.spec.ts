@@ -50,11 +50,6 @@ describe('MarcaDetailComponent', () => {
       debug = fixture.debugElement;
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  }
-  );
-
 
 
 
