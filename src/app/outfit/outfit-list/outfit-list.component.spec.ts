@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { OutfitService } from '../outfit.service';
 import { Outfit } from '../outfit';
 import { OutfitDetail } from '../outfitDetail';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 describe('OutfitListComponent', () => {
   let component: OutfitListComponent;
@@ -17,7 +19,7 @@ describe('OutfitListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule,RouterTestingModule,NgxPaginationModule],
       declarations: [ OutfitListComponent ],
       providers: [ OutfitService ]
     })
@@ -45,6 +47,28 @@ describe('OutfitListComponent', () => {
       }
       fixture.detectChanges();
       debug = fixture.debugElement;
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should display the "Outfits" heading', () => {
+    const headingElement: HTMLElement = fixture.nativeElement.querySelector('h1#outfits');
+    expect(headingElement.textContent).toContain('Outfits');
+  });
+
+  it('should display the number of outfits', () => {
+    const filterElement: HTMLElement = fixture.nativeElement.querySelector('.detail-filter');
+    expect(filterElement.textContent).toContain(`Outfits (${component.getNumberOfOutfits()})`);
+  });
+
+  it('should toggle the filters section on button click', () => {
+    const buttonElement: HTMLElement = fixture.nativeElement.querySelector('button');
+    buttonElement.click();
+    fixture.detectChanges();
+    const filterSectionElement: HTMLElement = fixture.nativeElement.querySelector('.filter');
+    expect(filterSectionElement).toBeTruthy();
   });
 
 });
