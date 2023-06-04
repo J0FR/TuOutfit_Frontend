@@ -88,7 +88,7 @@ describe('PrendaDetailComponent', () => {
     expect(detailsElement.textContent).toContain(component.prendaDetail.genero);
     expect(detailsElement.textContent).toContain(component.prendaDetail.ocasiones);
     expect(detailsElement.textContent).toContain(component.prendaDetail.talla);
-    expect(detailsElement.textContent).toContain(component.prendaDetail.rango_edad);
+    expect(detailsElement.textContent).toContain(component.prendaDetail.rangoEdad);
     expect(detailsElement.textContent).toContain(component.prendaDetail.marca.nombre);
   });
 

@@ -37,15 +37,19 @@ export class PrendaDetailComponent implements OnInit {
     }
   }
 
-  onCommentButtonClick(outfitId: number): void {
+  onCommentButtonClick(prendaId: number): void {
     console.log(this.usuarioService.IsAuth());
     if (this.usuarioService.IsAuth()) {
-      localStorage.setItem('currentPrendaId', String(outfitId));
+      localStorage.setItem('currentPrendaId', String(prendaId));
       this.router.navigate(['comentario-prenda']);
     } else {
       this.router.navigate(['Signup']);
       alert("Necesitas una cuenta para comentar.");
     }
+  }
+
+  getNumberOfOutfits(): number {
+    return this.outfits.length;
   }
 
 }

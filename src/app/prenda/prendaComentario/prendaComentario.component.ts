@@ -42,10 +42,11 @@ export class PrendaComentarioComponent implements OnInit {
         this.idPrendaNum = Number(this.idPrenda);
         this.prendaService.postAgregarUnComentarioPrenda(this.idPrendaNum, this.idComentario).subscribe((res) => {
           console.log(`Comentario with id ${this.idComentario} added to Prenda with id ${this.idPrendaNum}`);
-
+          this.router.navigate(['Prendas']);
+          alert('Comentario agregado con exito');
           }, error => {
             console.log('Error adding comentario to prenda', error);
-
+            alert('Error agregando comentario');
         });
       }
 

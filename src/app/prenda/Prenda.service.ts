@@ -23,6 +23,7 @@ export class PrendaService {
   }
 
   postAgregarUnComentarioPrenda(prenda_id: number, comentario_id: number): Observable<any> {
+    console.log(`${this.apiurl}/${prenda_id}/comentarios/${comentario_id}`);
     return this.http.post(`${this.apiurl}/${prenda_id}/comentarios/${comentario_id}`, {});
   }
 }

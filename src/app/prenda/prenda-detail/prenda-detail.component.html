@@ -16,8 +16,9 @@
                     <span><strong>Genero: </strong>{{prendaDetail.genero}}</span><br>
                     <span><strong>Ocasion: </strong>{{prendaDetail.ocasiones}}</span><br>
                     <span><strong>Rango Edad: </strong>{{prendaDetail.talla}}</span><br>
-                    <span><strong>Talla: </strong>{{prendaDetail.rango_edad}}</span><br>
+                    <span><strong>Talla: </strong>{{prendaDetail.rangoEdad}}</span><br>
                     <span><strong>Marca: </strong>{{prendaDetail.marca.nombre}}</span><br>
+                    <br>
                     <div class="d-flex">
                       <div class="interact">
                         <div class="interact">
@@ -27,42 +28,46 @@
                       </div>
                   </div>
                 </div>
-
                     </div>
                 </div>
             </div>
 </section>
 
-<div class="row text-center">
-  <div class="col-12">
-    <h1 class="display-3 fw-bold text-white" style="color: black!important;">Outfits</h1>
-  </div>
-</div>
-<div class="container-fluid">
-  <div class="container">
-    <div class="row">
-      <div *ngFor="let outfit of outfits" class="col-4 mb-4">
-        <div class="card" style="width: 20rem; height: 30rem;">
-          <div style="padding: 5%;text-align: center;">
-            <h5>{{outfit.nombre}}</h5>
-          </div>
-          <div class="card-body" style="line-height:0%">
-            <img src="{{ outfit.imagen }}" alt="{{outfit.nombre}}" width="100%">
-            <div style="padding: 5%">
-              <p class="card-text">Descripcion: {{outfit.descripcion}}</p>
-              <p class="card-text">Precio: ${{outfit.precio}}</p>
-
-            </div>
-          </div>
-        </div>
+<section >
+  <section class="py-5 text-center container">
+    <div class="row text-center">
+      <div class="col-12">
+        <h1 class="display-3 fw-bold text-white" style="color: black!important;">Outfits</h1>
+        <hr class="bg-white mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height:3px;">
+        <p class="p-text text-white" style="color: black!important">Las prendas de este producto</p>
       </div>
     </div>
+  </section>
+
+  <div class="container-fluid">
+    <div class="container-fluid d-flex justify-content-between">
+      <div>
+        <p class="detail-filter">Prendas ({{getNumberOfOutfits()}})</p>
+      </div>
+    </div>
+    <br>
+
+    <div class="row pb-5 mb-3 contenedor">
+      <ng-container *ngFor="let outfit of outfits">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" >
+              <div class="card rounded shadow-lg border-0">
+                <div class="card-body p-4"><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}" class="img-fluid d-block mx-auto mb-3">
+                  <h5>{{outfit.nombre}}</h5>
+                  <ul class="list-inline small">
+                    <li class="list-inline-item m-0"><i class="text-success price">{{outfit.precio}}$</i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+    </div>
   </div>
-</div>
-
-
-
-
+</section>
 
 
 

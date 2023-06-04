@@ -42,10 +42,11 @@ export class OutfitComentarioComponent implements OnInit {
         this.idOutfitNum = Number(this.idOutfit);
         this.outfitService.postAgregarUnComentarioOutfit(this.idOutfitNum, this.idComentario).subscribe((res) => {
           console.log(`Comentario with id ${this.idComentario} added to Outfit with id ${this.idOutfitNum}`);
-
+          this.router.navigate(['Outfits']);
+          alert('Comentario agregado con exito');
           }, error => {
             console.log('Error adding comentario to outfit', error);
-
+            alert('Error agregando comentario');
         });
       }
 
