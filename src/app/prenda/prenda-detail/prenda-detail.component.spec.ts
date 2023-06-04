@@ -8,6 +8,9 @@ import { Outfit } from '../../outfit/outfit';
 import { PrendaDetail } from './PrendaDetail'
 import { faker } from '@faker-js/faker';
 import { Marca } from 'src/app/marca/marca';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
+import { PrendaService } from '../Prenda.service';
 
 describe('PrendaDetailComponent', () => {
   let component: PrendaDetailComponent;
@@ -16,7 +19,9 @@ describe('PrendaDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PrendaDetailComponent ]
+      imports: [HttpClientModule,RouterTestingModule],
+      declarations: [ PrendaDetailComponent ],
+      providers: [ PrendaService]
     })
     .compileComponents();
   }));
@@ -59,6 +64,32 @@ describe('PrendaDetailComponent', () => {
 
     fixture.detectChanges();
     debug = fixture.debugElement;
+  });
+
+  it('should display the prenda\'s image', () => {
+    const imageElement: HTMLImageElement = debug.query(By.css('.card-img-top')).nativeElement;
+    expect(imageElement.src).toBe(component.prendaDetail.imagen);
+  });
+
+  it('should display the prenda\'s ID', () => {
+    const idElement: HTMLElement = debug.query(By.css('.small')).nativeElement;
+    expect(idElement.textContent).toContain(component.prendaDetail.id.toString());
+  });
+
+  it('should display the prenda\'s name', () => {
+    const nameElement: HTMLElement = debug.query(By.css('.display-5')).nativeElement;
+    expect(nameElement.textContent).toContain(component.prendaDetail.nombre);
+  });
+
+  it('should display the prenda\'s details', () => {
+    const detailsElement: HTMLElement = debug.query(By.css('.fs-5')).nativeElement;
+    expect(detailsElement.textContent).toContain(component.prendaDetail.precio.toString());
+    expect(detailsElement.textContent).toContain(component.prendaDetail.colores);
+    expect(detailsElement.textContent).toContain(component.prendaDetail.genero);
+    expect(detailsElement.textContent).toContain(component.prendaDetail.ocasiones);
+    expect(detailsElement.textContent).toContain(component.prendaDetail.talla);
+    expect(detailsElement.textContent).toContain(component.prendaDetail.rango_edad);
+    expect(detailsElement.textContent).toContain(component.prendaDetail.marca.nombre);
   });
 
 });
