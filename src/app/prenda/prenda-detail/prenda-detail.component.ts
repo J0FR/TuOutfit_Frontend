@@ -3,8 +3,8 @@ import { Prenda } from '../prenda';
 import { PrendaDetail } from './PrendaDetail';
 import { PrendaService } from '../Prenda.service';
 import { ActivatedRoute } from '@angular/router';
-import { Outfit } from 'src/app/outfit/outfit';
 import { OutfitService } from 'src/app/outfit/outfit.service';
+import { OutfitDetail } from 'src/app/outfit/outfitDetail';
 
 @Component({
   selector: 'app-prenda-detail',
@@ -15,7 +15,7 @@ export class PrendaDetailComponent implements OnInit {
 
   @Input() prendaDetail!: PrendaDetail;
 
-  outfits: Outfit[] = [];
+  outfits: OutfitDetail[] = [];
 
   constructor(private route: ActivatedRoute, private prendaService: PrendaService, private outfitService: OutfitService) { }
 
@@ -25,13 +25,15 @@ export class PrendaDetailComponent implements OnInit {
       this.prendaService.getPrendaById(+id).subscribe((prendaDetail) => {
         this.prendaDetail = prendaDetail;
       });
-      this.outfitService.getOutfits().subscribe((outfits: Outfit[]) => {
-        for (let i = 0; i < outfits.length; i++) {
-          if (+id in outfits[i].prendas) {
-            this.outfits.push(outfits[i]);
+      this.outfitService.getOutfits().subscribe((outfitss: OutfitDetail[]) => {
+        for (let i = 0; i < outfitss.length; i++) {
+          for (let j = 0; j < outfitss[i].prendas.length; j++) {
+            if (outfitss[i].prendas[j].id == +id) {
+              this.outfits.push(outfitss[i]);
+            }
           }
         }
-      }
+      });
     }
   }
 }
