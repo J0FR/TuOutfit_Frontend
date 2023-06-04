@@ -1,3 +1,4 @@
+<!-- Título -->
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
@@ -6,22 +7,60 @@
   </div>
 </section>
 
-<div class="album py-5" style="background-color: rgb(255, 255, 255)">
-  <div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div class="col" *ngFor="let marca of marcas">
-        <div class="card shadow-sm" (click)="onSelected(marca)">
-          <img src="{{marca.logo}}" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="{{marca.nombre}}">
-          <div class="card-body">
-            <p class="card-text">{{marca.nombre}}</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Id:</strong>  {{marca.id}}</li>
-                <li class="list-group-item"><strong>detalle_de_marca:</strong> {{marca.detalle_de_marca}}</li>
-                <li class="list-group-item"><strong>url_marca:</strong>  {{marca.url_sitio_web}}</li>
-              </ul>
-          </div>
-        </div>
+
+<!-- Contenido-->
+<div class="container-fluid">
+  <div class="container-fluid d-flex justify-content-between">
+    <!-- Número de outfits-->
+    <div>
+      <p class="detail-filter">Marcas: ({{getNumberOfMarcas()}})</p>
+    </div>
+
+    <div class="d-flex justify-content-start">
+      <!-- Botón de filtros -->
+      <button class="btn mr-2" style="background-color: brown; color: white; margin-right: 2rem;" (click)="showFilters = !showFilters">Filtro</button>
+      <br>
+
+      <!-- Botón de creación de outfits -->
+      <button class="btn" style="background-color: brown; color: white;" routerLink="outfit-create">Esto meh</button>
+  </div>
+
+  </div>
+  <br>
+  <div class="container-fluid filter" *ngIf="showFilters">
+    <div class="row">
+      <div class="col">
+        <select class="form-select" #genders (change)="onSelectedFilterNombre(genders.value)">
+          <option value="Genero" selected>Genero</option>
+          <option value="HOMBRE">Hombre</option>
+          <option value="MUJER">Mujer</option>
+          <option value="UNISEX">Unisex</option>
+        </select>
       </div>
     </div>
   </div>
+
+  <div class="row pb-5 mb-4 contenedor">
+    <ng-container *ngFor="let marca of marcas | paginate: { itemsPerPage: 9, currentPage: p}">
+      <ng-container >
+        <ng-container >
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" >
+            <div class="card rounded shadow-lg border-0" (click)="onSelected(marca)" style="background-color:#EDF0F0;">
+              <div class="card-body p-4"><img src="{{marca.logo}}" alt="{{marca.nombre}}" class="img-fluid d-block mx-auto mb-3 my-image">
+                <h5 class="my-name">{{marca.nombre}}</h5>
+                <ul class="list-inline small">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+  <div class="mt-8 py-5 d-flex justify-content-center">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
 </div>
+
+
+
