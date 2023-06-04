@@ -24,6 +24,8 @@ export class UsuarioService {
     return this.http.post<Usuario>(this.apiUrl, usuario);
   }
 
+
+
   IsAuth(): boolean {
     return this.isAuth;
   }

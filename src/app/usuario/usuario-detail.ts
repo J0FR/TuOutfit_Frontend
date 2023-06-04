@@ -7,6 +7,7 @@ export class UsuarioDetail extends Usuario {
   outfits_favoritos: Array<Outfit> = [];
 
   constructor (
+    id: number,
     nombre: string,
     genero: string,
     edad: number,
@@ -14,7 +15,7 @@ export class UsuarioDetail extends Usuario {
     comentarios: Array<Comentario>,
     outfits_favoritos: Array<Outfit>
   ) {
-    super(nombre, genero, edad, email);
+    super(id, nombre, genero, edad, email);
     this.comentarios = comentarios;
     this.outfits_favoritos = outfits_favoritos;
   }

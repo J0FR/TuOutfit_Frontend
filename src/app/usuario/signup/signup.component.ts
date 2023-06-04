@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    let usuario: Usuario = new Usuario (this.name, this.gender, this.age, this.email);
+    let usuario: Usuario = new Usuario (0, this.name, this.gender, this.age, this.email);
 
     this.usuarioService.postUsuario(usuario).subscribe(result => {
       alert('Account created successfully!');
