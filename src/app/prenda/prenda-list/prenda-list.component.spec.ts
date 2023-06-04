@@ -10,6 +10,8 @@ import { Prenda } from '../prenda';
 import { PrendaService } from '../Prenda.service';
 import { Marca } from 'src/app/marca/marca';
 import { PrendaDetail } from '../prenda-detail/PrendaDetail';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 describe('PrendaListComponent', () => {
   let component: PrendaListComponent;
@@ -18,8 +20,9 @@ describe('PrendaListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
-      declarations: [ PrendaListComponent ]
+      imports: [HttpClientModule,RouterTestingModule,NgxPaginationModule],
+      declarations: [ PrendaListComponent ],
+      providers: [ PrendaService]
     })
     .compileComponents();
   }));
@@ -38,5 +41,7 @@ describe('PrendaListComponent', () => {
     fixture.detectChanges();
     debug = fixture.debugElement;
   });
+
+
 
 });

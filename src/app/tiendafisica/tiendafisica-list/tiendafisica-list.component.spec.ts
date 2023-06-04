@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Tiendafisica } from 'src/app/tiendafisica/tiendafisica';
 import { Marca } from 'src/app/marca/marca';
 import { Ubicacion } from 'src/app/ubicacion/ubicacion';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('TiendafisicaListComponent', () => {
   let component: TiendafisicaListComponent;
@@ -17,7 +18,7 @@ describe('TiendafisicaListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule,RouterTestingModule],
       declarations: [ TiendafisicaListComponent ]
     })
     .compileComponents();
@@ -39,6 +40,30 @@ describe('TiendafisicaListComponent', () => {
     }
     fixture.detectChanges();
     debug = fixture.debugElement;
+  });
+
+  it('should display the heading correctly', () => {
+    const headingElement = fixture.debugElement.query(By.css('#tiendasfisicas')).nativeElement;
+    expect(headingElement.textContent).toContain('Tiendas Fisicas');
+  });
+
+  it('should display the list of tiendasfisicas correctly', () => {
+    const cardElements = fixture.debugElement.queryAll(By.css('.card'));
+    expect(cardElements.length).toBe(component.tiendasfisicas.length);
+
+    for (let i = 0; i < component.tiendasfisicas.length; i++) {
+      const tiendaFisica = component.tiendasfisicas[i];
+      const cardTextElement = cardElements[i].query(By.css('.card-text')).nativeElement;
+      const listItems = cardElements[i].queryAll(By.css('.list-group-item'));
+
+      expect(cardTextElement.textContent).toContain(tiendaFisica.nombre);
+      expect(listItems[0].nativeElement.textContent).toContain('id:');
+      expect(listItems[0].nativeElement.textContent).toContain(tiendaFisica.id);
+      expect(listItems[1].nativeElement.textContent).toContain('horarios:');
+      expect(listItems[1].nativeElement.textContent).toContain(tiendaFisica.horarios);
+      expect(listItems[2].nativeElement.textContent).toContain('marca:');
+      expect(listItems[2].nativeElement.textContent).toContain(tiendaFisica.marca.nombre);
+    }
   });
 
 });
