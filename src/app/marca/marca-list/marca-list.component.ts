@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Marca } from '../marca';
 import { MarcaService } from '../marca.service';
 import { MarcaDetail } from '../marcaDetail';
@@ -42,4 +42,10 @@ export class MarcaListComponent implements OnInit {
 		this.selectedOccasion = value;
 	}
 
+  enteredSearchValue: string = '';
+
+  onSearchTextChange(){
+    // Use this.enteredSearchValue directly in this method
+    console.log(this.enteredSearchValue);
+  }
 }
