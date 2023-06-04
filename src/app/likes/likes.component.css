@@ -97,18 +97,3 @@ input {
 .justify-content-center {
   padding: 0 !important;
 }
-
-.my-image {
-  max-width: 500px;
-  max-height: 500px;
-}
-
-.my-name{
-  font-size: 40px;
-}
-
-.my-search {
-  width: 100%;
-  height: 40px;
-}
-

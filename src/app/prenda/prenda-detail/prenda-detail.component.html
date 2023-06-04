@@ -1,41 +1,26 @@
-<div class="text-center">
-  <h1>Prenda Detallado</h1>
-  <table class="table table-bordered">
-    <caption>Prenda Detalles</caption>
-    <thead>
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Imagen</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Precio</th>
-        <th scope="col">Color</th>
-        <th scope="col">Genero</th>
-        <th scope="col">Ocacion</th>
-        <th scope="col">Edad</th>
-        <th scope="col">Talla</th>
-        <th scope="col">Marca</th>
-        <th scope="col">Outfits</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class = "id">{{prendaDetail.id}}</td>
-        <td><img src="{{prendaDetail.imagen}}" alt="{{prendaDetail.nombre}}"></td>
-        <td class ="nombre">{{prendaDetail.nombre}}</td>
-        <td class = "precio">{{prendaDetail.precio}}</td>
-        <td>{{prendaDetail.colores}}</td>
-        <td class = "genero">{{prendaDetail.genero}}</td>
-        <td class = "ocasiones">{{prendaDetail.ocasiones}}</td>
-        <td>{{prendaDetail.rango_edad}}</td>
-        <td class = "talla">{{prendaDetail.talla}}</td>
-        <td>{{prendaDetail.marca.nombre}}</td>
-        <td>
-        <dd class="caption" *ngFor= "let outfit of prendaDetail.outfits" >
-          {{outfit.nombre}}
-        </dd>
-        </td>
+<header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</header>
 
-      </tr>
-    </tbody>
-  </table>
-</div>
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{prendaDetail.imagen}}" alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small mb-1">ID: {{prendaDetail.id}}</div>
+                <h1 class="display-5 fw-bolder">{{prendaDetail.nombre}}</h1>
+                <div class="fs-5 mb-5">
+                    <span><strong>Precio: </strong>${{prendaDetail.precio}}</span><br>
+                    <span><strong>Color Principal: </strong>{{prendaDetail.colores}}</span><br>
+                    <span><strong>Genero: </strong>{{prendaDetail.genero}}</span><br>
+                    <span><strong>Ocasion: </strong>{{prendaDetail.ocasiones}}</span><br>
+                    <span><strong>Rango Edad: </strong>{{prendaDetail.talla}}</span><br>
+                    <span><strong>Talla: </strong>{{prendaDetail.rango_edad}}</span><br>
+                    <span><strong>Marca: </strong>{{prendaDetail.marca.nombre}}</span><br>
+                    <strong>Outfit: </strong><span class="caption" *ngFor="let outfit of prendaDetail.outfits">{{outfit.nombre}},</span><br>
+                </div>
+                    </div>
+                </div>
+            </div>
+</section>

@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { UsuarioDetail } from './usuario-detail';
 import { Usuario } from './usuario';
+import { OutfitDetail } from '../outfit/outfitDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,6 @@ export class UsuarioService {
 
   private apiUrl = environment.baseUrl + 'usuarios';
   public isAuth: boolean = false;
-  public emailUsuario: string = '';
 
   constructor(private http: HttpClient) { }
 
@@ -20,11 +20,21 @@ export class UsuarioService {
     return this.http.get<UsuarioDetail[]>(this.apiUrl);
   }
 
+  getOutfitsUsuario(idUsuario: number): Observable<OutfitDetail[]> {
+    return this.http.get<OutfitDetail[]>(this.apiUrl + "/" + idUsuario +"/outfits");
+  }
+
+  getUsuarioInstante(idUsuario: number): Observable<UsuarioDetail> {
+    return this.http.get<UsuarioDetail>(`${this.apiUrl}/${idUsuario}`);
+  }
+
   postUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.apiUrl, usuario);
   }
 
-
+  likeOutfit(idOutfit: number, idUsuario: number): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${idUsuario}/outfits/${idOutfit}`, {});
+  }
 
   IsAuth(): boolean {
     return this.isAuth;

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { MarcaListComponent } from './marca-list/marca-list.component';
 import { MarcaDetailComponent } from './marca-detail/marca-detail.component';
 import {NgxPaginationModule} from 'ngx-pagination';
@@ -9,7 +10,8 @@ import { TiendafisicaModule } from '../tiendafisica/tiendafisica.module';
   imports: [
     CommonModule,
     NgxPaginationModule,
-    TiendafisicaModule
+    TiendafisicaModule,
+    FormsModule
   ],
   exports: [MarcaListComponent],
   declarations: [MarcaListComponent, MarcaDetailComponent]

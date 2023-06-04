@@ -18,33 +18,23 @@
 
     <div class="d-flex justify-content-start">
       <!-- Botón de filtros -->
-      <button class="btn mr-2" style="background-color: brown; color: white; margin-right: 2rem;" (click)="showFilters = !showFilters">Filtro</button>
+      <button class="btn mr-2" style="background-color: brown; color: white; margin-right: 2rem;" (click)="showFilters = !showFilters">Buscar</button>
       <br>
-
-      <!-- Botón de creación de outfits -->
-      <button class="btn" style="background-color: brown; color: white;" routerLink="outfit-create">Esto meh</button>
   </div>
 
   </div>
   <br>
-  <div class="container-fluid filter" *ngIf="showFilters">
+  <div class="search-container" *ngIf="showFilters">
     <div class="row">
       <div class="col">
-        <select class="form-select" #genders (change)="onSelectedFilterNombre(genders.value)">
-          <option value="Genero" selected>Genero</option>
-          <option value="HOMBRE">Hombre</option>
-          <option value="MUJER">Mujer</option>
-          <option value="UNISEX">Unisex</option>
-        </select>
+        <input type="text" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChange()" class="my-search" placeholder="Buscar...">
       </div>
     </div>
   </div>
 
   <div class="row pb-5 mb-4 contenedor">
     <ng-container *ngFor="let marca of marcas | paginate: { itemsPerPage: 9, currentPage: p}">
-      <ng-container >
-        <ng-container >
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" >
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" *ngIf="enteredSearchValue === '' || marca.nombre.toLowerCase().includes(enteredSearchValue)">
             <div class="card rounded shadow-lg border-0" (click)="onSelected(marca)" style="background-color:#EDF0F0;">
               <div class="card-body p-4"><img src="{{marca.logo}}" alt="{{marca.nombre}}" class="img-fluid d-block mx-auto mb-3 my-image">
                 <h5 class="my-name">{{marca.nombre}}</h5>
@@ -53,8 +43,6 @@
               </div>
             </div>
           </div>
-        </ng-container>
-      </ng-container>
     </ng-container>
   </div>
   <div class="mt-8 py-5 d-flex justify-content-center">
