@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OutfitService } from '../outfit.service';
 import { OutfitFormData } from './outfit-form-data';
 import { OutfitDetail } from '../outfitDetail';
@@ -23,7 +23,8 @@ export class OutfitCreateComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private outfitService: OutfitService
+    private outfitService: OutfitService,
+    private router: Router
   ) { }
 
   getOutfits(): void {
@@ -52,8 +53,11 @@ export class OutfitCreateComponent implements OnInit {
           let num = Number(myArray[i]);
           this.outfitService.postAgregarUnaPrendaOutfit(this.idUsuarioNumber, num).subscribe((res) => {
             console.log(`Prenda with id ${num} added to Outfit with id ${this.idUsuarioNumber}`);
+            this.router.navigate(['Outfits']);
+            alert('Outfit agregado con exito');
           }, error => {
             console.log('Error adding prenda to outfit', error);
+            alert('Error agregando outfit');
           });
 
           console.log(num);

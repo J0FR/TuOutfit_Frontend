@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 import { PrendaListComponent } from './prenda-list/prenda-list.component';
 import { PrendaDetailComponent } from './prenda-detail/prenda-detail.component';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { FormsModule } from '@angular/forms';
+import { PrendaComentarioComponent } from './prendaComentario/prendaComentario.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
   ],
-  exports: [PrendaListComponent],
-  declarations: [PrendaListComponent, PrendaDetailComponent]
+  exports: [PrendaListComponent, PrendaComentarioComponent],
+  declarations: [PrendaListComponent, PrendaDetailComponent, PrendaComentarioComponent]
 })
 export class PrendaModule { }

@@ -1,18 +1,66 @@
 <testExecutions version="1">
-  <file path="src/app/tiendafisica/tiendafisica.service.spec.ts">
-    <testCase name="Service: Tiendafisica should ..." duration="18"/>
+  <file path="src/app/outfit/outfit-detail/outfit-detail.component.spec.ts">
+    <testCase name="OutfitDetailComponent should display outfitDetail.precio" duration="99"/>
+    <testCase name="OutfitDetailComponent should display outfitDetail.nombre" duration="15"/>
+    <testCase name="OutfitDetailComponent should display outfitDetail.id" duration="9"/>
+    <testCase name="OutfitDetailComponent should have a h1.display-5 element with outfitDetail.nombre" duration="9"/>
+    <testCase name="OutfitDetailComponent should have a link to Font Awesome stylesheet" duration="10"/>
+    <testCase name="OutfitDetailComponent should have a p.lead element with outfitDetail.descripcion" duration="13"/>
+    <testCase name="OutfitDetailComponent should have a span element with outfitDetail.precio" duration="8"/>
+    <testCase name="OutfitDetailComponent should display the correct number of Prenda cards" duration="13"/>
+    <testCase name="OutfitDetailComponent should display the correct number of Prenda cards" duration="11"/>
+    <testCase name="OutfitDetailComponent should display outfitDetail.descripcion" duration="15"/>
+    <testCase name="OutfitDetailComponent should have a div.small.mb-1 element with outfitDetail.id" duration="8"/>
+    <testCase name="OutfitDetailComponent should have a Like button" duration="15"/>
   </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should create the app" duration="113"/>
-    <testCase name="AppComponent should have as title 'base-project'" duration="12"/>
+  <file path="src/app/marca/marca-list/marca-list.component.spec.ts">
+    <testCase name="MarcaListComponent should invoke onSelected method when a brand is clicked" duration="37"/>
+    <testCase name="MarcaListComponent should display the heading correctly" duration="12"/>
+  </file>
+  <file path="src/app/tiendafisica/tiendafisica.service.spec.ts">
+    <testCase name="Service: Tiendafisica should ..." duration="3"/>
   </file>
   <file path="src/app/marca/marca.service.spec.ts">
     <testCase name="Service: Marca should ..." duration="2"/>
   </file>
-  <file path="src/app/prenda/PrendaService.service.spec.ts">
-    <testCase name="Service: Prenda should ..." duration="4"/>
+  <file path="src/app/outfit/outfit-create/outfit-create.component.spec.ts">
+    <testCase name="OutfitCreateComponent should display the label &quot;Nombre del outfit&quot;" duration="24"/>
+    <testCase name="OutfitCreateComponent should display the options for &quot;Ocasión&quot;" duration="8"/>
+    <testCase name="OutfitCreateComponent should display the options for &quot;Género&quot;" duration="8"/>
+    <testCase name="OutfitCreateComponent should display the heading &quot;Crea un outfit&quot;" duration="9"/>
+    <testCase name="OutfitCreateComponent should display the options for &quot;Talla&quot;" duration="12"/>
+    <testCase name="OutfitCreateComponent should have a required input field for &quot;Precio del outfit&quot;" duration="9"/>
+    <testCase name="OutfitCreateComponent should display the options for &quot;Color&quot;" duration="12"/>
+  </file>
+  <file path="src/app/prenda/prenda-detail/prenda-detail.component.spec.ts">
+    <testCase name="PrendaDetailComponent should display the prenda's name" duration="23"/>
+    <testCase name="PrendaDetailComponent should display the prenda's image" duration="8"/>
+    <testCase name="PrendaDetailComponent should display the prenda's ID" duration="7"/>
+  </file>
+  <file path="src/app/tiendafisica/tiendafisica-detail/tiendafisica-detail.component.spec.ts">
+    <testCase name="TiendafisicaDetailComponent should have a td.id element with tiendafisicaDetail.id" duration="9"/>
+    <testCase name="TiendafisicaDetailComponent should have a td.longitud element with tiendafisicaDetail.ubicacion.longitud" duration="2"/>
+    <testCase name="TiendafisicaDetailComponent should have a td.nombre element with tiendafisicaDetail.nombre" duration="2"/>
+    <testCase name="TiendafisicaDetailComponent should have a td.horarios element with tiendafisicaDetail.horarios" duration="2"/>
   </file>
   <file path="src/app/outfit/outfit.service.spec.ts">
-    <testCase name="Service: Outfit should ..." duration="4"/>
+    <testCase name="Service: Outfit should ..." duration="2"/>
+  </file>
+  <file path="src/app/outfit/outfit-list/outfit-list.component.spec.ts">
+    <testCase name="OutfitListComponent should display the &quot;Outfits&quot; heading" duration="26"/>
+    <testCase name="OutfitListComponent should display the number of outfits" duration="28"/>
+    <testCase name="OutfitListComponent should toggle the filters section on button click" duration="18"/>
+    <testCase name="OutfitListComponent should create" duration="20"/>
+  </file>
+  <file path="src/app/tiendafisica/tiendafisica-list/tiendafisica-list.component.spec.ts">
+    <testCase name="TiendafisicaListComponent should display the heading correctly" duration="11"/>
+    <testCase name="TiendafisicaListComponent should display the list of tiendasfisicas correctly" duration="9"/>
+  </file>
+  <file path="src/app/prenda/PrendaService.service.spec.ts">
+    <testCase name="Service: Prenda should ..." duration="3"/>
+  </file>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should create the app" duration="22"/>
+    <testCase name="AppComponent should have as title 'base-project'" duration="5"/>
   </file>
 </testExecutions>

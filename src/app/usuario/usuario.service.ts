@@ -37,11 +37,16 @@ export class UsuarioService {
   }
 
   IsAuth(): boolean {
+    if (localStorage.getItem('isAuth') == 'false') {
+      this.isAuth = false;
+    } else {
+      this.isAuth = true;
+    }
     return this.isAuth;
   }
 
   logOut(): void {
-    this.isAuth = false;
+    localStorage.setItem('isAuth', 'false');
   }
 
 

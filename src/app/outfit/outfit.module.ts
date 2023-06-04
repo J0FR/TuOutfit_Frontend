@@ -6,6 +6,7 @@ import { OutfitCreateComponent } from './outfit-create/outfit-create.component';
 import { RouterModule, Routes } from '@angular/router';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
+import { OutfitComentarioComponent } from './outfitComentario/outfitComentario.component';
 
 @NgModule({
   imports: [
@@ -17,12 +18,14 @@ import { FormsModule } from '@angular/forms';
   exports: [
     OutfitListComponent,
     OutfitDetailComponent,
-    OutfitCreateComponent
+    OutfitCreateComponent,
+    OutfitComentarioComponent
   ],
   declarations: [
     OutfitListComponent,
     OutfitDetailComponent,
-    OutfitCreateComponent
+    OutfitCreateComponent,
+    OutfitComentarioComponent
   ]
 })
 export class OutfitModule { }

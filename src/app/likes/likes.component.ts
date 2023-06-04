@@ -21,7 +21,6 @@ export class LikesComponent implements OnInit {
   private idUsuarioNumber = Number(this.idUsuario);
 
   constructor(private usuarioService: UsuarioService, private router: Router) {
-
   }
 
   ngOnInit() {

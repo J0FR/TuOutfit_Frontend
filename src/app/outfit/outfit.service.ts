@@ -33,9 +33,11 @@ export class OutfitService {
   }
 
   postAgregarUnaPrendaOutfit(outfit_id_1: number, prenda_id_1: number): Observable<any> {
-    console.log("Agregando prenda a outfit");
-    console.log(`${this.apiUrl}/${outfit_id_1}/prendas/${prenda_id_1}`);
     return this.http.post(`${this.apiUrl}/${outfit_id_1}/prendas/${prenda_id_1}`, {});
+  }
+
+  postAgregarUnComentarioOutfit(outfit_id_1: number, comentario_id: number): Observable<any> {
+    return this.http.post(`${this.apiUrl}/${outfit_id_1}/comentarios/${comentario_id}`, {});
   }
 
 

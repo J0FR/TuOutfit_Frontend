@@ -2,9 +2,10 @@ import { Component, Input ,OnInit } from '@angular/core';
 import { Prenda } from '../prenda';
 import { PrendaDetail } from './PrendaDetail';
 import { PrendaService } from '../Prenda.service';
-import { ActivatedRoute } from '@angular/router';
+import { UsuarioService } from 'src/app/usuario/usuario.service';
 import { OutfitService } from 'src/app/outfit/outfit.service';
 import { OutfitDetail } from 'src/app/outfit/outfitDetail';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-prenda-detail',
@@ -15,9 +16,8 @@ export class PrendaDetailComponent implements OnInit {
 
   @Input() prendaDetail!: PrendaDetail;
 
+  constructor(private route: ActivatedRoute, private prendaService: PrendaService, private router: Router, public usuarioService: UsuarioService, private outfitService: OutfitService) { }
   outfits: OutfitDetail[] = [];
-
-  constructor(private route: ActivatedRoute, private prendaService: PrendaService, private outfitService: OutfitService) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -35,5 +35,29 @@ export class PrendaDetailComponent implements OnInit {
         }
       });
     }
+
   }
+
+  onCommentButtonClick(prendaId: number): void {
+    console.log(this.usuarioService.IsAuth());
+    if (this.usuarioService.IsAuth()) {
+      localStorage.setItem('currentPrendaId', String(prendaId));
+      this.router.navigate(['comentario-prenda']);
+    } else {
+      this.router.navigate(['Signup']);
+      alert("Necesitas una cuenta para comentar.");
+      console.log(this.prendaDetail.comentarios.length);
+      console.log('pls');
+    }
+  }
+
+  getNumberOfOutfits(): number {
+    return this.outfits.length;
+  }
+
+  getNombreMarca(): string {
+    var marca = this.prendaDetail.marca;
+    return marca.nombre;
+  }
+
 }

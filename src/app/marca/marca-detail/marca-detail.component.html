@@ -22,9 +22,11 @@
 <!-- Prendas -->
 
 <section class="py-5 text-center container">
-  <div class="row py-lg-5">
-    <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="fw-light" id="outfits">Prendas</h1>
+  <div class="row text-center">
+    <div class="col-12">
+      <h1 class="display-3 fw-bold text-white" style="color: black!important;">Prendas</h1>
+      <hr class="bg-white mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height:3px;">
+      <p class="p-text text-white" style="color: black!important">Las prendas de esta marca</p>
     </div>
   </div>
 </section>
@@ -35,7 +37,7 @@
       <p class="detail-filter">Prendas ({{getNumberOfPrendas()}})</p>
     </div>
     <div class="filtro">
-      <button class="btn btn-primary" (click)="showFilters = !showFilters">Filtro</button>
+      <button class="btn btn-primary" style="background-color: brown; color: white; margin-right: 2rem; border-width: 0;" (click)="showFilters = !showFilters">Filtro</button>
     </div>
   </div>
   <br>
@@ -103,7 +105,13 @@
 
 <!-- Tiendas Fisicas -->
 <div class="text-center">
-  <h1>Tiendas Fisicas</h1>
+  <div class="row text-center">
+    <div class="col-12">
+      <h1 class="display-3 fw-bold text-white" style="color: black!important;">Tiendas Fisicas</h1>
+      <hr class="bg-white mb-4 mt-0 d-inline-block mx-auto" style="width: 100px; height:3px;">
+      <p class="p-text text-white" style="color: black!important">Las tiendas fisicas de esta marca</p>
+    </div>
+  </div>
   <div>
     <div class="album py-5" >
       <div class="container">
