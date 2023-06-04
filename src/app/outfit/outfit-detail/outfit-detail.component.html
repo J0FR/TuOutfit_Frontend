@@ -38,7 +38,36 @@
 
 
 <!-- Prendas -->
-
+<div class="row text-center">
+  <div class="col-12">
+    <h1 class="display-3 fw-bold text-white" style="color: black!important;">Prendas</h1>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let prenda of outfitDetail.prendas" class="col-4 mb-4">
+        <div class="card" style="width: 20rem; height: 30rem;">
+          <div style="padding: 5%;text-align: center;">
+            <h5>{{prenda.nombre}}</h5>
+          </div>
+          <div class="card-body" style="line-height:0%">
+            <img src="{{ prenda.imagen }}" alt="{{prenda.nombre}}" width="100%">
+            <div style="padding: 5%">
+              <p class="card-text">Genero: {{prenda.genero}}</p>
+              <p class="card-text">Color: {{prenda.colores}}</p>
+              <p class="card-text">Ocasion: {{prenda.ocasiones}}</p>
+              <p class="card-text">Rango Edad: {{prenda.rango_edad}}</p>
+              <p class="card-text">Talla: {{prenda.talla}}</p>
+              <p class="card-text">Precio: ${{prenda.precio}}</p>
+              <p class="card-text">Marca: {{prenda.marca.nombre}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <!-- Prendas Finaliza -->
