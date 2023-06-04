@@ -65,7 +65,7 @@
 
   <div class="row pb-5 mb-4 contenedor">
     <ng-container *ngFor="let outfit of outfits | paginate: { itemsPerPage: 9, currentPage: p}">
-      <ng-container *ngIf="selectedOccasion === 'Ocasion' || selectedOccasion === outfit.ocasiones">
+      <ng-container *ngIf="selectedOccasion === 'Oc0asion' || selectedOccasion === outfit.ocasiones">
         <ng-container *ngIf="selectedAge === 'Edad' || selectedAge === outfit.rangoEdad">
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" *ngIf="selectedGender === 'Genero' || selectedGender === outfit.genero">
             <div class="card rounded shadow-lg border-0" (click)="onSelected(outfit)">
