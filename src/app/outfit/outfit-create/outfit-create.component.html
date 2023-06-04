@@ -7,8 +7,8 @@
 </section>
 
 <!-- Formulario para crear el outfit-->
-<form (ngSubmit)="onFormSubmit()">
-  {{ miOutfit | json }}
+<form (ngSubmit)="onFormSubmit()" id="formulario">
+
   <div class="row">
     <!-- Nombre del outfit-->
     <div class="form-group col">
@@ -133,5 +133,46 @@
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">Crear</button>
+  <div class="row">
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" id="botonCrear">Crear outfit</button>
+    </div>
+  </div>
 </form>
+
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light" id="outfits">Agrega prendas</h1>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid" id="seleccion-prendas-outfit">
+  <div class="container-fluid d-flex justify-content-between">
+    <!-- Número de outfits-->
+    <div>
+      <p class="detail-filter">Outfits</p>
+    </div>
+
+
+  </div>
+
+  <!-- TODO: Aquí se ingresan los filtros -->
+
+  <div class="row pb-5 mb-4 contenedor" id="prendas-agregar">
+    <ng-container ng-container *ngFor="let outfit of outfits">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="card rounded shadow-lg border-0">
+              <div class="card-body p-4"><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}" class="img-fluid d-block mx-auto mb-3">
+                <h5>{{outfit.nombre}}</h5>
+                <p class="small text-muted font-italic">{{outfit.descripcion}}</p>
+                <ul class="list-inline small">
+                  <li class="list-inline-item m-0"><i class="fa fa-star text-success price">{{outfit.precio}}$</i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </ng-container>
+  </div>
+</div>
