@@ -3,7 +3,7 @@ import { OutfitService } from '../outfit.service';
 import { Router } from '@angular/router';
 import { Comentario } from 'src/app/comentario/comentario';
 import { ComentarioService } from 'src/app/comentario/comentario.service';
-import { MiComentario } from 'src/app/comentario/miComentario';
+import { NuestroComentario } from 'src/app/comentario/nuestroComentario';
 
 @Component({
   selector: 'app-outfitComentario',
@@ -16,7 +16,7 @@ export class OutfitComentarioComponent implements OnInit {
   public calificacion: number = 0;
   public mensaje: string = '';
 
-  miComentario = new MiComentario(
+  miComentario = new NuestroComentario(
     '', 0, ''
   );
 

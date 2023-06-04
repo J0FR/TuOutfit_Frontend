@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComentarioService } from 'src/app/comentario/comentario.service';
-import { MiComentario } from 'src/app/comentario/miComentario';
 import { OutfitService } from 'src/app/outfit/outfit.service';
 import { PrendaService } from '../Prenda.service';
+import { miComentario } from 'src/app/comentario/miComentario';
 
 @Component({
   selector: 'app-prendaComentario',
@@ -16,7 +16,7 @@ export class PrendaComentarioComponent implements OnInit {
   public calificacion: number = 0;
   public mensaje: string = '';
 
-  miComentario = new MiComentario(
+  miComentario = new miComentario(
     '', 0, ''
   );
 

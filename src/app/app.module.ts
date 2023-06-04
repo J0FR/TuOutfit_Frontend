@@ -49,7 +49,7 @@ const appRoute: Routes = [
 ]
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
       LikesComponent
    ],
@@ -67,7 +67,8 @@ const appRoute: Routes = [
     NosotrosModule,
     RouterModule.forRoot(appRoute),
     NgxPaginationModule,
-    FormsModule
+    FormsModule,
+    ComentarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

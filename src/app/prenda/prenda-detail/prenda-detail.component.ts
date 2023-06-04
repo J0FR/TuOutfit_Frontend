@@ -35,6 +35,7 @@ export class PrendaDetailComponent implements OnInit {
         }
       });
     }
+
   }
 
   onCommentButtonClick(prendaId: number): void {
@@ -45,11 +46,18 @@ export class PrendaDetailComponent implements OnInit {
     } else {
       this.router.navigate(['Signup']);
       alert("Necesitas una cuenta para comentar.");
+      console.log(this.prendaDetail.comentarios.length);
+      console.log('pls');
     }
   }
 
   getNumberOfOutfits(): number {
     return this.outfits.length;
+  }
+
+  getNombreMarca(): string {
+    var marca = this.prendaDetail.marca;
+    return marca.nombre;
   }
 
 }
