@@ -27,6 +27,11 @@ export class OutfitDetailComponent implements OnInit {
     }
   }
 
+
+  getNumberOfPrendas(): number {
+    return this.outfitDetail.prendas.length;
+  }
+
   onLikeButtonClick(outfitId: number): void {
     this.usuarioService.likeOutfit(outfitId, this.idUsuarioNumber).subscribe(() => {
       alert("Se agrego el Like!" + outfitId);
@@ -44,6 +49,8 @@ export class OutfitDetailComponent implements OnInit {
     this.router.navigate(['Signup']);
     alert("Necesitas una cuenta para comentar.");
   }
+
+
 
 
 }

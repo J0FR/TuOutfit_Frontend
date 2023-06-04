@@ -9,6 +9,9 @@ import { TiendafisicaDetail } from './TiendafisicaDetail'
 import { faker } from '@faker-js/faker';
 import { Marca } from 'src/app/marca/marca';
 import { Ubicacion } from 'src/app/ubicacion/ubicacion';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TiendafisicaService } from '../tiendafisica.service';
 
 describe('TiendafisicaDetailComponent', () => {
   let component: TiendafisicaDetailComponent;
@@ -17,7 +20,9 @@ describe('TiendafisicaDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TiendafisicaDetailComponent ]
+      imports: [ HttpClientModule,RouterTestingModule],
+      declarations: [ TiendafisicaDetailComponent ],
+      providers: [TiendafisicaService]
     })
     .compileComponents();
   }));
@@ -40,5 +45,29 @@ describe('TiendafisicaDetailComponent', () => {
     fixture.detectChanges();
     debug = fixture.debugElement;
   });
+
+  it('should have a td.id element with tiendafisicaDetail.id', () => {
+    const element: HTMLElement = debug.query(By.css('td.id')).nativeElement;
+    expect(element.textContent).toContain(component.tiendafisicaDetail.id);
+  });
+
+  it('should have a td.nombre element with tiendafisicaDetail.nombre', () => {
+    const element: HTMLElement = debug.query(By.css('td.nombre')).nativeElement;
+    expect(element.textContent).toContain(component.tiendafisicaDetail.nombre);
+  });
+
+  it('should have a td.horarios element with tiendafisicaDetail.horarios', () => {
+    const element: HTMLElement = debug.query(By.css('td.horarios')).nativeElement;
+    expect(element.textContent).toContain(component.tiendafisicaDetail.horarios);
+  }
+  );
+
+  it('should have a td.longitud element with tiendafisicaDetail.ubicacion.longitud', () => {
+    const element: HTMLElement = debug.query(By.css('td.longitud')).nativeElement;
+    expect(element.textContent).toContain(component.tiendafisicaDetail.ubicacion.longitud);
+  }
+  );
+
+
 
 });
