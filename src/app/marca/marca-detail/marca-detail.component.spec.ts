@@ -8,6 +8,9 @@ import { MarcaDetailComponent } from './marca-detail.component';
 import { MarcaDetail } from '../marcaDetail';
 import { Prenda } from 'src/app/prenda/prenda';
 import { Marca } from 'src/app/marca/marca';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
+import { MarcaService } from '../marca.service';
 
 describe('MarcaDetailComponent', () => {
   let component: MarcaDetailComponent;
@@ -16,7 +19,9 @@ describe('MarcaDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MarcaDetailComponent ]
+      imports: [HttpClientModule, RouterTestingModule],
+      declarations: [ MarcaDetailComponent ],
+      providers: [ MarcaService ]
     })
     .compileComponents();
   }));
@@ -44,5 +49,13 @@ describe('MarcaDetailComponent', () => {
       fixture.detectChanges();
       debug = fixture.debugElement;
   });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  }
+  );
+
+
+
 
 });
