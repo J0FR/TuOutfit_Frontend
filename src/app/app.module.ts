@@ -29,6 +29,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { LoginComponent } from './usuario/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './usuario/signup/signup.component';
+import { LikesComponent } from './likes/likes.component';
 
 const appRoute: Routes = [
   {path: '', component: HomeComponent},
@@ -48,8 +49,9 @@ const appRoute: Routes = [
 ]
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [	
+    AppComponent,
+      LikesComponent
    ],
   imports: [
     BrowserModule,

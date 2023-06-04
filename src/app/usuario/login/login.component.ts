@@ -11,8 +11,11 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   public email: string = '';
+  localStorage: Storage;
 
-  constructor(private usuarioService: UsuarioService, private router: Router) { }
+  constructor(private usuarioService: UsuarioService, private router: Router) {
+    this.localStorage = window.localStorage;
+  }
 
   usuarios: Array<Usuario> = [];
 
@@ -25,7 +28,7 @@ export class LoginComponent implements OnInit {
   userExists(email: string): boolean {
     for (let i = 0; i < this.usuarios.length; i++) {
       if (this.usuarios[i].email == email) {
-        this.usuarioService.emailUsuario = this.usuarios[i].email;
+        localStorage.setItem('idUsuario', this.usuarios[i].id.toString());
         return true;
       }
     }

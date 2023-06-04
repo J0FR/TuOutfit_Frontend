@@ -3,6 +3,7 @@ import { Outfit } from '../outfit';
 import { OutfitDetail } from '../outfitDetail';
 import { ActivatedRoute } from '@angular/router';
 import { OutfitService } from '../outfit.service';
+import { UsuarioService } from 'src/app/usuario/usuario.service';
 
 @Component({
   selector: 'app-outfit-detail',
@@ -13,7 +14,10 @@ export class OutfitDetailComponent implements OnInit {
 
   @Input() outfitDetail!: OutfitDetail;
 
-  constructor(private route: ActivatedRoute, private outfitService: OutfitService) { }
+  private idUsuario = localStorage.getItem('idUsuario');
+  private idUsuarioNumber = Number(this.idUsuario);
+
+  constructor(private route: ActivatedRoute, private outfitService: OutfitService, private usuarioService: UsuarioService) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -24,6 +28,13 @@ export class OutfitDetailComponent implements OnInit {
     }
   }
 
+  onLikeButtonClick(outfitId: number): void {
+    this.usuarioService.likeOutfit(outfitId, this.idUsuarioNumber).subscribe(() => {
+      alert("Se agrego el Like!" + outfitId);
+    }, (error) => {
+      alert("Error: no se pudo agragar el like." + outfitId);
+    });
+  }
 
 
 }
