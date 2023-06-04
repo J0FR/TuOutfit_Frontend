@@ -10,6 +10,7 @@ export class ComentarioDetail extends Comentario {
   prenda: Prenda;
 
   constructor (
+    id: number,
     titulo: string,
     calificacion: number,
     mensaje: string,
@@ -17,7 +18,7 @@ export class ComentarioDetail extends Comentario {
     outfit: Outfit,
     prenda: Prenda
   ) {
-    super(titulo, calificacion, mensaje);
+    super(id, titulo, calificacion, mensaje);
     this.autor = autor;
     this.outfit = outfit;
     this.prenda = prenda;

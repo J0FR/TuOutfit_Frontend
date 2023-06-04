@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     this.getUsuarios();
     if (this.userExists(this.email)) {
       this.router.navigate(['/']);
-      this.usuarioService.isAuth = true;
+      localStorage.setItem('isAuth', 'true');
       alert("Logged in successfully!");
     } else {
       alert("Error: user does not exist.");

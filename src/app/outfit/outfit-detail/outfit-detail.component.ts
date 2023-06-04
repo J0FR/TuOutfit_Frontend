@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Outfit } from '../outfit';
 import { OutfitDetail } from '../outfitDetail';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OutfitService } from '../outfit.service';
 import { UsuarioService } from 'src/app/usuario/usuario.service';
 
@@ -17,7 +16,7 @@ export class OutfitDetailComponent implements OnInit {
   private idUsuario = localStorage.getItem('idUsuario');
   private idUsuarioNumber = Number(this.idUsuario);
 
-  constructor(private route: ActivatedRoute, private outfitService: OutfitService, private usuarioService: UsuarioService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private outfitService: OutfitService, public usuarioService: UsuarioService) { }
 
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
@@ -34,6 +33,16 @@ export class OutfitDetailComponent implements OnInit {
     }, (error) => {
       alert("Error: no se pudo agragar el like." + outfitId);
     });
+  }
+
+  onCommentButtonClick(outfitId: number): void {
+    localStorage.setItem('currentOutfitId', String(outfitId));
+    this.router.navigate(['comentario-outfit']);
+  }
+
+  onCommentButtonClickNot(): void {
+    this.router.navigate(['Signup']);
+    alert("Necesitas una cuenta para comentar.");
   }
 
 

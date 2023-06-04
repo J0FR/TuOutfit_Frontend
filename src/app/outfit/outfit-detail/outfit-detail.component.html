@@ -25,9 +25,12 @@
                         <button class="btn btn-light heart" (click)="onLikeButtonClick(outfitDetail.id)">
                           <i class="fa fa-heart"></i> Like
                         </button>
-                        <!-- <button class="btn btn-light comment">
-                            <i class="fa fa-comment"></i> Comment
-                        </button> -->
+                        <button class="btn btn-light comment" (click)="onCommentButtonClick(outfitDetail.id)" *ngIf="usuarioService.IsAuth()">
+                          <i class="fa fa-comment"></i> Comment
+                      </button>
+                        <button class="btn btn-light comment" (click)="onCommentButtonClickNot()" *ngIf="!usuarioService.IsAuth()">
+                          <i class="fa fa-comment"></i> Comment
+                      </button>
                       </div>
                     </div>
                 </div>

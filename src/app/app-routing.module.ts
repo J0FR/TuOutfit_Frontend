@@ -15,6 +15,8 @@ import { TiendafisicaListComponent } from './tiendafisica/tiendafisica-list/tien
 import { LoginComponent } from './usuario/login/login.component';
 import { SignupComponent } from './usuario/signup/signup.component';
 import { LikesComponent } from './likes/likes.component';
+import { PrendaComentarioComponent } from './prenda/prendaComentario/prendaComentario.component';
+import { OutfitComentarioComponent } from './outfit/outfitComentario/outfitComentario.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -31,6 +33,8 @@ const routes: Routes = [
   {path: 'Login', component: LoginComponent},
   {path: 'Signup', component: SignupComponent},
   {path: 'Favoritos', component: LikesComponent},
+  {path: 'comentario-outfit', component: OutfitComentarioComponent},
+  {path: 'comentario-prenda', component: PrendaComentarioComponent},
   {path: '**', component: NotFoundComponent},
 ]
 

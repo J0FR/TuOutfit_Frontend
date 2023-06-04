@@ -7,7 +7,7 @@
 ::ng-deep .ngx-pagination .current {
   border-radius: 50%; /* Makes the button circular */
   color: white; /* Changes the text color to white */
-  background-color: #007bff; /* Changes the background color to blue */
+  background-color: #0050a5; /* Changes the background color to blue */
   border: none; /* Removes the border */
 }
 
