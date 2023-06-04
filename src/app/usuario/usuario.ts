@@ -1,7 +1,6 @@
 import { Outfit } from '../outfit/outfit';
 
 export class Usuario {
-  // FIXME: revisar tipo de genero. No es enumerado?
   nombre: string;
   genero: string;
   edad: number;

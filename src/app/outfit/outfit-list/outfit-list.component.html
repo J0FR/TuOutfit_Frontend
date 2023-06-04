@@ -16,15 +16,14 @@
       <p class="detail-filter">Outfits ({{getNumberOfOutfits()}})</p>
     </div>
 
-    <!-- Botón de filtros -->
-    <div class="filtro">
-      <button class="btn btn-primary" (click)="showFilters = !showFilters">Filtro</button>
-    </div>
+    <div class="d-flex justify-content-start">
+      <!-- Botón de filtros -->
+      <button class="btn mr-2" style="background-color: brown; color: white; margin-right: 2rem;" (click)="showFilters = !showFilters">Filtro</button>
+      <br>
 
-    <!-- Botón de creación de outfits -->
-    <div class>
-      <button class="btn btn-primary" routerLink="outfit-create">Crear outfit</button>
-    </div>
+      <!-- Botón de creación de outfits -->
+      <button class="btn" style="background-color: brown; color: white;" routerLink="outfit-create">Crear outfit</button>
+  </div>
 
   </div>
   <br>
@@ -51,7 +50,7 @@
       </div>
       <div class="col">
         <select class="form-select" #occasion (change)="onSelectedFilterOcassion(occasion.value)">
-          <option value="Ocasion" selected>Ocasion</option>
+          <option value="Ocasion" selected>Ocasión</option>
           <option value="BODA">Boda</option>
           <option value="FIESTA">Fiesta</option>
           <option value="CENA">Cena</option>
@@ -73,7 +72,13 @@
                 <h5>{{outfit.nombre}}</h5>
                 <p class="small text-muted font-italic">{{outfit.descripcion}}</p>
                 <ul class="list-inline small">
-                  <li class="list-inline-item m-0"><i class="fa fa-star text-success price">{{outfit.precio}}$</i></li>
+                  <li class="list-inline-item m-0"><i class="text-success price">Precio: ${{outfit.precio}}</i></li>
+                  <br>
+                  <li class="list-inline-item m-0"><i class="text-success price">Genero: {{outfit.genero}}</i></li>
+                  <br>
+                  <li class="list-inline-item m-0"><i class="text-success price">Edad: {{outfit.rangoEdad}}</i></li>
+                  <br>
+                  <li class="list-inline-item m-0"><i class="text-success price">Ocasión: {{outfit.ocasiones}}</i></li>
                 </ul>
               </div>
             </div>
@@ -88,20 +93,4 @@
 </div>
 
 
-<!--
-<div class="row pb-5 mb-4" >
-  <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" *ngFor="let outfit of outfits | paginate: { itemsPerPage: 9, currentPage: p}">
-    <div class="card rounded shadow-lg border-0" (click)="onSelected(outfit)">
-      <div class="card-body p-4"><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}" class="img-fluid d-block mx-auto mb-3">
-        <h5>{{outfit.nombre}}</h5>
-        <p class="small text-muted font-italic">{{outfit.descripcion}}</p>
-        <ul class="list-inline small">
-          <li class="list-inline-item m-0"><i class="fa fa-star text-success price">{{outfit.precio}}$</i></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="mt-8 py-5 d-flex justify-content-center">
-  <pagination-controls (pageChange)="p = $event"></pagination-controls>
-</div> -->
+

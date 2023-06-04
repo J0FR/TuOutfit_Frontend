@@ -12,6 +12,7 @@ export class UsuarioService {
 
   private apiUrl = environment.baseUrl + 'usuarios';
   public isAuth: boolean = false;
+  public emailUsuario: string = '';
 
   constructor(private http: HttpClient) { }
 
