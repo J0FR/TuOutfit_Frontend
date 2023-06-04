@@ -13,7 +13,10 @@ export class MarcaListComponent implements OnInit {
 
   marcas: Array<MarcaDetail> = [];
   selected: boolean = false;
+
   p:number = 1;
+  showFilters = false;
+
   constructor(private marcaService: MarcaService, private router: Router) { }
 
   getMarcas(): void {
@@ -29,5 +32,14 @@ export class MarcaListComponent implements OnInit {
   ngOnInit(): void {
     this.getMarcas();
   }
+
+  getNumberOfMarcas(): number {
+    return this.marcas.length;
+  }
+
+  selectedOccasion = 'Nombre';
+	onSelectedFilterNombre(value:string): void {
+		this.selectedOccasion = value;
+	}
 
 }

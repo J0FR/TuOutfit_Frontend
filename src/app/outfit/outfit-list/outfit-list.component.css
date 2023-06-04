@@ -98,7 +98,10 @@ input {
   padding: 0 !important;
 }
 
-
+.my-image {
+  max-width: 500px;
+  max-height: 500px;
+}
 
 
 

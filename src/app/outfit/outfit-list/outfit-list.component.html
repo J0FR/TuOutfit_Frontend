@@ -67,8 +67,8 @@
       <ng-container *ngIf="selectedOccasion === 'Ocasion' || selectedOccasion === outfit.ocasiones">
         <ng-container *ngIf="selectedAge === 'Edad' || selectedAge === outfit.rangoEdad">
           <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" *ngIf="selectedGender === 'Genero' || selectedGender === outfit.genero">
-            <div class="card rounded shadow-lg border-0" (click)="onSelected(outfit)">
-              <div class="card-body p-4"><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}" class="img-fluid d-block mx-auto mb-3">
+            <div class="card rounded shadow-lg border-0" (click)="onSelected(outfit)" style="background-color:#EDF0F0;">
+              <div class="card-body p-4"><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}" class="img-fluid d-block mx-auto mb-3 my-image">
                 <h5>{{outfit.nombre}}</h5>
                 <p class="small text-muted font-italic">{{outfit.descripcion}}</p>
                 <ul class="list-inline small">
