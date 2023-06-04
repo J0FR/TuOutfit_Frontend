@@ -12,6 +12,8 @@ import { PrendaDetailComponent } from './prenda/prenda-detail/prenda-detail.comp
 import { PrendaListComponent } from './prenda/prenda-list/prenda-list.component';
 import { TiendafisicaDetailComponent } from './tiendafisica/tiendafisica-detail/tiendafisica-detail.component';
 import { TiendafisicaListComponent } from './tiendafisica/tiendafisica-list/tiendafisica-list.component';
+import { LoginComponent } from './usuario/login/login.component';
+import { SignupComponent } from './usuario/signup/signup.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -25,6 +27,8 @@ const routes: Routes = [
   {path: 'Tiendas', component: TiendafisicaListComponent},
   {path: 'Tiendas/:id', component: TiendafisicaDetailComponent},
   {path: 'Nosotros', component: NosotrosComponent},
+  {path: 'Login', component: LoginComponent},
+  {path: 'Signup', component: SignupComponent},
   {path: '**', component: NotFoundComponent},
 ]
 

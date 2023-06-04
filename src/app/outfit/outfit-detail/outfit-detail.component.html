@@ -5,52 +5,20 @@
 
 <section class="py-5">
     <div class="container px-4 px-lg-5 my-5">
-        <div class="row gx-4 gx-lg-5 ">
+        <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{outfitDetail.imagen}}" alt="..." /></div>
             <div class="col-md-6">
                 <div class="small mb-1">ID: {{outfitDetail.id}}</div>
                 <h1 class="display-5 fw-bolder">{{outfitDetail.nombre}}</h1>
-                <p class="lead">{{outfitDetail.descripcion}}</p>
-
-                <div class="card-header py-3 px-4" id="headingTwo">
-                  <h2 class="mb-0">
-                  <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Massage Therapies
-                  <i class="fa" aria-hidden="true"></i>
-                  </button>
-                  </h2>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion" style="">
-                    <div class="card-body py-md-5 px-4">
-                    <ul>
-                    <li class="d-sm-flex">
-                    <span>Face Treatments</span>
-                    <span>40 min.</span>
-                    <span>$10</span>
-                    </li>
-                    <li class="d-sm-flex">
-                    <span>Nail Treatments</span>
-                    <span>30 min.</span>
-                    <span>$20</span>
-                    </li>
-                    <li class="d-sm-flex">
-                    <span>Medical Treatments</span>
-                    <span>60 min.</span>
-                    <span>$10</span>
-                    </li>
-                    <li class="d-sm-flex">
-                    <span>Hair Treatments</span>
-                    <span>30 min.</span>
-                    <span>$30</span>
-                    </li>
-                    </ul>
-                    </div>
-                    </div>
-
-
                 <div class="fs-5 mb-5">
-                    <span><h5>${{outfitDetail.precio}}</h5></span>
+                    <span><strong>Precio: </strong>${{outfitDetail.precio}}</span><br>
+                    <span><strong>Color Principal: </strong>{{outfitDetail.colores}}</span><br>
+                    <span><strong>Genero: </strong>{{outfitDetail.genero}}</span><br>
+                    <span><strong>Ocasion: </strong>{{outfitDetail.ocasiones}}</span><br>
+                    <span><strong>Rango Edad: </strong>{{outfitDetail.rangoEdad}}</span><br>
+                    <span><strong>Talla: </strong>{{outfitDetail.talla}}</span><br>
                 </div>
+                <p class="lead">{{outfitDetail.descripcion}}</p>
                 <div class="d-flex">
                     <div class="interact">
                       <div class="interact">
@@ -64,50 +32,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
-<script>
-$(document).ready(function () {
-  $('#accordion').on('hide.bs.collapse', function (e) {
-    $(e.target)
-      .prev('.card-header')
-      .find('.fas')
-      .removeClass('fa-chevron-up')
-      .addClass('fa-chevron-down');
-  });
 
-  $('#accordion').on('show.bs.collapse', function (e) {
-    $(e.target)
-      .prev('.card-header')
-      .find('.fas')
-      .removeClass('fa-chevron-down')
-      .addClass('fa-chevron-up');
-  });
-});
-</script>
-
-<!-- <section class="py-5 bg-light">
-  <div class="container px-4 px-lg-5 mt-5">
-      <h2 class="fw-bolder mb-4">Productos</h2>
-      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-          <div class="col mb-5">
-              <div class="card h-100" *ngFor="let prenda of outfitDetail.prendas ">
-                  <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                  <div class="card-body p-4">
-                      <div class="text-center">
-                          <h5 class="fw-bolder">Fancy Product</h5>
-                          $40.00 - $80.00
-                      </div>
-                  </div>
-                  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                  </div>
-              </div>
-          </div>
-
-      </div>
-  </div>
-</section> -->

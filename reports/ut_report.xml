@@ -1,18 +1,18 @@
 <testExecutions version="1">
-  <file path="src/app/tiendafisica/tiendafisica.service.spec.ts">
-    <testCase name="Service: Tiendafisica should ..." duration="9"/>
-  </file>
-  <file path="src/app/marca/marca.service.spec.ts">
-    <testCase name="Service: Marca should ..." duration="2"/>
+  <file path="src/app/app.component.spec.ts">
+    <testCase name="AppComponent should have as title 'base-project'" duration="87"/>
+    <testCase name="AppComponent should create the app" duration="9"/>
   </file>
   <file path="src/app/outfit/outfit.service.spec.ts">
     <testCase name="Service: Outfit should ..." duration="2"/>
   </file>
+  <file path="src/app/marca/marca.service.spec.ts">
+    <testCase name="Service: Marca should ..." duration="3"/>
+  </file>
   <file path="src/app/prenda/PrendaService.service.spec.ts">
     <testCase name="Service: Prenda should ..." duration="2"/>
   </file>
-  <file path="src/app/app.component.spec.ts">
-    <testCase name="AppComponent should have as title 'base-project'" duration="64"/>
-    <testCase name="AppComponent should create the app" duration="8"/>
+  <file path="src/app/tiendafisica/tiendafisica.service.spec.ts">
+    <testCase name="Service: Tiendafisica should ..." duration="2"/>
   </file>
 </testExecutions>

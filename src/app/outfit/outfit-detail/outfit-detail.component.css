@@ -14,10 +14,9 @@
 
 .interact .comment:hover {
   color: #fff;
-  background-color: #eb85ff;
-  border-color: #eb85ff;
+  background-color: #04377f;
+  border-color: #04377f;
 }
-
 
 .interact .fa-heart:before {
   content: "\f004";

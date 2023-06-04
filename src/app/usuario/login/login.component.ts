@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
   userExists(email: string): boolean {
     for (let i = 0; i < this.usuarios.length; i++) {
       if (this.usuarios[i].email == email) {
+        this.usuarioService.emailUsuario = this.usuarios[i].email;
         return true;
       }
     }
