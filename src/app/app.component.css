@@ -177,6 +177,55 @@ body {
   width:230px;
 }
 
+.btn-cerrarSesion{
+  font-size:23px;
+  padding:0px 20px;
+  color: #fff;
+  background-color: #778899;
+  border:none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width:230px;
+}
+
+.btn-iniciarSesion{
+  font-size:23px;
+  padding:0px 20px;
+  color: #fff;
+  background-color: #27374D;
+  border:none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width:230px;
+}
+
+.btn-registrar{
+  font-size:23px;
+  padding:0px 20px;
+  color: #ffffff;
+  background-color: #464663;
+  border:none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width:230px;
+}
+
+.btn-favoritos{
+  font-size:23px;
+  padding:0px 20px;
+  color: #fff;
+  background-color: #526D82;
+  border:none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width:230px;
+}
+
+
 .btn-twitter{
   font-size:23px;
   padding:0px 20px;
