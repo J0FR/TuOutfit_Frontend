@@ -64,29 +64,29 @@
 
   <div class="panel column-layout" *ngIf="isPanelOpen">
     <div class="icon-btn radius-style column-layout">
-      <button class="btn-snapchat" *ngIf="authService.IsAuth()">
+
+      <button class="btn-favoritos" *ngIf="authService.IsAuth()" routerLink="Favoritos">
         <span class="btn-gradient radius-btn">
-          <i class="fa fa-snapchat"></i>
+          <i class="fa fa-favoritos"></i>
         </span>
-        <span class="btn-text">Snapchat</span>
+        <span class="btn-text">Favoritos</span>
       </button>
 
-
-      <button class="btn-iniciarSesion">
+      <button class="btn-iniciarSesion" *ngIf="!authService.IsAuth()" routerLink="Login">
         <span class="btn-gradient radius-btn">
           <i class="fa fa-iniciarSesion"></i>
         </span>
         <span class="btn-text">Iniciar sesión</span>
       </button>
 
-      <button class="btn-cerrarSesion">
+      <button class="btn-cerrarSesion" *ngIf="authService.IsAuth()" (click)="logOut()">
         <span class="btn-gradient radius-btn">
           <i class="fa fa-cerrarSesion"></i>
         </span>
         <span class="btn-text">Cerrar sesión</span>
       </button>
 
-      <button class="btn-registrar">
+      <button class="btn-registrar" *ngIf="!authService.IsAuth()" routerLink="Signup">
         <span class="btn-gradient radius-btn">
           <i class="fa fa-registrar"></i>
         </span>
@@ -94,12 +94,6 @@
       </button>
 
 
-      <button class="btn-favoritos">
-        <span class="btn-gradient radius-btn">
-          <i class="fa fa-favoritos"></i>
-        </span>
-        <span class="btn-text">Favoritos</span>
-      </button>
 
 
 
