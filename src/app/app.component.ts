@@ -16,4 +16,8 @@ export class AppComponent {
   togglePanel() {
     this.isPanelOpen = !this.isPanelOpen;
   }
+
+  logOut() {
+    this.authService.logOut();
+  }
 }

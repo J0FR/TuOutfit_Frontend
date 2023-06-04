@@ -26,6 +26,10 @@ export class LikesComponent implements OnInit {
     this.getOutfits();
   }
 
+  getOutfitsLen(): number {
+    return this.outfits.length;
+  }
+
   onSelected(outfit: OutfitDetail): void {
     this.router.navigate(['/Outfits', outfit.id]);
   }
