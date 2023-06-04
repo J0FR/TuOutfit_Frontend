@@ -2,7 +2,7 @@
 <section class="py-5 text-center container">
   <div class="row py-lg-5">
     <div class="col-lg-6 col-md-8 mx-auto">
-      <h1 class="fw-light" id="outfits">Outfits Favoritos de</h1>
+      <h1 class="fw-light" id="outfits">Outfits Favoritos</h1>
     </div>
   </div>
 </section>
@@ -16,11 +16,56 @@
       <p class="detail-filter">Outfits Favoritos ({{getOutfitsLen()}})</p>
     </div>
 
+    <div class="d-flex justify-content-start">
+      <!-- Botón de filtros -->
+      <button class="btn mr-2" style="background-color: brown; color: white; margin-right: 2rem;" (click)="showFilters = !showFilters">Filtro</button>
+      <br>
+  </div>
+
+  </div>
+  <br>
+  <div class="container-fluid filter" *ngIf="showFilters">
+    <div class="row">
+      <div class="col">
+        <select class="form-select" #genders (change)="onSelectedFilterGender(genders.value)">
+          <option value="Genero" selected>Genero</option>
+          <option value="HOMBRE">Hombre</option>
+          <option value="MUJER">Mujer</option>
+          <option value="UNISEX">Unisex</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-select" #age (change)="onSelectedFilterAge(age.value)">
+          <option value="Edad" selected>Edad</option>
+          <option value="BEBE">Bebe</option>
+          <option value="NIÑO">Niño</option>
+          <option value="ADOLECENTE">Adolecente</option>
+          <option value="JOVEN">Joven</option>
+          <option value="ADULTO">Adulto</option>
+          <option value="ABUELOS">Abuelo</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-select" #occasion (change)="onSelectedFilterOcassion(occasion.value)">
+          <option value="Ocasion" selected>Ocasión</option>
+          <option value="BODA">Boda</option>
+          <option value="FIESTA">Fiesta</option>
+          <option value="CENA">Cena</option>
+          <option value="CASUAL">Casual</option>
+          <option value="FORMAL">Formal</option>
+          <option value="GRADO">Grado</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
   <div class="row pb-5 mb-4 contenedor">
     <ng-container *ngFor="let outfit of outfits | paginate: { itemsPerPage: 9, currentPage: p}">
-          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <div class="card rounded shadow-lg border-0" (click)="onSelected(outfit)">
-              <div class="card-body p-4"><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}" class="img-fluid d-block mx-auto mb-3">
+      <ng-container *ngIf="selectedOccasion === 'Ocasion' || selectedOccasion === outfit.ocasiones">
+        <ng-container *ngIf="selectedAge === 'Edad' || selectedAge === outfit.rangoEdad">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" *ngIf="selectedGender === 'Genero' || selectedGender === outfit.genero">
+            <div class="card rounded shadow-lg border-0" (click)="onSelected(outfit)" style="background-color:#EDF0F0;">
+              <div class="card-body p-4"><img src="{{outfit.imagen}}" alt="{{outfit.nombre}}" class="img-fluid d-block mx-auto mb-3 my-image">
                 <h5>{{outfit.nombre}}</h5>
                 <p class="small text-muted font-italic">{{outfit.descripcion}}</p>
                 <ul class="list-inline small">
@@ -35,6 +80,8 @@
               </div>
             </div>
           </div>
+        </ng-container>
+      </ng-container>
     </ng-container>
   </div>
 </div>
