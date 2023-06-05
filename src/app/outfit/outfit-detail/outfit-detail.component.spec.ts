@@ -36,7 +36,7 @@ describe('OutfitDetailComponent', () => {
     const prendas: Prenda[] = [];
     for(let i = 0; i < 3; i++) {
       const prenda = new Prenda(faker.datatype.number(), faker.lorem.sentence(), faker.image.imageUrl(), faker.lorem.sentence(), faker.lorem.sentence(), faker.datatype.number(), faker.lorem.sentence(),
-      faker.lorem.sentence(), faker.lorem.sentence(),marca);
+      faker.lorem.sentence(), faker.lorem.sentence(),marca, faker.lorem.sentence());
       prendas.push(prenda);
     }
 
