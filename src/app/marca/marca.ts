@@ -1,17 +1,17 @@
 export class Marca {
   id: number;
   nombre: string;
-  url_sitio_web: string;
+  urlSitioWeb: string;
   logo: string;
-  detalle_de_marca: string;
+  detalleDeMarca: string;
 
 
-  constructor(id: number, nombre: string, url_sitio_web: string, logo: string, detalle_de_marca: string) {
+  constructor(id: number, nombre: string, urlSitioWeb: string, logo: string, detalleDeMarca: string) {
     this.id = id;
     this.nombre = nombre;
-    this.url_sitio_web = url_sitio_web;
+    this.urlSitioWeb = urlSitioWeb;
     this.logo = logo;
-    this.detalle_de_marca = detalle_de_marca;
+    this.detalleDeMarca = detalleDeMarca;
   }
 
 

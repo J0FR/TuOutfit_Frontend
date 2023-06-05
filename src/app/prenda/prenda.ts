@@ -11,7 +11,8 @@ export class Prenda {
     rangoEdad: string;
     talla: string;
     marca: Marca;
-    constructor(id: number, nombre: string, imagen: string, colores: string, genero: string, precio: number, ocasiones: string, rango_edad: string, talla: string, marca: Marca) {
+    urlSitioWebCompra: string;
+    constructor(id: number, nombre: string, imagen: string, colores: string, genero: string, precio: number, ocasiones: string, rango_edad: string, talla: string, marca: Marca, url: string) {
         this.id = id;
         this.nombre = nombre;
         this.imagen = imagen;
@@ -22,5 +23,6 @@ export class Prenda {
         this.rangoEdad = rango_edad;
         this.talla = talla;
         this.marca = marca;
+        this.urlSitioWebCompra = url;
     }
   }

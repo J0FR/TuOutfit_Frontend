@@ -35,7 +35,7 @@ describe('PrendaListComponent', () => {
 
     for(let i = 0; i < 10; i++) {
     const prenda = new PrendaDetail(faker.datatype.number(), faker.lorem.sentence(), faker.image.imageUrl(), faker.lorem.sentence(), faker.lorem.sentence(), faker.datatype.number(), faker.lorem.sentence(),
-    faker.lorem.sentence(), faker.lorem.sentence(),marca,[],[]);
+    faker.lorem.sentence(), faker.lorem.sentence(),marca,[],[], faker.lorem.sentence());
     component.prendas.push(prenda);
     }
     fixture.detectChanges();

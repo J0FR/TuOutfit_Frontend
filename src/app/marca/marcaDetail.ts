@@ -8,13 +8,13 @@ export class MarcaDetail extends Marca{
   constructor(
     id: number,
     nombre: string,
-    url_sitio_web: string,
+    urlSitioWeb: string,
     logo: string,
-    detalle_marca: string,
+    detalleDeMarca: string,
     prendas: Array<Prenda>
     //tiendasFisicas: Array<TiendaFisica>
   ){
-    super(id, nombre, url_sitio_web, logo, detalle_marca)
+    super(id, nombre, urlSitioWeb, logo, detalleDeMarca)
    this.prendas = prendas;
   }
 }
