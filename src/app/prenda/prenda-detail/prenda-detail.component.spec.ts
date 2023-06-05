@@ -59,7 +59,8 @@ describe('PrendaDetailComponent', () => {
       faker.lorem.sentence(),
       faker.lorem.sentence(),
       marca,
-      outfits,[]
+      outfits,[],
+      faker.lorem.sentence()
     );
 
     fixture.detectChanges();

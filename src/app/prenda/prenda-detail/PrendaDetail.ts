@@ -20,8 +20,9 @@ export class PrendaDetail extends Prenda{
                    talla: string,
                    marca: Marca,
                    outfits: Array<Outfit>,
-                   comentarios: Array<Comentario>) {
-        super(id, nombre, imagen, colores, genero, precio, ocasiones, rango_edad, talla, marca)
+                   comentarios: Array<Comentario>,
+                   url: string) {
+        super(id, nombre, imagen, colores, genero, precio, ocasiones, rango_edad, talla, marca, url)
         this.outfits = outfits;
         this.comentarios = comentarios;
 

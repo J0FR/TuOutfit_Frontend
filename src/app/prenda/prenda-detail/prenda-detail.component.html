@@ -18,10 +18,12 @@
                     <span><strong>Rango Edad: </strong>{{prendaDetail.talla}}</span><br>
                     <span><strong>Talla: </strong>{{prendaDetail.rangoEdad}}</span><br>
                     <span><strong>Marca: </strong>{{prendaDetail.marca.nombre}}</span><br>
-                    <br>
                     <div class="d-flex">
                       <div class="interact">
                         <div class="interact">
+                          <a href="{{prendaDetail.urlSitioWebCompra}}" class="btn btn-light comment" target="_blank">
+                            <i class="fa fa-shopping-cart"></i> Comprar
+                          </a>
                           <button class="btn btn-light comment" (click)="onCommentButtonClick(prendaDetail.id)">
                             <i class="fa fa-comment"></i> Comment</button>
                         </div>
